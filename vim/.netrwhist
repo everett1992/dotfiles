@@ -1,0 +1,7 @@
+let g:netrw_dirhistmax  =10
+let g:netrw_dirhist_cnt =5
+let g:netrw_dirhist_1='/home/caleb/workspace/music-streamer/app'
+let g:netrw_dirhist_2='/home/caleb/workspace/rms_rails/app/assets/javascripts/mobile'
+let g:netrw_dirhist_3='/home/caleb'
+let g:netrw_dirhist_4='/home/caleb/workspace'
+let g:netrw_dirhist_5='/home/caleb/Dropbox/TCNJ/netsec/sploits/id'
