@@ -27,6 +27,8 @@ syntax on " turns on syntax highlighting
 " changes the way tabs look
 hi TabLine term=none cterm=none ctermfg=15 ctermbg=242 gui=underline guibg=DarkGrey
 
+set iskeyword=_ " add _ as a word delimeter
+
 set number " turn on line numbers
 set nowrap " turn off line wraping
 set hidden " allow hiding modified buffers with no errors
@@ -67,8 +69,9 @@ set autoindent " some nicer indenting
 set autoread " I think this puts the cursor at the location it was last time the file was edited
 
 set laststatus=2
-let g:Powerline_symbols = 'fancy'
 set fillchars=vert:│ " use a single bar to seperate vertical splits
+
+let g:Powerline_symbols = 'fancy'
 
 " map Ctrl / to clear search highlight
 nnoremap  :noh<CR>
