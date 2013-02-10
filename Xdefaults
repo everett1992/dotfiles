@@ -14,21 +14,21 @@ urxvt.boldFont:             xft: Terminus:size=10
 urxvt.scrollBar:        false
 urxvt.internalBorder:   5
 
-!usability
-urxvt.perl-ext-common: default,matcher
+! Clickable urls
+urxvt.perl-ext-common: default,matcher,vtwheel
 urxvt.urlLauncher:     /usr/bin/google-chrome
 urxvt.matcher.button:  1
 
 
 
-!false transparency
+! False transparency
 urxvt.transparent:    true
 *background: #111111
 
 urxvt.tintColor:        white
 urxvt.shading:          20
 
-!true transparency
+! True transparency
 !urxvt*depth: 32
 !urxvt*background: rgba:1111/1111/1111/eeee
 
