@@ -1,0 +1,56 @@
+Xft.dpi:        95
+Xft.antialias:  true
+!Xft.hinting:    full
+!Xft.hintstyle:  hintslight
+Xft.rgba:       rgb
+XTerm*termName: xterm-256color
+URxvt*termName: xterm-256color
+
+! font settings
+urxvt.font:             xft: Terminus:size=10
+urxvt.boldFont:             xft: Terminus:size=10
+!urxvt.font:             xft: Dejavu Sans Mono:size=9:autohint=true:antialias:true
+
+urxvt.scrollBar:        false
+urxvt.internalBorder:   5
+
+!usability
+urxvt.perl-ext-common: default,matcher
+urxvt.urlLauncher:     /usr/bin/google-chrome
+urxvt.matcher.button:  1
+
+
+
+!false transparency
+urxvt.transparent:    true
+*background: #111111
+
+urxvt.tintColor:        white
+urxvt.shading:          20
+
+!true transparency
+!urxvt*depth: 32
+!urxvt*background: rgba:1111/1111/1111/eeee
+
+urxvt.pointerColor:     black
+urxvt.pointerColor2:    #e9e9e9
+
+
+! molokai scheme
+*foreground: #e5e5e5
+*color0:     #2e3436
+*color8:     #555753
+*color1:     #bf3f3f
+*color9:     #cd0000
+*color2:     #87ff00
+*color10:    #a6e22e
+*color3:     #aa5500
+*color11:    #fd971f
+*color4:     #13354a
+*color12:    #ae81ff
+*color5:     #960050
+*color13:    #f92672
+*color6:     #06989a
+*color14:    #66d9ef
+*color7:     #e5e5e5
+*color15:    #e5e5e5
