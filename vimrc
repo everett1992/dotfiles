@@ -27,7 +27,7 @@ syntax on " turns on syntax highlighting
 " changes the way tabs look
 hi TabLine term=none cterm=none ctermfg=15 ctermbg=242 gui=underline guibg=DarkGrey
 
-set iskeyword=_ " add _ as a word delimeter
+set iskeyword-=_ " added _ as a word delimeter
 
 set number " turn on line numbers
 set nowrap " turn off line wraping
