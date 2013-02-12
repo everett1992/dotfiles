@@ -50,7 +50,6 @@ set incsearch " search as you type
 set ignorecase " ignore letter case
 set smartcase " unless the search term has an uppercase char in it
 
-map Q gq
 
 set scrolloff=3 " keeps 3 lines at the top or bottom of the screen
 set ruler " displays line and column in the status bar
@@ -75,6 +74,8 @@ let g:Powerline_symbols = 'fancy'
 " map Ctrl / to clear search highlight
 nnoremap  :noh<CR>
 
+map Q gq
+
 " navigate buffers with ctrl h, l
 nnoremap  
 nnoremap  
@@ -91,6 +92,8 @@ cnoreabbrev tn tabnew
 nnoremap <F1> <nop>
 nnoremap Q <nop>
 nnoremap K <nop>
+
+imap ;; <Esc>
 
 
 
