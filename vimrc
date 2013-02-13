@@ -1,3 +1,5 @@
+set guioptions=c
+set guicursor=a:blinkon0
 set nocompatible
 "
 " vundle
@@ -74,6 +76,10 @@ let g:Powerline_symbols = 'fancy'
 " map Ctrl / to clear search highlight
 nnoremap  :noh<CR>
 
+nnoremap <leader>g :GundoToggle<CR>
+imap ;; <Esc>
+
+
 map Q gq
 
 " navigate buffers with ctrl h, l
@@ -93,7 +99,6 @@ nnoremap <F1> <nop>
 nnoremap Q <nop>
 nnoremap K <nop>
 
-imap ;; <Esc>
 
 
 
