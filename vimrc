@@ -11,7 +11,6 @@ filetype off
 
   "my bundles
   "Bundle 'Lokaltog/vim-powerline'
-  Bundle 'jiangmiao/auto-pairs'
   Bundle 'sjl/gundo.vim'
   Bundle 'jwhitley/vim-matchit'
   Bundle 'vim-scripts/fugitive.vim'
@@ -19,7 +18,6 @@ filetype off
   Bundle 'kchmck/vim-coffee-script'
   Bundle 'plasticboy/vim-markdown'
   Bundle 'tomasr/molokai'
-  Bundle 'vim-surrond'
 filetype plugin indent on
 
 
