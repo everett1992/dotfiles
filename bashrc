@@ -42,3 +42,9 @@ alias suspend="systemctl suspend"
 alias alert='notify-send --urgency=low -i "$([ $? = 0 ] && echo terminal || echo error)" "$(history|tail -n1|sed -e '\''s/^\s*[0-9]\+\s*//;s/[;&|]\s*alert$//'\'')"'
 
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm"
+
+# your fortune is printed
+# [[ "$PS1" ]] && echo -e "\e[00;33m$(/usr/bin/fortune -s)\e[00m"
+
+# a cow says your fortune
+# [[ "$PS1" ]] && echo -e "\e[00;33m$(/usr/bin/fortune -s | /usr/bin/cowsay)\e[00m"

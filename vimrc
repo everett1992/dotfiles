@@ -77,7 +77,6 @@ let g:Powerline_symbols = 'fancy'
 nnoremap  :noh<CR>
 
 nnoremap <leader>g :GundoToggle<CR>
-imap ;; <Esc>
 
 
 map Q gq
