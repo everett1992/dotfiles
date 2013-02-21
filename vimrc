@@ -10,6 +10,7 @@ filetype off
   Bundle 'gmarik/vundle'
 
   "my bundles
+  Bundle 'kien/ctrlp.vim'
   Bundle 'majutsushi/tagbar'
   Bundle 'sjl/gundo.vim'
   Bundle 'jwhitley/vim-matchit'
@@ -19,8 +20,8 @@ filetype off
   Bundle 'plasticboy/vim-markdown'
   Bundle 'tomasr/molokai'
   "Bundle 'Lokaltog/vim-powerline'
-  "Bundle 'Lokaltog/powerline'
-  "set rtp+=~/.vim/bundle/powerline/powerline/bindings/vim
+  Bundle 'Lokaltog/powerline'
+  set rtp+=~/.vim/bundle/powerline/powerline/bindings/vim
 filetype plugin indent on
 
 

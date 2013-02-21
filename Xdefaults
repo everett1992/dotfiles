@@ -7,8 +7,8 @@ XTerm*termName: xterm-256color
 URxvt*termName: xterm-256color
 
 ! font settings
-urxvt.font:                 xft: Terminus:size=10
-urxvt.boldFont:             xft: Terminus:size=10
+urxvt.font:                 xft: Terminus Powerline:size=10
+urxvt.boldFont:             xft: Terminus Powerline:size=10
 
 urxvt.scrollBar:        false
 urxvt.internalBorder:   5
