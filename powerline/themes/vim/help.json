@@ -1,0 +1,29 @@
+{
+	"segments": {
+		"left": [
+			{
+				"name": "file_name",
+				"draw_divider": false
+			},
+			{
+				"type": "string",
+				"highlight_group": ["background"],
+				"draw_divider": false,
+				"width": "auto"
+			}
+		],
+		"right": [
+			{
+				"type": "string",
+				"contents": " ",
+				"highlight_group": ["line_current_symbol", "line_current"]
+			},
+			{
+				"name": "line_current",
+				"draw_divider": false,
+				"width": 3,
+				"align": "r"
+			}
+		]
+	}
+}

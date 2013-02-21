@@ -9,6 +9,7 @@
 dir=~/dotfiles                    # dotfiles directory
 olddir=~/dotfiles_old             # old dotfiles backup directory
 files=" fonts Xdefaults bashrc gitconfig irbrc vim vimrc tmux.conf "    # list of files/folders to symlink in homedir
+config_files=" powerline "
 
 
 ##########
@@ -29,4 +30,11 @@ for file in $files; do
     mv ~/.$file ~/dotfiles_old/
     echo "Creating symlink to $file in home directory."
     ln -s $dir/$file ~/.$file
+done
+
+for file in $config_files; do
+    echo "Moving any existing dotfiles from ~/.config to $olddir"
+    mv ~/.config/$file ~/dotfiles_old/
+    echo "Creating symlink to $file in home directory."
+    ln -s $dir/$file ~/.config/$file
 done
