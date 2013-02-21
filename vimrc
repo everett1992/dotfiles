@@ -10,7 +10,7 @@ filetype off
   Bundle 'gmarik/vundle'
 
   "my bundles
-  "Bundle 'Lokaltog/vim-powerline'
+  Bundle 'majutsushi/tagbar'
   Bundle 'sjl/gundo.vim'
   Bundle 'jwhitley/vim-matchit'
   Bundle 'vim-scripts/fugitive.vim'
@@ -18,11 +18,14 @@ filetype off
   Bundle 'kchmck/vim-coffee-script'
   Bundle 'plasticboy/vim-markdown'
   Bundle 'tomasr/molokai'
+  "Bundle 'Lokaltog/vim-powerline'
+  "Bundle 'Lokaltog/powerline'
+  "set rtp+=~/.vim/bundle/powerline/powerline/bindings/vim
 filetype plugin indent on
 
 
 set t_Co=256
-"let g:solarized_termcolors=256
+let g:solarized_termcolors=256
 
 colorscheme molokai " uses molokai for the color scheme
 syntax on " turns on syntax highlighting
@@ -64,19 +67,22 @@ set softtabstop=2
 
 set autoindent " some nicer indenting
 
-"set mouse=a " turn on mouse support
+set mouse=n " turn on mouse support
 
 set autoread " I think this puts the cursor at the location it was last time the file was edited
 
 set laststatus=2
 set fillchars=vert:│ " use a single bar to seperate vertical splits
 
-let g:Powerline_symbols = 'fancy'
+
 
 " map Ctrl / to clear search highlight
 nnoremap  :noh<CR>
 
 nnoremap <leader>g :GundoToggle<CR>
+
+nnoremap <F5> :TagbarToggle<CR>
+nnoremap <F6> :GundoToggle<CR>
 
 
 map Q gq
