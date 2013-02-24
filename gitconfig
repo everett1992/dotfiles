@@ -1,6 +1,9 @@
 [user]
 	name =  Caleb Everett
 	email = everett.caleb@gmail.com
+[core]
+	autocrlf = input
+	safecrlf = true
 [push]
 	default = matching
 [color]
@@ -11,13 +14,11 @@
   current = yellow reverse
   local = yellow
   remote = green
-
 [color "diff"]
   meta = yellow bold
   frag = magenta bold
   old = red bold
   new = green bold
-
 [color "status"]
   added = yellow
   changed = green
