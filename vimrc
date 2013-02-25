@@ -19,6 +19,7 @@ filetype off
   Bundle 'kchmck/vim-coffee-script'
   Bundle 'plasticboy/vim-markdown'
   Bundle 'tomasr/molokai'
+  Bundle 'mattn/gist-vim'
   "Bundle 'Lokaltog/vim-powerline'
   Bundle 'Lokaltog/powerline'
   set rtp+=~/.vim/bundle/powerline/powerline/bindings/vim
@@ -83,6 +84,7 @@ nnoremap  :noh<CR>
 nnoremap <leader>g :GundoToggle<CR>
 
 nnoremap <F5> :TagbarToggle<CR>
+nnoremap \t :TagbarToggle<CR>
 nnoremap <F6> :GundoToggle<CR>
 
 
