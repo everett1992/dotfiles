@@ -18,7 +18,6 @@ filetype off
   Bundle 'kchmck/vim-coffee-script'
   Bundle 'plasticboy/vim-markdown'
   Bundle 'tomasr/molokai'
-  Bundle 'mattn/gist-vim'
   "Bundle 'Lokaltog/vim-powerline'
   Bundle 'Lokaltog/powerline'
   set rtp+=~/.vim/bundle/powerline/powerline/bindings/vim
