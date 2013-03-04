@@ -2,7 +2,10 @@
 # ~/.bashrc
 #
 
-# If not running interactively, don't do anything
+# Load rvm
+[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm"
+
+# If not running interactively, don't do anything more
 [[ $- != *i* ]] && return
 shopt -s checkwinsize
 
@@ -20,9 +23,7 @@ fi
 export EDITOR="vim"
 
 # load amazon credentials 
-if [[ -f "$HOME/.amazon_keys" ]]; then
-  source "$HOME/.amazon_keys";
-fi
+[[ -f "$HOME/.amazon_keys" ]] && source "$HOME/.amazon_keys";
 
 # color aliases
 alias ls='ls -h --color=auto'
@@ -41,7 +42,6 @@ alias shutdown="systemctl poweroff"
 alias suspend="systemctl suspend"
 alias alert='notify-send --urgency=low -i "$([ $? = 0 ] && echo terminal || echo error)" "$(history|tail -n1|sed -e '\''s/^\s*[0-9]\+\s*//;s/[;&|]\s*alert$//'\'')"'
 
-[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm"
 
 # your fortune is printed
 # [[ "$PS1" ]] && echo -e "\e[00;33m$(/usr/bin/fortune -s)\e[00m"

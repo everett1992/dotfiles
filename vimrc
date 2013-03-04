@@ -31,17 +31,38 @@ filetype plugin indent on
 " Style Options
 " -----------------------------
 set t_Co=256 " enable 256 colors in vim
-let g:solarized_termcolors=256 " solarized uses 256 colors instead of terminal's colors
 colorscheme molokai            " use molokai for the color scheme
-hi TabLine term=none cterm=none ctermfg=15 ctermbg=242 gui=underline guibg=DarkGrey " simplify tab styling
+syntax on       " turn on syntax highlighting
+hi TabLine term=none cterm=none ctermfg=15 ctermbg=242 gui=underline guibg=DarkGrey
 set laststatus=2     " always display the status bar
 set fillchars=vert:│ " use a single bar to seperate vertical splits
 
-syntax on       " turn on syntax highlighting
+" -----------------------------
+" Text Options
+" -----------------------------
+
 set scrolloff=3 " keeps 3 lines at the top or bottom of the screen
+set sidescrolloff=3 " keeps 3 lines at the right of the screen
+
 set ruler       " displays line and column in the status bar
 set number      " turn on line numbers
+
 set nowrap      " turn off line wraping
+
+" -----------------------------
+" Editing Options
+" -----------------------------
+set backspace=indent,eol,start " backspace over these charecters
+
+if v:version > 7.03 || v.version == 7.03 && has("patch541")
+  set formatoptions+=j " remove comment charecter 
+                       " when joining two commented lines
+endif
+
+" -----------------------------
+" Terminal Options
+" -----------------------------
+set ttyfast
 
 " -------------------------------------
 "  Gvim Options
@@ -144,7 +165,6 @@ cnoreabbrev tn tabnew
 "  Misc Options
 " -------------------------------------
 set autoread " If the file is edited outside fo vim, reload the file
-set backspace=indent,eol,start
 
 
 "if has("autocmd")
