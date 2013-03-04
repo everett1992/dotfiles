@@ -21,7 +21,7 @@ urxvt.matcher.button:  1
 
 
 ! False transparency
-urxvt.transparent:    true
+*transparent:    true
 *background: #111111
 
 urxvt.tintColor:        white
