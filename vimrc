@@ -15,8 +15,12 @@ filetype off
   Bundle 'jwhitley/vim-matchit'
   Bundle 'vim-scripts/fugitive.vim'
   Bundle 'tpope/vim-rails'
+
+  " Syntax plugins
   Bundle 'kchmck/vim-coffee-script'
   Bundle 'plasticboy/vim-markdown'
+  Bundle 'groenewege/vim-less'
+
   Bundle 'tomasr/molokai'
   "Bundle 'Lokaltog/vim-powerline'
   Bundle 'Lokaltog/powerline'
@@ -53,7 +57,7 @@ set backupdir=~/.backup,/tmp " backup to .backup and /tmp
 " -------------------------------------
 "  Buffer Options
 " -------------------------------------
-set hidden " allow hiding modified buffers with no errors
+" set hidden " allow hiding modified buffers with no errors
 
 " -------------------------------------
 "  Command Options

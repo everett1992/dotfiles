@@ -48,3 +48,5 @@ alias alert='notify-send --urgency=low -i "$([ $? = 0 ] && echo terminal || echo
 
 # a cow says your fortune
 # [[ "$PS1" ]] && echo -e "\e[00;33m$(/usr/bin/fortune -s | /usr/bin/cowsay)\e[00m"
+
+PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
