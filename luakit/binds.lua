@@ -49,13 +49,6 @@ menu_binds = {
 
 -- Add binds to special mode "all" which adds its binds to all modes.
 add_binds("all", {
-    key({}, "q", function(w)
-        if true == w.sbar.hidden then
-            w.sbar.ebox:show() w.sbar.hidden = false
-        else
-            w.sbar.ebox:hide() w.sbar.hidden = true
-        end
-    end),
     key({}, "Escape", "Return to `normal` mode.",
         function (w) w:set_mode() end),
 
@@ -148,6 +141,13 @@ add_binds("normal", {
             return false
         end),
 
+    key({}, "q", function(w)
+        if true == w.sbar.hidden then
+            w.sbar.ebox:show() w.sbar.hidden = false
+        else
+            w.sbar.ebox:hide() w.sbar.hidden = true
+        end
+    end),
     key({}, "i", "Enter `insert` mode.",
         function (w) w:set_mode("insert")  end),
 

@@ -13,16 +13,20 @@ filetype off
   Bundle 'majutsushi/tagbar'
   Bundle 'sjl/gundo.vim'
   Bundle 'jwhitley/vim-matchit'
-  Bundle 'vim-scripts/fugitive.vim'
   Bundle 'tpope/vim-rails'
+  "Bundle 'vim-scripts/fugitive.vim'
+  "Bundle 'scrooloose/syntastic'
 
   " Syntax plugins
   Bundle 'kchmck/vim-coffee-script'
   Bundle 'plasticboy/vim-markdown'
   Bundle 'groenewege/vim-less'
 
+  " Color scheme
   Bundle 'tomasr/molokai'
-  "Bundle 'Lokaltog/vim-powerline'
+
+  " Powerline
+  "Bundle 'Lokaltog/vim-powerline' " old version
   Bundle 'Lokaltog/powerline'
   set rtp+=~/.vim/bundle/powerline/powerline/bindings/vim
 filetype plugin indent on
