@@ -114,9 +114,16 @@ nnoremap  :noh<CR>
 
 
 " -------------------------------------
+"  Timeout
+" -------------------------------------
+set ttimeout
+set ttimeoutlen=50
+
+
+" -------------------------------------
 "  Tab & Indentation Options
 " -------------------------------------
-set expandtab " insert space instead of tabs
+set smarttab " insert space instead of tabs
 set tabstop=2     " tabs are two spaces wide
 set softtabstop=2 " use two space for tabs
 set shiftwidth=2
