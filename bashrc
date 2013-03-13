@@ -14,10 +14,14 @@ parse_git_branch() {
  }
 
 if [ -n "$SSH_CLIENT" ]; then
-  PS1="\h \[\033[00;32m\]\w\[\033[00m\]\[\e[01;33;49m\]\$(parse_git_branch)\[\e[0;0m\]$ "
-else
-  PS1="\[\033[00;32m\]\w\[\033[00m\]\[\e[01;33;49m\]\$(parse_git_branch)\[\e[0;0m\]$ "
+	hostname="\h "
 fi
+
+if [[ $EUID == 0 ]]; then
+	$root = "\u "
+fi
+
+PS1="$root$hostname\[\033[00;32m\]\w\[\033[00m\]\[\e[01;33;49m\]\$(parse_git_branch)\[\e[0;0m\]$ "
 
 
 # load amazon credentials 
