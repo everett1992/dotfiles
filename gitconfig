@@ -27,4 +27,6 @@
   untracked = cyan
 [alias]
   lg = log --decorate --graph --oneline
+  unstage = reset HEAD --
+  last = log -1 HEAD
 

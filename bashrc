@@ -2,11 +2,10 @@
 # ~/.bashrc
 #
 
-# Load rvm
-[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm"
 
 # If not running interactively, don't do anything more
 [[ $- != *i* ]] && return
+
 shopt -s checkwinsize
 
 
@@ -15,12 +14,15 @@ parse_git_branch() {
  }
 
 if [ -n "$SSH_CLIENT" ]; then
-  PS1="\h \[\033[00;32m\]\w\[\033[00m\]\[\e[01;33;49m\]\$(parse_git_branch)\[\e[0;0m\]$ "
-else
-  PS1="\[\033[00;32m\]\w\[\033[00m\]\[\e[01;33;49m\]\$(parse_git_branch)\[\e[0;0m\]$ "
+	hostname="\h "
 fi
 
-export EDITOR="vim"
+if [[ $EUID == 0 ]]; then
+	$root = "\u "
+fi
+
+PS1="$root$hostname\[\033[00;32m\]\w\[\033[00m\]\[\e[01;33;49m\]\$(parse_git_branch)\[\e[0;0m\]$ "
+
 
 # load amazon credentials 
 [[ -f "$HOME/.amazon_keys" ]] && source "$HOME/.amazon_keys";
@@ -44,9 +46,16 @@ alias shutdown="systemctl poweroff"
 alias suspend="systemctl suspend"
 alias alert='notify-send --urgency=low -i "$([ $? = 0 ] && echo terminal || echo error)" "$(history|tail -n1|sed -e '\''s/^\s*[0-9]\+\s*//;s/[;&|]\s*alert$//'\'')"'
 
+export EDITOR="vim"
+export BROWSER="chromium"
+
 
 # your fortune is printed
 # [[ "$PS1" ]] && echo -e "\e[00;33m$(/usr/bin/fortune -s)\e[00m"
 
 # a cow says your fortune
 # [[ "$PS1" ]] && echo -e "\e[00;33m$(/usr/bin/fortune -s | /usr/bin/cowsay)\e[00m"
+
+# Load rvm
+[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm"
+#PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
