@@ -35,6 +35,8 @@ alias egrep='egrep -i --color=auto'
 
 alias df='df -h'
 
+alias nc='ncmpcpp'
+
 
 # my aliases
 alias reboot="systemctl reboot"

@@ -1,6 +1,6 @@
 {
 	"common": {
-		"term_24bit_colors": false,
+		"term_truecolor": false,
 		"dividers": {
 			"left": {
 				"hard": " ",
@@ -16,7 +16,12 @@
 	"ext": {
 		"ipython": {
 			"colorscheme": "default",
-			"theme": "default"
+			"theme": "in",
+			"local_themes": {
+				"rewrite": "rewrite",
+				"out": "out",
+				"in2": "in2"
+			}
 		},
 		"shell": {
 			"colorscheme": "default",
