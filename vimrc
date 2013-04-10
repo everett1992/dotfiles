@@ -14,6 +14,7 @@ filetype off
   Bundle 'sjl/gundo.vim'
   Bundle 'jwhitley/vim-matchit'
   Bundle 'tpope/vim-rails'
+  Bundle 'tpope/vim-dispatch'
   "Bundle 'vim-scripts/fugitive.vim'
   "Bundle 'scrooloose/syntastic'
 
@@ -178,9 +179,10 @@ cnoreabbrev tn tabnew
 set autoread " If the file is edited outside fo vim, reload the file
 
 
-"if has("autocmd")
-"	filetype plugin indent on
-"	au BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g`\"" | endif
-"else
-"	set autoindent
-"endif
+" Place cursor at last location
+if has("autocmd")
+	filetype plugin indent on
+	au BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g`\"" | endif
+else
+	set autoindent
+endif
