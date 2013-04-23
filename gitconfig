@@ -1,13 +1,19 @@
+# User Info
 [github]
 	user = everett1992
 [user]
 	name =  Caleb Everett
 	email = everett.caleb@gmail.com
+
+# Settings
 [core]
 	autocrlf = input
 	safecrlf = true
 [push]
 	default = matching
+
+
+# Configs and Alias
 [merge]
 	tool = vimdiff
 [alias]
@@ -15,6 +21,7 @@
   unstage = reset HEAD --
   last = log -1 HEAD
 
+# Colors
 [color]
   branch = auto
   diff =   auto
