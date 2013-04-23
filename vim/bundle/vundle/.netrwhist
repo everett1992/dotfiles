@@ -1,8 +1,0 @@
-let g:netrw_dirhistmax  =10
-let g:netrw_dirhist_cnt =6
-let g:netrw_dirhist_1='/home/caleb/workspace/pois/conf'
-let g:netrw_dirhist_2='/home/caleb/workspace/pois'
-let g:netrw_dirhist_3='/home/caleb/workspace/project-470/log'
-let g:netrw_dirhist_4='/home/caleb/workspace/pois/boot'
-let g:netrw_dirhist_5='/home/caleb/workspace/project-470/config'
-let g:netrw_dirhist_6='/home/caleb/workspace/pipeline_test/config'
