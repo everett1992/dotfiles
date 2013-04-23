@@ -15,8 +15,9 @@ filetype off
   Bundle 'jwhitley/vim-matchit'
   Bundle 'tpope/vim-rails'
   Bundle 'tpope/vim-dispatch'
-  "Bundle 'vim-scripts/fugitive.vim'
-  "Bundle 'scrooloose/syntastic'
+  "Bundle 'jiangmiao/auto-pairs' " Adds matching brackets or quotes.
+  "Bundle 'vim-scripts/fugitive.vim' " Git plugin. I never used it
+  "Bundle 'scrooloose/syntastic' " Syntax Linter. Didn't work
 
   " Syntax plugins
   Bundle 'kchmck/vim-coffee-script'
@@ -36,7 +37,9 @@ filetype plugin indent on
 " Style Options
 " -----------------------------
 set t_Co=256 " enable 256 colors in vim
+
 colorscheme molokai            " use molokai for the color scheme
+let g:rehash256 = 1
 syntax on       " turn on syntax highlighting
 hi TabLine term=none cterm=none ctermfg=15 ctermbg=242 gui=underline guibg=DarkGrey
 set laststatus=2     " always display the status bar
@@ -83,7 +86,7 @@ set backupdir=~/.backup,/tmp " backup to .backup and /tmp
 " -------------------------------------
 "  Buffer Options
 " -------------------------------------
-" set hidden " allow hiding modified buffers with no errors
+set hidden " allow hiding modified buffers with no errors
 
 " -------------------------------------
 "  Command Options
@@ -134,6 +137,12 @@ set shiftwidth=2
 "  Mouse Options
 " -------------------------------------
 set mouse=n " turn on mouse support in normal mode
+
+" -------------------------------------
+"  Convenience  Keybindings
+" -------------------------------------
+" S-w does nothing, why not make it save?
+nnoremap W :w<CR>
 
 
 " -------------------------------------
