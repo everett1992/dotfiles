@@ -8,6 +8,13 @@
 	safecrlf = true
 [push]
 	default = matching
+[merge]
+	tool = vimdiff
+[alias]
+  lg = log --decorate --graph --oneline
+  unstage = reset HEAD --
+  last = log -1 HEAD
+
 [color]
   branch = auto
   diff =   auto
@@ -25,8 +32,3 @@
   added = yellow
   changed = green
   untracked = cyan
-[alias]
-  lg = log --decorate --graph --oneline
-  unstage = reset HEAD --
-  last = log -1 HEAD
-
