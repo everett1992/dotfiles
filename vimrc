@@ -17,7 +17,7 @@ filetype off
   Bundle 'tpope/vim-dispatch'
   "Bundle 'jiangmiao/auto-pairs' " Adds matching brackets or quotes.
   "Bundle 'vim-scripts/fugitive.vim' " Git plugin. I never used it
-  "Bundle 'scrooloose/syntastic' " Syntax Linter. Didn't work
+  Bundle 'scrooloose/syntastic'
 
   " Syntax plugins
   Bundle 'kchmck/vim-coffee-script'
@@ -127,6 +127,7 @@ set ttimeoutlen=50
 " -------------------------------------
 "  Tab & Indentation Options
 " -------------------------------------
+set expandtab
 set smarttab " insert space instead of tabs
 set tabstop=2     " tabs are two spaces wide
 set softtabstop=2 " use two space for tabs
