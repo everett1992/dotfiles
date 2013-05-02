@@ -10,7 +10,6 @@ filetype off
 
   "my bundles
   Bundle 'kien/ctrlp.vim'
-  Bundle 'majutsushi/tagbar'
   Bundle 'sjl/gundo.vim'
   Bundle 'jwhitley/vim-matchit'
   Bundle 'tpope/vim-rails'
@@ -27,9 +26,10 @@ filetype off
   " Color scheme
   Bundle 'tomasr/molokai'
 
-  " Powerline
-  "Bundle 'Lokaltog/vim-powerline' " old version
-  Bundle 'Lokaltog/powerline'
+  if version > 703
+		Bundle 'majutsushi/tagbar'
+		Bundle 'Lokaltog/powerline'
+	endif
   set rtp+=~/.vim/bundle/powerline/powerline/bindings/vim
 filetype plugin indent on
 
@@ -62,10 +62,6 @@ set nowrap      " turn off line wraping
 " -----------------------------
 set backspace=indent,eol,start " backspace over these charecters
 
-if v:version > 7.03 || v.version == 7.03 && has("patch541")
-  set formatoptions+=j " remove comment charecter 
-                       " when joining two commented lines
-endif
 
 " -----------------------------
 " Terminal Options
