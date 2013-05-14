@@ -116,8 +116,7 @@ nnoremap  :noh<CR>
 " -------------------------------------
 "  Timeout
 " -------------------------------------
-set ttimeout
-set ttimeoutlen=50
+set timeout timeoutlen=500 ttimeoutlen=500
 
 
 " -------------------------------------

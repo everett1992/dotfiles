@@ -11,13 +11,15 @@
 	safecrlf = true
 [push]
 	default = matching
+[merge]
+	tool = vimdiff
 
 
 # Configs and Alias
 [merge]
 	tool = vimdiff
 [alias]
-  lg = log --decorate --graph --oneline
+  lg = log --decorate --graph --oneline --all --abbrev-commit
   unstage = reset HEAD --
   last = log -1 HEAD
 
@@ -26,6 +28,7 @@
   branch = auto
   diff =   auto
   status = auto
+	ui = 1
 [color "branch"]
   current = yellow reverse
   local = yellow
@@ -39,6 +42,3 @@
   added = yellow
   changed = green
   untracked = cyan
-
-[merge]
-	tool = vimdiff
