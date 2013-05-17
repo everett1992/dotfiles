@@ -1,138 +1,141 @@
 set nocompatible " disable vi compatibility
+
 " ------------------------------
-" vundle
+" Vundle
 " ------------------------------
+
 filetype off
   set rtp+=~/.vim/bundle/vundle
   call vundle#rc()
   " vundle vundle's vundle
   Bundle 'gmarik/vundle'
 
-  "my bundles
+  " My bundles
+  " Fuzzy file navigation
   Bundle 'kien/ctrlp.vim'
+  " Advanced undo feature navigation
   Bundle 'sjl/gundo.vim'
+  " Matches closing parens,quotes,def/ends
   Bundle 'jwhitley/vim-matchit'
+  " Rails project navigation
   Bundle 'tpope/vim-rails'
+  " Tpope wizardry
   Bundle 'tpope/vim-dispatch'
-  "Bundle 'jiangmiao/auto-pairs' " Adds matching brackets or quotes.
-  "Bundle 'vim-scripts/fugitive.vim' " Git plugin. I never used it
+  " Syntax checker
   Bundle 'scrooloose/syntastic'
+  " Ctags improvement
+  Bundle 'majutsushi/tagbar'
+  " Statusline improvmet
+  Bundle 'Lokaltog/powerline'
 
   " Syntax plugins
   Bundle 'kchmck/vim-coffee-script'
   Bundle 'plasticboy/vim-markdown'
   Bundle 'groenewege/vim-less'
 
-  " Color scheme
+  " Colorschemes
   Bundle 'tomasr/molokai'
 
-  if version > 703
-		Bundle 'majutsushi/tagbar'
-		Bundle 'Lokaltog/powerline'
-	endif
+
   set rtp+=~/.vim/bundle/powerline/powerline/bindings/vim
 filetype plugin indent on
 
 " -----------------------------
 " Style Options
 " -----------------------------
-set t_Co=256 " enable 256 colors in vim
+set t_Co=256 " Enable 256 colors in vim
 
-colorscheme molokai            " use molokai for the color scheme
-let g:rehash256 = 1
-syntax on       " turn on syntax highlighting
+colorscheme molokai " Use the molokai colorscheme
+let g:rehash256 = 1 " Use Molokai's new version
+syntax on       " Turn on syntax highlighting
+
+" Simplify tag style by removing underlines
 hi TabLine term=none cterm=none ctermfg=15 ctermbg=242 gui=underline guibg=DarkGrey
-set laststatus=2     " always display the status bar
-set fillchars=vert:│ " use a single bar to seperate vertical splits
+
+set laststatus=2     " Always display the status bar
+set fillchars=vert:│ " Use a single bar to seperate vertical splits
 
 " -----------------------------
 " Text Options
 " -----------------------------
 
-set scrolloff=3 " keeps 3 lines at the top or bottom of the screen
-set sidescrolloff=3 " keeps 3 lines at the right of the screen
+set scrolloff=3 " Keep 3 lines at the top or bottom of the screen
+set sidescrolloff=3 " Keep 3 lines at the right of the screen
 
-set ruler       " displays line and column in the status bar
-set number      " turn on line numbers
-
-set nowrap      " turn off line wraping
+set ruler       " Display line and column in the status bar
+set number      " Turn on line numbers
+set nowrap      " Turn off line wraping
 
 " -----------------------------
 " Editing Options
 " -----------------------------
-set backspace=indent,eol,start " backspace over these charecters
+set backspace=indent,eol,start " Backspace over these charecters
 
 
 " -----------------------------
 " Terminal Options
 " -----------------------------
-set ttyfast
+set ttyfast " Reduce escape wait times
+set timeout timeoutlen=500 ttimeoutlen=500
 
 " -------------------------------------
 "  Gvim Options
 " -------------------------------------
-set guioptions=c " disable menu, and other gui elements
-set guicursor=a:blinkon0 " disable cursor blink
+set guioptions=c " Disable menu, and other gui elements
+set guicursor=a:blinkon0 " Disable cursor blink
 
 " -------------------------------------
 "  File Options
 " -------------------------------------
-set backupdir=~/.backup,/tmp " backup to .backup and /tmp
+set backupdir=~/.backup,/tmp " Backup to ~/.backup and /tmp
 
 " -------------------------------------
 "  Buffer Options
 " -------------------------------------
-set hidden " allow hiding modified buffers with no errors
+set hidden " Allow hiding modified buffers with no errors
 
 " -------------------------------------
 "  Command Options
 " -------------------------------------
-set showcmd    " display commands as they are typed
-set history=50 " keep 50 commands in history
+set showcmd    " Display commands as they are typed
+set history=50 " Keep 50 commands in history
 
 " -------------------------------------------------
 "  Wildmenu Options (vim command line completion)
 " -------------------------------------------------
-set wildmode=full:longest,full " match to the longest common string
+set wildmode=full:longest,full " Match to the longest common string
 set wildmenu
 
 " -------------------------------------
 "  Insert Completion Options
 " -------------------------------------
-set completeopt=menu,longest,preview " match to the congest common string
-set pumheight=10 " only list 10 items in menu
+set completeopt=menu,longest,preview " Match to the congest common string
+set pumheight=10 " Only list 10 items in menu
 
 " -------------------------------------
 "  Search Options
 " -------------------------------------
-set hlsearch   " highlight search terms
-set incsearch  " search as you type
-set ignorecase " ignore letter case
-set smartcase  " unless the search term has an uppercase char in it
-" clear highlighting with crtl-/
+set hlsearch   " Highlight search terms
+set incsearch  " Search as you type
+set ignorecase " Ignore letter case
+set smartcase  " Unless the search term has an uppercase char in it
+
+" Clear highlighting with crtl-/
 nnoremap  :noh<CR>
-
-
-" -------------------------------------
-"  Timeout
-" -------------------------------------
-set timeout timeoutlen=500 ttimeoutlen=500
-
 
 " -------------------------------------
 "  Tab & Indentation Options
 " -------------------------------------
 set expandtab
-set smarttab " insert space instead of tabs
-set tabstop=2     " tabs are two spaces wide
-set softtabstop=2 " use two space for tabs
+set smarttab " Insert space instead of tabs
+set tabstop=2     " Tabs are two spaces wide
+set softtabstop=2 " Use two space for tabs
 set shiftwidth=2
-
 
 " -------------------------------------
 "  Mouse Options
 " -------------------------------------
-set mouse=n " turn on mouse support in normal mode
+set mouse=n " Turn on mouse support in normal mode
 
 " -------------------------------------
 "  Convenience  Keybindings
