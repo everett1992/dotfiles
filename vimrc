@@ -1,6 +1,10 @@
 "------------------------------------------------------------------"
 " File: .vimrc                           vim runtime configuration "
 " Author: Caleb Everett                                            "
+"                                                                  "
+" Dependancies:                                                    "
+"   Vundle: git clone https://github.com/gmarik/vundle.git         "
+"             ~/.vim/bundle/vundle                                 "
 "------------------------------------------------------------------"
 
 set nocompatible " disable vi compatibility
