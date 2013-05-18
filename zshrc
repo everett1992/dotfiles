@@ -107,6 +107,5 @@ zle -N zle-line-finish
 #└ $fg[magenta]%~$fg[cyan]${vcs_info_msg_0_}$reset_color$ '
 
 # Single Line prompt with git and vi mode
-PROMPT='$fg[magenta]%~$fg[cyan]${vcs_info_msg_0_}$reset_color$ '
-RPROMPT='${vim_mode}'
+PROMPT='${vim_mode} $fg[magenta]%~$fg[cyan]${vcs_info_msg_0_}$reset_color$ '
 
