@@ -89,11 +89,11 @@ precmd() { vcs_info }
 
 # Indicate what vi mode is active
 vim_ins_mode="%{$fg[cyan]%}[INS]%{$reset_color%}"
-vim_cmd_mode="%{$fg[blue]%}[CMD]%{$reset_color%}"
+vim_nml_mode="%{$fg[blue]%}[NML]%{$reset_color%}"
 vim_mode=$vim_ins_mode
 
 function zle-keymap-select {
-  vim_mode="${${KEYMAP/vicmd/${vim_cmd_mode}}/(main|viins)/${vim_ins_mode}}"
+  vim_mode="${${KEYMAP/vicmd/${vim_nml_mode}}/(main|viins)/${vim_ins_mode}}"
   zle reset-prompt
 }
 zle -N zle-keymap-select
@@ -109,4 +109,3 @@ zle -N zle-line-finish
 
 # Single Line prompt with git and vi mode
 PROMPT='${vim_mode} $fg[magenta]%~$fg[cyan]${vcs_info_msg_0_}$reset_color$ '
-
