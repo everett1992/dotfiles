@@ -87,6 +87,11 @@ zstyle ':vcs_info:*' enable git
 zstyle ':vcs_info:git*' formats "(±%b)"
 precmd() { vcs_info }
 
+# Display hostname if logged in remotely
+if [ -n "$SSH_CLIENT" ]; then
+	hostname="%M "
+fi
+
 # Indicate what vi mode is active
 vim_ins_mode="%{$fg[cyan]%}[INS]%{$reset_color%}"
 vim_cmd_mode="%{$fg[blue]%}[CMD]%{$reset_color%}"
@@ -108,5 +113,5 @@ zle -N zle-line-finish
 #└ $fg[magenta]%~$fg[cyan]${vcs_info_msg_0_}$reset_color$ '
 
 # Single Line prompt with git and vi mode
-PROMPT='${vim_mode} $fg[magenta]%~$fg[cyan]${vcs_info_msg_0_}$reset_color$ '
+PROMPT='${vim_mode} $fg[blue]$hostname$fg[magenta]%~$fg[cyan]${vcs_info_msg_0_} $reset_color%# '
 
