@@ -1,3 +1,8 @@
+"------------------------------------------------------------------"
+" File: .vimrc                           vim runtime configuration "
+" Author: Caleb Everett                                            "
+"------------------------------------------------------------------"
+
 set nocompatible " disable vi compatibility
 
 " ------------------------------
@@ -25,15 +30,19 @@ filetype off
   Bundle 'scrooloose/syntastic'
   " Ctags improvement
   Bundle 'majutsushi/tagbar'
-  " Statusline improvmet
+  " Status line improvement
   Bundle 'Lokaltog/powerline'
+
+  " Collaborative editing
+  " install `twisted` first
+  Bundle 'FredKSchott/CoVim'
 
   " Syntax plugins
   Bundle 'kchmck/vim-coffee-script'
   Bundle 'plasticboy/vim-markdown'
   Bundle 'groenewege/vim-less'
 
-  " Colorschemes
+  " Color schemes
   Bundle 'tomasr/molokai'
 
 
@@ -45,7 +54,7 @@ filetype plugin indent on
 " -----------------------------
 set t_Co=256 " Enable 256 colors in vim
 
-colorscheme molokai " Use the molokai colorscheme
+colorscheme molokai " Use the molokai color scheme
 let g:rehash256 = 1 " Use Molokai's new version
 syntax on       " Turn on syntax highlighting
 
@@ -53,7 +62,7 @@ syntax on       " Turn on syntax highlighting
 hi TabLine term=none cterm=none ctermfg=15 ctermbg=242 gui=underline guibg=DarkGrey
 
 set laststatus=2     " Always display the status bar
-set fillchars=vert:│ " Use a single bar to seperate vertical splits
+set fillchars=vert:│ " Use a single bar to separate vertical splits
 
 " -----------------------------
 " Text Options
@@ -64,12 +73,12 @@ set sidescrolloff=3 " Keep 3 lines at the right of the screen
 
 set ruler       " Display line and column in the status bar
 set number      " Turn on line numbers
-set nowrap      " Turn off line wraping
+set nowrap      " Turn off line wrapping
 
 " -----------------------------
 " Editing Options
 " -----------------------------
-set backspace=indent,eol,start " Backspace over these charecters
+set backspace=indent,eol,start " Backspace over these characters
 
 
 " -----------------------------
@@ -138,14 +147,14 @@ set shiftwidth=2
 set mouse=n " Turn on mouse support in normal mode
 
 " -------------------------------------
-"  Convenience  Keybindings
+"  Convenience  Key bindings
 " -------------------------------------
 " S-w does nothing, why not make it save?
 nnoremap W :w<CR>
 
 
 " -------------------------------------
-"  Plugin Keybinds 
+"  Plug-in Key binds 
 " -------------------------------------
 
 " toggle tagbar with \t or <F5>
@@ -157,7 +166,7 @@ nnoremap <leader>g :GundoToggle<CR>
 nnoremap <F6> :GundoToggle<CR>
 
 " -------------------------------------
-"  Navigation Keybindings
+"  Navigation Key bindings
 " -------------------------------------
 " navigate buffers with ctrl h, l
 nnoremap  
@@ -169,7 +178,7 @@ nnoremap  :tabp<CR>
 
 
 " -------------------------------------
-"  Disable Keybindings
+"  Disable Key bindings
 " -------------------------------------
 nnoremap <F1> <nop>
 nnoremap Q <nop>
@@ -184,7 +193,7 @@ cnoreabbrev tn tabnew
 " -------------------------------------
 "  Misc Options
 " -------------------------------------
-set autoread " If the file is edited outside fo vim, reload the file
+set autoread " If the file is edited outside for vim, reload the file
 
 
 " Place cursor at last location
