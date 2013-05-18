@@ -33,10 +33,6 @@ filetype off
   " Status line improvement
   Bundle 'Lokaltog/powerline'
 
-  " Collaborative editing
-  " install `twisted` first
-  Bundle 'FredKSchott/CoVim'
-
   " Syntax plugins
   Bundle 'kchmck/vim-coffee-script'
   Bundle 'plasticboy/vim-markdown'
