@@ -31,7 +31,7 @@ PS1="$root$hostname\[\033[00;32m\]\w\[\033[00m\]\[\e[01;33;49m\]\$(parse_git_bra
 alias ls='ls -h --color=auto'
 alias dir='dir --color=auto'
 alias vdir='vdir --color=auto'
-alias grep='grep -ri --color=auto'
+alias grep='grep -i --color=auto'
 alias fgrep='fgrep -i --color=auto'
 alias egrep='egrep -i --color=auto'
 
