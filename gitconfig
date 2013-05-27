@@ -22,6 +22,7 @@
   lg = log --decorate --graph --oneline --all --abbrev-commit
   unstage = reset HEAD --
   last = log -1 HEAD
+  st = status -sb
 
 # Colors
 [color]
