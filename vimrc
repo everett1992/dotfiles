@@ -20,20 +20,30 @@ filetype off
   Bundle 'gmarik/vundle'
 
   " My bundles
+
   " Fuzzy file navigation
   Bundle 'kien/ctrlp.vim'
+
   " Advanced undo feature navigation
   Bundle 'sjl/gundo.vim'
+
   " Matches closing parens,quotes,def/ends
   Bundle 'jwhitley/vim-matchit'
+
   " Rails project navigation
   Bundle 'tpope/vim-rails'
+
   " Tpope wizardry
   Bundle 'tpope/vim-dispatch'
+
   " Syntax checker
   Bundle 'scrooloose/syntastic'
+  " disable `no docs` error checking
+  let syntastic_gjslint_conf= '--nojsdoc'
+
   " Ctags improvement
   Bundle 'majutsushi/tagbar'
+
   " Status line improvement
   Bundle 'Lokaltog/powerline'
 
