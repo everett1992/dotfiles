@@ -1,0 +1,114 @@
+# Name of Server List configuration file
+config_serverlist=serverlist
+
+# Directory where to store downloaded files
+dir_library=/home/caleb/Dropbox/podcasts
+
+# Directory to store logs in
+dir_log=/home/caleb/.podget/logs
+
+# Set logging files
+log_fail=errors
+log_comp=done
+
+# Build playlists (comment out or set to a blank string to accept default format: New-).
+# playlist_namebase=New-
+
+# Date format for new playlist names
+date_format=+%m-%d-%Y
+
+# Wget base options
+# Commonly used options:
+#   -c            Continued interupted downloads
+#   -nH           No host directories (overrides .wgetrc defaults if necessary)
+#   --proxy=off   To disable proxy set by environmental variable http_proxy/
+#wget_baseopts=-c --proxy=off
+wget_baseopts=-c -nH
+
+# Most Recent
+# 0  == download all new items.
+# 1+ == download only the <count> most recent
+most_recent=0
+
+# Force
+# 0 == Only download new material.
+# 1 == Force download all items even those you've downloaded before. 
+force=0
+
+# Autocleanup. 
+# 0 == disabled
+# 1 == delete any old content
+cleanup=1
+
+# Number of days to keep files.   Cleanup will remove anything 
+# older than this.
+cleanup_days=7
+
+# Filename Cleanup: For FAT32 filename compatability (Feature Request #1378956)
+# Tested with the following characters: !@#$%^&*()_-+=||{[}]:;"'<,>.?/
+# filename_badchars=!#$^&=+{}[]:;"'<>?|\
+
+# Filename Replace Character: Character to use to replace any/all 
+# bad characters found.
+filename_replacechar=_
+
+# Filename Cleanup 2:  Some RSS Feeds (like the BBC World News Bulletin) 
+# download files with names like filename.mp3?1234567.  Enable this mode 
+# to fix the format to filename1234567.mp3.
+# 0 == disabled
+# 1 == enabled (default)
+filename_formatfix=1
+
+# Filename Cleanup 3: Filenames of feeds hosted by LBC Plus corrupted.
+# Fixed per MoonUnit's feature request (#1660764)
+#
+# Takes an URL that looks like:  http://lbc.audioagain.com/shared/audio/stream.mp3?guid=2007-03/14<...snip>
+#                            <snip...>a7766e8ad2748269fd347eaee2b2e3f8&amp;source=podcast.php&amp;channel_id=88
+#
+# Which normally creates a file named: a7766e8ad2748269fd347eaee2b2e3f8&amp;source=podcast.php&amp;channel_id=88
+#
+# This fix extracts the date of the episode and changes the filename to 2007-03-14.mp3
+# 0 == disabled
+# 1 == enabled (default)
+filename_formatfix2=1
+
+# Filename Cleanup 4: Filenames of feeds hosted by CatRadio.cat need fixing.
+# Fixed per Oriol Rius's Bug Report (#1744705)
+#
+# Downloaded filenames look like: 1189153569775.mp3?programa=El+mat%ED+de+Catalunya+R%E0dio&amp;podcast=y 
+# This fix removes everything after the .mp3
+#
+# 0 == disabled
+# 1 == enabled (default)
+filename_formatfix3=1
+
+# Filename Cleanup 5:  When the filename is part of the URL and the actual filename stays the same for
+# all items listed.
+#
+# Download URLs look like: http://feeds.theonion.com/~r/theonion/radionews/~5/213589629/podcast_redirect.mp3
+# Where 213589629 is the unique filename.
+#
+# 0 == disabled
+# 1 == enabled (default)
+filename_formatfix4=1
+
+# Filename Cleanup 6: Remove "?referrer=rss" from the end of filenames as included in some feeds like 
+# those from Vimcasts.org.  Setup to work for MP3, M4V, OGG and OGV files.
+#
+# Feed URLs: http://vimcasts.org/feeds/ogg
+#            http://vimcasts.org/feeds/quicktime
+#
+# In the feed, enclosure URLs look like: http://media.vimcasts.org/videos/1/show_invisibles.ogv?referrer=rss
+#
+# 0 == disabled
+# 1 == enabled (default)
+filename_formatfix5=1
+
+# Stop downloading if available space on the partition drops below value (in KB)
+# default:  614400 (600MB)
+min_space=614400
+
+# ASX Playlists for Windows Media Player
+# 0 == do not create
+# 1 == create
+asx_playlist=0
