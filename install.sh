@@ -7,7 +7,7 @@
 ########## Variables
 
 dir=~/dotfiles                    # dotfiles directory
-olddir=~/dotfiles_old             # old dotfiles backup directory
+olddir=~/.dotfiles_old             # old dotfiles backup directory
 files=" fonts Xdefaults bashrc gitconfig irbrc vim vimrc tmux.conf zshenv zshrc "    # list of files/folders to symlink in homedir
 config_files=" powerline luakit"
 
