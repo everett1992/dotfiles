@@ -5,7 +5,7 @@ config_serverlist=serverlist
 dir_library=/home/caleb/Dropbox/podcasts
 
 # Directory to store logs in
-dir_log=/home/caleb/.podget/logs
+dir_log=/home/caleb/Dropbox/podcasts/logs
 
 # Set logging files
 log_fail=errors
