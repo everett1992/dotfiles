@@ -3,3 +3,6 @@
 
 # Load RVM into a shell session *as a function*
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" 
+
+PATH="$PATH:/home/caleb/.gem/ruby/2.0.0/bin"
+export GEM_HOME=~/.gem/ruby/2.0.0
