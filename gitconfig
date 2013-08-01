@@ -1,34 +1,32 @@
 # User Info
-[github]
-	user = everett1992
 [user]
-	name =  Caleb Everett
-	email = everett.caleb@gmail.com
+  name = Caleb Everett
+  email = calebe@amazon.com
 
 # Settings
 [core]
-	autocrlf = input
-	safecrlf = true
-[push]
-	default = matching
+  autocrlf = input
+  safecrlf = true
+  excludesfile = ~/.gitignore
+  pager = cat
 [merge]
-	tool = vimdiff
-
+  tool = vimdiff
 
 # Configs and Alias
-[merge]
-	tool = vimdiff
 [alias]
-  lg = log --decorate --graph --oneline --all --abbrev-commit
-  unstage = reset HEAD --
-  last = log -1 HEAD
+  lg = log --decorate --graph --all --oneline --color=always
+  lgs = log --decorate --graph --all --oneline --color=always -5
+  sh = show --name-status
+  unstage = reset HEAD
+  last = log -1 --name-status
+  st  = status -sb
 
 # Colors
 [color]
-  branch = auto
-  diff =   auto
-  status = auto
-	ui = 1
+  branch = always
+  diff =   always
+  status = always
+	ui = auto
 [color "branch"]
   current = yellow reverse
   local = yellow
@@ -42,3 +40,14 @@
   added = yellow
   changed = green
   untracked = cyan
+
+# Amazon Settings
+[amazon]
+  append-cr-url = true
+[alias]
+  backup = push origin +refs/heads/*:refs/backup/calebe/*
+	dag = log --graph --format='format:%C(yellow)%h%C(reset) %C(blue)\"%cn\" <%ce>%C(reset) %C(magenta)%cr%C(reset)%C(auto)%d%C(reset)%n%s' --date-order
+[rerere]
+	enabled = true
+[push]
+	default = simple

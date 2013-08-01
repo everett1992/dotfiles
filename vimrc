@@ -2,60 +2,88 @@
 " File: .vimrc                           vim runtime configuration "
 " Author: Caleb Everett                                            "
 "                                                                  "
-" Dependancies:                                                    "
+" Dependencies:                                                    "
 "   Vundle: git clone https://github.com/gmarik/vundle.git         "
 "             ~/.vim/bundle/vundle                                 "
 "------------------------------------------------------------------"
 
 set nocompatible " disable vi compatibility
 
+
 " ------------------------------
 " Vundle
 " ------------------------------
 
-filetype off
-  set rtp+=~/.vim/bundle/vundle
-  call vundle#rc()
-  " vundle vundle's vundle
-  Bundle 'gmarik/vundle'
+ filetype off
+   set rtp+=~/.vim/bundle/vundle
+   call vundle#rc()
+   " vundle vundle's vundle
+   Bundle 'gmarik/vundle'
 
-  " My bundles
-  " Fuzzy file navigation
-  Bundle 'kien/ctrlp.vim'
-  " Advanced undo feature navigation
-  Bundle 'sjl/gundo.vim'
-  " Matches closing parens,quotes,def/ends
-  Bundle 'jwhitley/vim-matchit'
-  " Rails project navigation
-  Bundle 'tpope/vim-rails'
-  " Tpope wizardry
-  Bundle 'tpope/vim-dispatch'
-  " Syntax checker
-  Bundle 'scrooloose/syntastic'
-  " Ctags improvement
-  Bundle 'majutsushi/tagbar'
-  " Status line improvement
-  Bundle 'Lokaltog/powerline'
+   " My bundles
 
-  " Syntax plugins
-  Bundle 'kchmck/vim-coffee-script'
-  Bundle 'plasticboy/vim-markdown'
-  Bundle 'groenewege/vim-less'
+   " Git plugin
+   Bundle 'tpope/vim-fugitive'
 
-  " Color schemes
-  Bundle 'tomasr/molokai'
+   " Fuzzy file navigation
+   Bundle 'kien/ctrlp.vim'
+
+   " Advanced undo feature navigation
+   Bundle 'sjl/gundo.vim'
+
+   " Matches closing parens,quotes,def/ends
+   Bundle 'jwhitley/vim-matchit'
+
+   " Rails project navigation
+   Bundle 'tpope/vim-rails'
+
+   " Tpope wizardry
+   "Bundle 'tpope/vim-dispatch'
+
+   " Syntax checker
+   Bundle 'scrooloose/syntastic'
+
+   " Vim Ctags integration
+   Bundle 'majutsushi/tagbar'
+
+   " Souce .local.vimrc files
+   Bundle "localrc.vim"
+
+   " Status line improvement
+   Bundle 'Lokaltog/powerline'
+
+   " Syntax plugins
+   Bundle 'kchmck/vim-coffee-script'
+   Bundle 'plasticboy/vim-markdown'
+   Bundle 'groenewege/vim-less'
+   Bundle 'vim-scripts/groovy.vim'
+   Bundle 'vim-scripts/groovy.vim--Ruley'
+
+   " Color schemes
+   Bundle 'tomasr/molokai'
 
 
-  set rtp+=~/.vim/bundle/powerline/powerline/bindings/vim
-filetype plugin indent on
+   " Python plugins cause apollo vim to crash, disable powerline for now
+   " set rtp+=~/.vim/bundle/powerline/powerline/bindings/vim
+ filetype plugin indent on
+
+ let g:localrc_filename='.local.vimrc'
+
+" -----------------------------
+" Diff Options
+" -----------------------------
+set diffopt+=iwhite
 
 " -----------------------------
 " Style Options
 " -----------------------------
 set t_Co=256 " Enable 256 colors in vim
 
-colorscheme molokai " Use the molokai color scheme
+"let g:solarized_bold=0 " Disable bold
+colorscheme solarized
+"colorscheme molokai " Use the molokai color scheme
 let g:rehash256 = 1 " Use Molokai's new version
+set bg=light
 syntax on       " Turn on syntax highlighting
 
 " Simplify tag style by removing underlines
@@ -63,6 +91,9 @@ hi TabLine term=none cterm=none ctermfg=15 ctermbg=242 gui=underline guibg=DarkG
 
 set laststatus=2     " Always display the status bar
 set fillchars=vert:│ " Use a single bar to separate vertical splits
+
+set list
+set listchars=tab:▸\ ,trail:»
 
 " -----------------------------
 " Text Options
@@ -80,6 +111,12 @@ set nowrap      " Turn off line wrapping
 " -----------------------------
 set backspace=indent,eol,start " Backspace over these characters
 
+" -----------------------------
+" Plugin Options
+" -----------------------------
+" Ctrl-p
+let g:ctrlp_by_filename = 1
+let g:ctrlp_switch_buffer = "E"
 
 " -----------------------------
 " Terminal Options
@@ -141,6 +178,8 @@ set tabstop=2     " Tabs are two spaces wide
 set softtabstop=2 " Use two space for tabs
 set shiftwidth=2
 
+set smartindent
+
 " -------------------------------------
 "  Mouse Options
 " -------------------------------------
@@ -154,28 +193,28 @@ nnoremap W :w<CR>
 
 
 " -------------------------------------
-"  Plug-in Key binds 
+"  Plug-in Key binds
 " -------------------------------------
 
 " toggle tagbar with \t or <F5>
 nnoremap <leader>l :TagbarToggle<CR>
 nnoremap <F5> :TagbarToggle<CR>
 
-" toggle gundo with \g or <F6>
+" toggle undo with \g or <F6>
 nnoremap <leader>g :GundoToggle<CR>
 nnoremap <F6> :GundoToggle<CR>
 
 " -------------------------------------
 "  Navigation Key bindings
 " -------------------------------------
-" navigate buffers with ctrl h, l
-nnoremap  
-nnoremap  
 
 " navigate tabs with ctrl j, k
 nnoremap <C-j> :tabn<CR>
 nnoremap  :tabp<CR>
 
+" opening new tabs
+cnoreabbrev td tab drop
+cnoreabbrev tn tabnew
 
 " -------------------------------------
 "  Disable Key bindings
@@ -184,9 +223,6 @@ nnoremap <F1> <nop>
 nnoremap Q <nop>
 nnoremap K <nop>
 
-" opening new tabs
-cnoreabbrev td tab drop
-cnoreabbrev tn tabnew
 
 
 
@@ -198,8 +234,48 @@ set autoread " If the file is edited outside for vim, reload the file
 
 " Place cursor at last location
 if has("autocmd")
-	filetype plugin indent on
-	au BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g`\"" | endif
+  filetype plugin indent on
+  au BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g`\"" | endif
 else
-	set autoindent
+  set autoindent
 endif
+
+" -------------------------------------
+"  Fold Options
+" -------------------------------------
+
+" Set a nicer foldtext function
+set foldtext=MyFoldText()
+function! MyFoldText()
+  let line = getline(v:foldstart)
+  if match( line, '^[ \t]*\(\/\*\|\/\/\)[*/\\]*[ \t]*$' ) == 0
+    let initial = substitute( line, '^\([ \t]\)*\(\/\*\|\/\/\)\(.*\)', '\1\2', '' )
+    let linenum = v:foldstart + 1
+    while linenum < v:foldend
+      let line = getline( linenum )
+      let comment_content = substitute( line, '^\([ \t\/\*]*\)\(.*\)$', '\2', 'g' )
+      if comment_content != ''
+        break
+      endif
+      let linenum = linenum + 1
+    endwhile
+    let sub = initial . ' ' . comment_content
+  else
+    let sub = line
+    let startbrace = substitute( line, '^.*{[ \t]*$', '{', 'g')
+    if startbrace == '{'
+      let line = getline(v:foldend)
+      let endbrace = substitute( line, '^[ \t]*}\(.*\)$', '}', 'g')
+      if endbrace == '}'
+        let sub = sub.substitute( line, '^[ \t]*}\(.*\)$', '...}\1', 'g')
+      endif
+    endif
+  endif
+  let n = v:foldend - v:foldstart + 1
+  let info = " " . n . " lines"
+  let sub = sub . "                                                                                                                  "
+  let num_w = getwinvar( 0, '&number' ) * getwinvar( 0, '&numberwidth' )
+  let fold_w = getwinvar( 0, '&foldcolumn' )
+  let sub = strpart( sub, 0, winwidth(0) - strlen( info ) - num_w - fold_w - 1 )
+  return sub . info
+endfunction

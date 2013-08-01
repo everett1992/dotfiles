@@ -4,6 +4,21 @@
 #------------------------------------------------------------------#
 
 #------------------------------------------------------------------
+# Amazon specific configuration
+#------------------------------------------------------------------
+
+# Add apollo environmnets to PATH, and call
+# other apollo emprovements
+source /apollo/env/envImprovement/var/zshrc
+export PATH=/usr/local/bin:$PATH
+export PATH=$PATH:/apollo/env/wmii/bin
+export PATH=$PATH:/apollo/env/eclipse-4.2/bin
+
+# Always use --gitmode when creating brazil workspaces
+export BRAZIL_WORKSPACE_GITMODE=1
+#TERM=xterm-256color
+
+#------------------------------------------------------------------
 # History
 #------------------------------------------------------------------
 HISTFILE=~/.histfile
@@ -47,17 +62,19 @@ bindkey "\e[7~" beginning-of-line
 alias ls='ls -h --color=auto'
 alias dir='dir --color=auto'
 alias vdir='vdir --color=auto'
-alias grep='grep -i --color=auto'
-alias fgrep='fgrep -i --color=auto'
-alias egrep='egrep -i --color=auto'
+alias grep='grep --color=auto'
+alias fgrep='fgrep --color=auto'
+alias egrep='egrep --color=auto'
 
 alias df='df -h'
 
-alias nc='ncmpcpp'
+# Always follow symbolic links
+alias find='find -L'
 
-alias reboot="systemctl reboot"
-alias shutdown="systemctl poweroff"
-alias suspend="systemctl suspend"
+alias shutdown='sudo shutdown -h now'
+
+# Amazon Aliass
+alias tmux='TERM=xterm-256color tmux'
 
 #------------------------------------------------------------------
 # Autocomplete configuration
@@ -85,11 +102,13 @@ colors
 autoload -Uz vcs_info
 zstyle ':vcs_info:*' enable git
 zstyle ':vcs_info:git*' formats "(±%b)"
+
+# disabled untill git is configured on rhel box
 precmd() { vcs_info }
 
 # Display hostname if logged in remotely
 if [ -n "$SSH_CLIENT" ]; then
-	hostname="%M "
+  hostname="%M "
 fi
 
 # Indicate what vi mode is active
@@ -111,6 +130,10 @@ zle -N zle-line-finish
 # Multiline prompt with git and vi mode
 #PROMPT='┌─${vim_mode} $fg[green]%n@%M$reset_color
 #└ $fg[magenta]%~$fg[cyan]${vcs_info_msg_0_}$reset_color$ '
+PROMPT='┌─${vim_mode} %{$fg[blue]%}$hostname%{$fg[magenta]%}%~%{$fg[cyan]%}${vcs_info_msg_0_} 
+%{$reset_color%}└ %# '
 
 # Single Line prompt with git and vi mode
-PROMPT='${vim_mode} %{$fg[blue]%}$hostname%{$fg[magenta]%}%~%{$fg[cyan]%}${vcs_info_msg_0_} %{$reset_color%}%# '
+#PROMPT='${vim_mode} %{$fg[blue]%}$hostname%{$fg[magenta]%}%~%{$fg[cyan]%}${vcs_info_msg_0_} %{$reset_color%}%# '
+
+RPROMPT=''
