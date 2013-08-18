@@ -24,6 +24,7 @@ date_format=+%m-%d-%Y
 #   --proxy=off   To disable proxy set by environmental variable http_proxy/
 #wget_baseopts=-c --proxy=off
 wget_baseopts=-c -nH
+curl_baseopts=-C -
 
 # Most Recent
 # 0  == download all new items.
@@ -38,11 +39,11 @@ force=0
 # Autocleanup. 
 # 0 == disabled
 # 1 == delete any old content
-cleanup=1
+cleanup=0
 
 # Number of days to keep files.   Cleanup will remove anything 
 # older than this.
-cleanup_days=7
+#cleanup_days=7
 
 # Filename Cleanup: For FAT32 filename compatability (Feature Request #1378956)
 # Tested with the following characters: !@#$%^&*()_-+=||{[}]:;"'<,>.?/

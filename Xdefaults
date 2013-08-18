@@ -15,7 +15,7 @@ urxvt.internalBorder:   5
 
 ! Clickable urls
 urxvt.perl-ext-common: default,matcher,vtwheel
-urxvt.urlLauncher:     /usr/bin/google-chrome
+urxvt.urlLauncher:     /usr/bin/chrome
 urxvt.matcher.button:  1
 
 
@@ -25,7 +25,7 @@ urxvt.matcher.button:  1
 *background: #111111
 
 urxvt.tintColor:        white
-urxvt.shading:          20
+urxvt.shading:          5
 
 ! True transparency
 !urxvt*depth: 32

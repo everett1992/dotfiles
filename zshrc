@@ -70,9 +70,6 @@ compinit
 
 setopt BASH_AUTO_LIST
 
-# Extend Globing
-setopt autocd extendedglob
-
 #------------------------------------------------------------------
 # Prompt
 #------------------------------------------------------------------
