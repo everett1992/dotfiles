@@ -35,6 +35,7 @@ filetype off
 
   " Tpope wizardry
   Bundle 'tpope/vim-dispatch'
+  Bundle 'tpope/vim-unimpaired'
 
   " Syntax checker
   Bundle 'scrooloose/syntastic'
