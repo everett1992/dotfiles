@@ -18,7 +18,14 @@ urxvt.perl-ext-common: default,matcher,vtwheel
 urxvt.urlLauncher:     /usr/bin/chrome
 urxvt.matcher.button:  1
 
+! do not scroll with output
+URxvt*scrollTtyOutput: false
 
+! scroll in relation to buffer (with mouse scroll or Shift+Page Up)
+URxvt*scrollWithBuffer: true
+
+! scroll back to the bottom on keypress
+URxvt*scrollTtyKeypress: true
 
 ! False transparency
 *transparent:    true
