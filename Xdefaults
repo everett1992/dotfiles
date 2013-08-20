@@ -32,7 +32,7 @@ URxvt*scrollTtyKeypress: true
 *background: #111111
 
 urxvt.tintColor:        white
-urxvt.shading:          5
+urxvt.shading:          10
 
 ! True transparency
 !urxvt*depth: 32

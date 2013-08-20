@@ -6,4 +6,5 @@
 
 PATH="$PATH:/home/caleb/.gem/ruby/2.0.0/bin"
 PATH="$PATH:/home/caleb/.cabal/bin"
+PATH="/home/caleb/bin:$PATH"
 export GEM_HOME=~/.gem/ruby/2.0.0
