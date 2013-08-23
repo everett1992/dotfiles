@@ -28,11 +28,11 @@ URxvt*scrollWithBuffer: true
 URxvt*scrollTtyKeypress: true
 
 ! False transparency
-*transparent:    true
-*background: #111111
+!*transparent:    true
+!*background: #111111
 
-urxvt.tintColor:        white
-urxvt.shading:          10
+!urxvt.tintColor:        white
+!urxvt.shading:          10
 
 ! True transparency
 !urxvt*depth: 32
@@ -43,20 +43,46 @@ urxvt.pointerColor2:    #d9d9d9
 
 
 ! molokai scheme
-*foreground: #d9d9d9
+! 252 light light grey
+*foreground: #D0D0D0
+! 234 dark gray
+*background: #1c1c1c
+
+! blacks?
 *color0:     #2e3436
 *color8:     #555753
+
+! reds
 *color1:     #bf3f3f
 *color9:     #cd0000
-*color2:     #87ff00
-*color10:    #a6e22e
-*color3:     #aa5500
-*color11:    #fd971f
-*color4:     #13354a
-*color12:    #ae81ff
-*color5:     #960050
-*color13:    #f92672
+
+! greens
+! 154  bright green
+*color2:    #afff00
+! 154  bright green
+*color10:    #afff00
+
+! yellows
+! 222 Light tan
+*color3:     #ffff87
+! 208 Bright Orange
+*color11:    #ff8700
+
+! blues
+! 141 light purple
+*color4:     #AF87FF
+! 141 light purple
+*color12:    #AF87FF
+
+! magentas
+! 197 Pink
+*color5:    #ff005f
+! 125 plumb
+*color13:    #af005f
+
+! cyans
 *color6:     #06989a
 *color14:    #66d9ef
+
 *color7:     #e5e5e5
 *color15:    #e5e5e5
