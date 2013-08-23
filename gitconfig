@@ -26,9 +26,9 @@
 
 # Colors
 [color]
-  branch = auto
-  diff =   auto
-  status = auto
+  branch = always
+  diff =   always
+  status = always
 	ui = 1
 [color "branch"]
   current = yellow reverse
