@@ -60,6 +60,14 @@ filetype off
   set rtp+=~/.vim/bundle/powerline/powerline/bindings/vim
 filetype plugin indent on
 
+" Enable directory vim configs
+ let g:localrc_filename='.local.vimrc'
+
+" -----------------------------
+" Diff Options
+" -----------------------------
+set diffopt+=iwhite
+
 " -----------------------------
 " Style Options
 " -----------------------------
@@ -74,6 +82,9 @@ hi TabLine term=none cterm=none ctermfg=15 ctermbg=242 gui=underline guibg=DarkG
 
 set laststatus=2     " Always display the status bar
 set fillchars=vert:│ " Use a single bar to separate vertical splits
+
+set list
+set listchars=tab:▸\ ,trail:»
 
 " -----------------------------
 " Text Options
@@ -179,14 +190,14 @@ nnoremap <F6> :GundoToggle<CR>
 " -------------------------------------
 "  Navigation Key bindings
 " -------------------------------------
-" navigate buffers with ctrl h, l
-nnoremap  
-nnoremap  
 
 " navigate tabs with ctrl j, k
 nnoremap <C-j> :tabn<CR>
 nnoremap  :tabp<CR>
 
+" opening new tabs
+cnoreabbrev td tab drop
+cnoreabbrev tn tabnew
 
 " -------------------------------------
 "  Disable Key bindings
@@ -194,12 +205,6 @@ nnoremap  :tabp<CR>
 nnoremap <F1> <nop>
 nnoremap Q <nop>
 nnoremap K <nop>
-
-" opening new tabs
-cnoreabbrev td tab drop
-cnoreabbrev tn tabnew
-
-
 
 " -------------------------------------
 "  Misc Options
@@ -214,3 +219,43 @@ if has("autocmd")
 else
 	set autoindent
 endif
+
+" -------------------------------------
+"  Fold Options
+" -------------------------------------
+
+" Set a nicer foldtext function
+set foldtext=MyFoldText()
+function! MyFoldText()
+  let line = getline(v:foldstart)
+  if match( line, '^[ \t]*\(\/\*\|\/\/\)[*/\\]*[ \t]*$' ) == 0
+    let initial = substitute( line, '^\([ \t]\)*\(\/\*\|\/\/\)\(.*\)', '\1\2', '' )
+    let linenum = v:foldstart + 1
+    while linenum < v:foldend
+      let line = getline( linenum )
+      let comment_content = substitute( line, '^\([ \t\/\*]*\)\(.*\)$', '\2', 'g' )
+      if comment_content != ''
+        break
+      endif
+      let linenum = linenum + 1
+    endwhile
+    let sub = initial . ' ' . comment_content
+  else
+    let sub = line
+    let startbrace = substitute( line, '^.*{[ \t]*$', '{', 'g')
+    if startbrace == '{'
+      let line = getline(v:foldend)
+      let endbrace = substitute( line, '^[ \t]*}\(.*\)$', '}', 'g')
+      if endbrace == '}'
+        let sub = sub.substitute( line, '^[ \t]*}\(.*\)$', '...}\1', 'g')
+      endif
+    endif
+  endif
+  let n = v:foldend - v:foldstart + 1
+  let info = " " . n . " lines"
+  let sub = sub . "                                                                                                                  "
+  let num_w = getwinvar( 0, '&number' ) * getwinvar( 0, '&numberwidth' )
+  let fold_w = getwinvar( 0, '&foldcolumn' )
+  let sub = strpart( sub, 0, winwidth(0) - strlen( info ) - num_w - fold_w - 1 )
+  return sub . info
+endfunction

@@ -20,15 +20,16 @@
 	tool = vimdiff
 [alias]
   lg = log --decorate --graph --oneline --all --abbrev-commit
+  lg = log --decorate --graph --oneline --all --abbrev-commit -5
+  sh = show --name-status
   unstage = reset HEAD --
-  last = log -1 HEAD
   st = status -sb
 
 # Colors
 [color]
-  branch = auto
-  diff =   auto
-  status = auto
+  branch = always
+  diff =   always
+  status = always
 	ui = 1
 [color "branch"]
   current = yellow reverse
@@ -43,3 +44,7 @@
   added = yellow
   changed = green
   untracked = cyan
+[rerere]
+  enabled=true
+[push]
+  default = simple
