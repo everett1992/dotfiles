@@ -1,0 +1,3 @@
+#!/bin/bash
+
+ruby /home/caleb/workspace/podcatcher/podget.rb
