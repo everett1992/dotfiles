@@ -1,4 +1,4 @@
-podget/session.*
+podcatcher/done
 vim/bundle/*
 !vim/bundle/vundle
 !vim/bundle/vundle/*
