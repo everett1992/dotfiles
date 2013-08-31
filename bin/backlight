@@ -1,0 +1,16 @@
+#!/bin/bash
+
+step=20
+
+function notify {
+  notify-send 'Brightness' -i dialog-information -h int:value:$1 -h string:title:backlight
+}
+
+if [[ "$1" = "inc" ]]; then
+  xbacklight -inc $step
+  notify $(xbacklight)
+fi
+if [[ "$1" = "dec" ]]; then
+  xbacklight -dec $step
+  notify $(xbacklight)
+fi
