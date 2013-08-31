@@ -1,0 +1,13 @@
+#!/bin/bash
+
+source ~/.colors
+
+
+color=$(eval "echo \$COLOR$1")
+if [ "$color" != "" ]; then
+  echo $color
+  exit 0;
+else
+  exit 1;
+fi
+
