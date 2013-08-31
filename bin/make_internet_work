@@ -1,0 +1,2 @@
+#!/bin/zsh
+while ! sudo netctl start ethernet; do; done

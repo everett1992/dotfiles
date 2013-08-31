@@ -1,0 +1,3 @@
+feed_file = ./serverlist
+done_file = ./done
+pod_dir = ~/Dropbox/podcasts
