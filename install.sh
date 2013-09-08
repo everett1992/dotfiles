@@ -8,33 +8,53 @@
 
 dir=~/dotfiles                    # dotfiles directory
 olddir=~/.dotfiles_old             # old dotfiles backup directory
-files=" dzen bin podcatcher fonts Xdefaults bashrc gitconfig irbrc vim vimrc tmux.conf zshenv zshrc "    # list of files/folders to symlink in homedir
-config_files=" powerline luakit"
 
+declare -A locations
+locations=(
+  ["home"]=~
+  ["config"]=~/.config
+)
+
+########## Functions
+
+function indent {
+  echo ":: $@"
+}
 
 ##########
 
 # create dotfiles_old in homedir
-echo "Creating $olddir for backup of any existing dotfiles in ~"
-mkdir -p $olddir
-echo "...done"
+if [ ! -e "$olddir" ]; then
+  echo "Creating $olddir for backup of any existing dotfiles in ~"
+  mkdir -p $olddir
+  echo "...done"
+fi
 
-# change to the dotfiles directory
-echo "Changing to the $dir directory"
 cd $dir
-echo "...done"
 
-# move any existing dotfiles in homedir to dotfiles_old directory, then create symlinks 
-for file in $files; do
-    echo "Moving any existing dotfiles from ~ to $olddir"
-    mv ~/.$file ~/dotfiles_old/
-    echo "Creating symlink to $file in home directory."
-    ln -s $dir/$file ~/.$file
-done
 
-for file in $config_files; do
-    echo "Moving any existing dotfiles from ~/.config to $olddir"
-    mv ~/.config/$file ~/dotfiles_old/
-    echo "Creating symlink to $file in home directory."
-    ln -s $dir/$file ~/.config/$file
+for source in "${!locations[@]}"; do
+  dest=${locations["$source"]}
+  echo "Linking files in $source to $dest"
+  for file in `ls -A $source`; do
+    link="$dest/$file"
+    real="$dir/$source/$file"
+
+    # Back up existing files if they exist
+    if [[ -e $link ]] && [[ ! -h $link ]]; then
+      echo "Backing up $file"
+      mv $link $olddir/$source/$file
+    fi
+
+    if [[ ! -e $link ]]; then
+      echo "Creating $file"
+    elif[[ -h $link ]]
+      echo "Updating $file"
+    fi
+
+    if [[ "`readlink "$link"`" != "$real" ]]; then
+      indent "$link -> $real"
+      ln -sf $real $link
+    fi
+  done
 done
