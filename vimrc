@@ -55,6 +55,7 @@ filetype off
 
   " Color schemes
   Bundle 'tomasr/molokai'
+  Bundle 'john2x/flatui.vim'
 
 
   set rtp+=~/.vim/bundle/powerline/powerline/bindings/vim
