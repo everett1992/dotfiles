@@ -1,13 +1,13 @@
 #!/bin/bash
 ############################
 # .make.sh
-# This script creates symlinks from the home directory to any desired dotfiles in ~/dotfiles
+# This script creates symlinks from the home directory to any desired configs in ~/configs
 ############################
 
 ########## Variables
 
-dir=~/dotfiles                    # dotfiles directory
-olddir=~/.dotfiles_old             # old dotfiles backup directory
+dir=~/configs                    # configs directory
+olddir=~/.configs_old             # old configs backup directory
 
 declare -A locations
 locations=(
@@ -23,9 +23,9 @@ function indent {
 
 ##########
 
-# create dotfiles_old in homedir
+# create configs_old in homedir
 if [ ! -e "$olddir" ]; then
-  echo "Creating $olddir for backup of any existing dotfiles in ~"
+  echo "Creating $olddir for backup of any existing configs in ~"
   mkdir -p $olddir
   echo "...done"
 fi
