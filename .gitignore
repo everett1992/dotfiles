@@ -1,4 +1,4 @@
-podcatcher/done
-vim/bundle/*
-!vim/bundle/vundle
-!vim/bundle/vundle/*
+*.swp
+*.swo
+home/.vim/bundle
+!home/.vim/bundle/vundle
