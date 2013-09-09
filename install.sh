@@ -46,13 +46,13 @@ for source in "${!locations[@]}"; do
       mv $link $olddir/$source/$file
     fi
 
-    if [[ ! -e $link ]]; then
-      echo "Creating $file"
-    elif[[ -h $link ]]
-      echo "Updating $file"
-    fi
 
     if [[ "`readlink "$link"`" != "$real" ]]; then
+      if [[ ! -e "$link" ]]; then
+        echo "Creating $file"
+      elif [[ -h "$link" ]]; then
+        echo "Updating $file"
+      fi
       indent "$link -> $real"
       ln -sf $real $link
     fi
