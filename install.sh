@@ -34,6 +34,9 @@ cd $dir
 
 
 for source in "${!locations[@]}"; do
+
+  mkdir -p "$olddir/$source/"
+
   dest=${locations["$source"]}
   echo "Linking files in $source to $dest"
   for file in `ls -A $source`; do
@@ -43,7 +46,7 @@ for source in "${!locations[@]}"; do
     # Back up existing files if they exist
     if [[ -e $link ]] && [[ ! -h $link ]]; then
       echo "Backing up $file"
-      mv $link $olddir/$source/$file
+      mv  $link $olddir/$source/$file/
     fi
 
 
