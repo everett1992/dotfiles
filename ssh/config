@@ -1,0 +1,20 @@
+Host beast
+  User everetc1
+
+Host *.tcnj.edu
+  User everetc1
+
+host git.apiary
+  HostName git.theapiary.co
+  User ceverett
+  IdentityFile ~/.ssh/apiary-web.pem
+
+host amazon 
+  HostName 54.235.87.183
+  User ubuntu
+  IdentityFile ~/.ssh/amazon_ec2_project_2.pem
+  
+host amazon2
+  HostName 54.225.104.65
+  User ceverett
+  IdentityFile ~/.ssh/amazon_ec2_project_2.pem

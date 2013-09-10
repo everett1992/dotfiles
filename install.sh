@@ -13,6 +13,7 @@ declare -A locations
 locations=(
   ["home"]=~
   ["config"]=~/.config
+  ["ssh"]=~/.ssh
 )
 
 ########## Functions
