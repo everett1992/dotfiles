@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/bash -e
 ############################
 # .make.sh
 # This script creates symlinks from the home directory to any desired configs in ~/configs
@@ -6,15 +6,10 @@
 
 ########## Variables
 
-dir=~/configs                    # configs directory
-olddir=~/.configs_old             # old configs backup directory
+dir=~/configs                 # Change this to the location of this script
+olddir=${dir}_old             # old configs backup directory
 
-declare -A locations
-locations=(
-  ["home"]=~
-  ["config"]=~/.config
-  ["ssh"]=~/.ssh
-)
+locations="$dir/locations"
 
 ########## Functions
 
@@ -33,29 +28,32 @@ fi
 
 cd $dir
 
+cat $locations | while read line; do
+  # Must be a way to simplify these three lines
+  set -- $line
+  source=$1
+  dest=$(eval echo $2)
 
-for source in "${!locations[@]}"; do
-  dest=${locations["$source"]}
-  echo "Linking files in $source to $dest"
-  for file in `ls -A $source`; do
-    link="$dest/$file"
-    real="$dir/$source/$file"
+  echo "Linking files in '$source' to '$dest'"
+   for file in `ls -A $source`; do
+     link="$dest/$file"
+     real="$dir/$source/$file"
 
-    # Back up existing files if they exist
-    if [[ -e $link ]] && [[ ! -h $link ]]; then
-      echo "Backing up $file"
-      mv $link $olddir/$source/$file
-    fi
+     # Back up existing files if they exist
+     if [[ -e $link ]] && [[ ! -h $link ]]; then
+       echo "Backing up $file"
+       mv $link $olddir/$source/$file
+     fi
 
 
-    if [[ "`readlink "$link"`" != "$real" ]]; then
-      if [[ ! -e "$link" ]]; then
-        echo "Creating $file"
-      elif [[ -h "$link" ]]; then
-        echo "Updating $file"
-      fi
-      indent "$link -> $real"
-      ln -sf $real $link
-    fi
-  done
+     if [[ "`readlink "$link"`" != "$real" ]]; then
+       if [[ ! -e "$link" ]]; then
+         echo "Creating $file"
+       elif [[ -h "$link" ]]; then
+         echo "Updating $file"
+       fi
+       indent "$link -> $real"
+       ln -sf $real $link
+     fi
+   done
 done
