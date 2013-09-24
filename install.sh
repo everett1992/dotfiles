@@ -6,7 +6,7 @@
 
 ########## Variables
 
-dir=~/configs                 # Change this to the location of this script
+dir=$(readlink -f `dirname $0`)             # Change this to the location of this script
 olddir=${dir}_old             # old configs backup directory
 
 locations="$dir/locations"
@@ -26,6 +26,7 @@ if [ ! -e "$olddir" ]; then
   echo "...done"
 fi
 
+echo $dir
 cd $dir
 
 cat $locations | while read line; do
