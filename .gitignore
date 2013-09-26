@@ -3,3 +3,4 @@
 home/.vim/bundle
 !home/.vim/bundle/vundle
 home/.ncmpcpp/error.log
+home/.ncmpcpp/artists/

@@ -41,6 +41,7 @@ filetype off
   Bundle 'scrooloose/syntastic'
   " disable `no docs` error checking
   let syntastic_gjslint_conf= '--nojsdoc'
+  let g:syntastic_java_javac_config_file_enabled= 1
 
   " Ctags improvement
   Bundle 'majutsushi/tagbar'
@@ -168,13 +169,6 @@ set shiftwidth=2
 "  Mouse Options
 " -------------------------------------
 set mouse=n " Turn on mouse support in normal mode
-
-" -------------------------------------
-"  Convenience  Key bindings
-" -------------------------------------
-" S-w does nothing, why not make it save?
-nnoremap W :w<CR>
-
 
 " -------------------------------------
 "  Plug-in Key binds 
