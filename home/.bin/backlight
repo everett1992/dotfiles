@@ -3,7 +3,8 @@
 step=20
 
 function notify {
-  notify-send 'Brightness' -i dialog-information -h int:value:$1 -h string:title:backlight
+  echo $1
+  #notify-send 'Brightness' -i dialog-information -h int:value:$1 -h string:title:backlight
 }
 
 if [[ "$1" = "inc" ]]; then
