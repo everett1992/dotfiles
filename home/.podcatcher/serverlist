@@ -5,26 +5,22 @@ http://www.npr.org/rss/podcast.php?id=510299                     radio      Ask 
 http://feeds.themoth.org/themothpodcast                          radio      The Moth
 http://feeds.thisamericanlife.org/talpodcast                     radio      This American Life
 http://www.npr.org/rss/podcast.php?id=510298                     radio      Ted Radio Hour
-http://www.americanradioworks.org/podcast.xml                    radio      RadioWorks
 http://www.marketplace.org/node/all/podcast.xml                  radio      Marketplace
-#http://www.npr.org/rss/podcast.php?id=510294                     radio      Snap Judgement
 http://americanpublicmedia.publicradio.org/podcasts/xml/dinner-party/podcast.xml radio Dinner Party Download
-#http://www.publicbroadcasting.net/wyk/.jukebox?action=viewPodcast&podcastId=5243 radio Whatda Know
+http://feeds.feedburner.com/tciafpodcast                         radio      Re:sound
+http://www.abc.net.au/radionational/feed/2883726/podcast.xml     radio      Future Tense
 http://www.npr.org/rss/podcast.php?id=510282                     radio      Pop Culture Happy Hour
-http://www.npr.org/rss/podcast.php?id=510289                     radio      Planet Money
-http://www.npr.org/rss/rss.php?id=7                              radio      Weekend Edition
+http://www.npr.org/rss/podcast.php?id=510019                     radio      All Songs Considered
+http://americanpublicmedia.publicradio.org/podcasts/xml/splendid_table/kitchen_questions.xml radio The Splended Table
 
-#http://girlonguy.libsyn.com/rss                                  net        Girl On Guy
+http://www.thesoundsinmyhead.com/rss.xml                         net      The Sound in My Head
+http://feeds.99percentinvisible.org/99percentinvisible           net        99 Percent Invisible
 http://feeds.feedburner.com/WelcomeToNightVale                   net        Welcome to Night Vale
-#http://www.howstuffworks.com/podcasts/stuff-you-should-know.rss  net        Stuff You Should Know
-http://feeds.feedburner.com/judgejohnhodgman                     net        Judge John Hodgman
+http://feeds.prx.org/toe                                         net        Theory of Everything
+http://podcast.rickygervais.com/podcast.xml                      net        The Ricky Gervais Podcast
 
 
 http://rubyrogues.com/feed/                                      dev        Ruby Rouges
-http://feeds.feedburner.com/JavascriptJabber                     dev        Javascript Jabber
-http://www.hackerpublicradio.org/hpr_ogg_rss.php                 dev        Hacker Public Radio
-#http://feeds.feedburner.com/JupiterBroadcasting                  dev        Linux Action Show
 http://feeds.gitminutes.com/gitminutes-podcast                   dev        Gitminutes
-http://atp.fm/episodes?format=rss                                dev        Accidental Tech
 
 http://www.startalkradio.net/feed/shows/                         astronomy  Star Talk Radio
