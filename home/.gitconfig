@@ -20,7 +20,7 @@
 	tool = vimdiff
 [alias]
   lg = log --decorate --graph --oneline --all --abbrev-commit
-  lg = log --decorate --graph --oneline --all --abbrev-commit -5
+  lgs = log --decorate --graph --oneline --all --abbrev-commit -5
   sh = show --name-status
   unstage = reset HEAD --
   st = status -sb
