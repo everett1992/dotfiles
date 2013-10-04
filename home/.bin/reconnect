@@ -1,0 +1,15 @@
+#!/bin/bash
+
+echo "Reconnecting to wireless"
+sudo systemctl restart netctl-auto@wlp3s0.service
+
+status=$?
+
+if [ $status -ne 0 ]; then
+  echo "Failed"
+  exit $status
+else
+  echo "Done"
+fi
+
+exit 0
