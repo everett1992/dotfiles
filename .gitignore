@@ -4,3 +4,8 @@ home/.vim/bundle
 !home/.vim/bundle/vundle
 home/.ncmpcpp/error.log
 home/.ncmpcpp/artists/
+
+config/dwb/default/cookies
+config/dwb/default/history
+config/dwb/default/navigate.history
+config/dwb/default/session
