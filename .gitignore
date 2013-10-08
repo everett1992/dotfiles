@@ -1,3 +1,4 @@
+# Files to ignore
 *.swp
 *.swo
 home/.vim/bundle
@@ -5,6 +6,8 @@ home/.vim/bundle
 home/.ncmpcpp/error.log
 home/.ncmpcpp/artists/
 
+# Ignore dwb state file
+config/dwb/keys.*
 config/dwb/default/cookies
 config/dwb/default/history
 config/dwb/default/navigate.history
