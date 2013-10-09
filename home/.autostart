@@ -1,6 +1,6 @@
 #!/bin/bash
 
-system=~/.autostart.system.sh
+system=~/.system.autostart
 
 echo "Starting programs"
 #:: start programs
@@ -11,6 +11,7 @@ dropboxd &    # file sync
 alsactl restore & # restore audio settings
 
 #:: Bind keys
+xmodmap .Xmodmap
 xbindkeys & # Media keys
 volumeicon & # Volume bindings
 
