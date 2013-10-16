@@ -20,11 +20,16 @@ function indent {
 ##########
 
 # create configs_old in homedir
-if [ ! -e "$olddir" ]; then
-  echo "Creating $olddir for backup of any existing configs in ~"
-  mkdir -p $olddir
-  echo "...done"
-fi
+cat $locations | while read line; do
+  set -- $line
+  backup=$olddir/$1
+
+  if [ ! -e "$backup" ]; then
+    echo "Creating $backup for backup of any existing configs in ~"
+    mkdir -p $backup
+  fi
+done
+echo "...done"
 
 echo $dir
 cd $dir
