@@ -56,6 +56,5 @@ export BROWSER="chromium"
 # a cow says your fortune
 # [[ "$PS1" ]] && echo -e "\e[00;33m$(/usr/bin/fortune -s | /usr/bin/cowsay)\e[00m"
 
-# Load rvm
-[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm"
-#PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
+
+PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
