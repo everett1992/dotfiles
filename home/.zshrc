@@ -44,6 +44,8 @@ bindkey "\e[7~" beginning-of-line
 #------------------------------------------------------------------
 # Aliass
 #------------------------------------------------------------------
+
+# colors
 alias ls='ls -h --color=auto'
 alias dir='dir --color=auto'
 alias vdir='vdir --color=auto'
@@ -53,11 +55,14 @@ alias egrep='egrep --color=auto'
 
 alias df='df -h'
 
+# convenience
 alias nc='ncmpcpp'
 
 alias reboot="systemctl reboot"
 alias shutdown="systemctl poweroff"
 alias suspend="systemctl suspend"
+
+alias rake='noglob rake'
 
 #------------------------------------------------------------------
 # Autocomplete configuration
