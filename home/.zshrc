@@ -40,6 +40,9 @@ bindkey '^R' history-incremental-search-backward
 bindkey "\e[8~" end-of-line
 bindkey "\e[7~" beginning-of-line
 
+bindkey "" backward-kill-line
+bindkey "" yank
+
 
 #------------------------------------------------------------------
 # Aliass
