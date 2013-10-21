@@ -122,7 +122,7 @@ zle -N zle-line-finish
 PROMPT='${vim_mode} %{$fg[blue]%}$hostname%{$fg[magenta]%}%~%{$fg[cyan]%}${vcs_info_msg_0_} %{$reset_color%}%# '
 
 #------------------------------------------------------------------
-# Man
+# Man Colors
 #------------------------------------------------------------------
 
 export LESS_TERMCAP_mb=$'\E[01;31m' # begin blinking
@@ -132,5 +132,17 @@ export LESS_TERMCAP_se=$'\E[0m' # end standout-mode
 export LESS_TERMCAP_so=$'\E[38;5;246m' # begin standout-mode - info box
 export LESS_TERMCAP_ue=$'\E[0m' # end underline
 export LESS_TERMCAP_us=$'\E[04;38;5;146m' # begin underline
+#------------------------------------------------------------------
+# Cat Colors
+#------------------------------------------------------------------
 
+function ccat {
+  for arg in "$@"; do
+    pygmentize -g "${arg}" 2> /dev/null || /bin/cat "${arg}"
+  done
+}
+
+
+# RVM path loading
 PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
+
