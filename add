@@ -35,6 +35,7 @@ for file in $*; do
 
   # dir is not in locations, ask to add it.
   if [ -z $dir ]; then
+    # TODO: support adding new locations
     echo "$dir doesn't exist in dotfiles locations"
     exit 1
   else
