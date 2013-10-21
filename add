@@ -3,6 +3,10 @@
 dir=$(readlink -f $(dirname $0))
 locations=$dir/locations
 
+function indent {
+  echo ":: $*"
+}
+
 function loc {
   dir=$1
   cat $locations | while read line; do
@@ -20,6 +24,10 @@ function loc {
 
 # Check that each argument is a file
 for file in $*; do
+  if [[ -h $file ]]; then
+    echo "$0: $file is a link"
+    exit 1
+  fi
   if [[ ! -e $file ]]; then
     echo "$0: $file is not a file"
     exit 1
@@ -39,7 +47,11 @@ for file in $*; do
     echo "$dir doesn't exist in dotfiles locations"
     exit 1
   else
+    set -o errexit
+    name=$(basename $file)
     mv $file $dir/$dest/
-    ln -s $dir/$dest/$(basename $file) $(basename $file)
+    ln -s $dir/$dest/$name $name
+    set +o errexit
+    indent "$name added to $dir, but not committed to git"
   fi
 done
