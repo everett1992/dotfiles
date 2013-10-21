@@ -23,5 +23,7 @@ the configs to be tracked in git, but not synced to other computers.
  
  - Option to add new directories to the locations file on `dot add`.
 
- - Fix install script creating looped links ~/.wallpapers/.wallpapers
-                                               ^-----------+
+ - Fix install script creating looped links
+ 
+    ~/.wallpapers/.wallpapers
+       ^-----------+
