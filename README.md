@@ -25,5 +25,7 @@ the configs to be tracked in git, but not synced to other computers.
 
  - Fix install script creating looped links
  
+```
     ~/.wallpapers/.wallpapers
        ^-----------+
+```
