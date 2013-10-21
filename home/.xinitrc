@@ -3,7 +3,8 @@ xset -b
 xset +fp /usr/share/fonts/local
 xset fp rehash
 
-xset mouse 3/1 2
+# Run local xinitrc
+[[ -f $HOME/.xinitrc.system ]] && $HOME/.xinitrc.system
 
 function herbstluftwm {
   ~/.autostart
