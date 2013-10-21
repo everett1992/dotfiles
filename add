@@ -1,0 +1,57 @@
+#!/bin/bash
+
+dir=$(readlink -f $(dirname $0))
+locations=$dir/locations
+
+function indent {
+  echo ":: $*"
+}
+
+function loc {
+  dir=$1
+  cat $locations | while read line; do
+    set -- $line
+    source="$1"
+    dest=$(eval echo $2)
+
+    if [ "$dir" = "$dest" ]; then
+      echo "$source"
+      exit 0
+    fi
+  done
+  exit 1
+}
+
+# Check that each argument is a file
+for file in $*; do
+  if [[ -h $file ]]; then
+    echo "$0: $file is a link"
+    exit 1
+  fi
+  if [[ ! -e $file ]]; then
+    echo "$0: $file is not a file"
+    exit 1
+  fi
+done
+
+
+for file in $*; do
+  # Check if the file's parent directory
+  # is in the dotfiles location list
+  source=$(readlink -f $(dirname $1))
+  dest=$(loc $source)
+
+  # dir is not in locations, ask to add it.
+  if [ -z $dir ]; then
+    # TODO: support adding new locations
+    echo "$dir doesn't exist in dotfiles locations"
+    exit 1
+  else
+    set -o errexit
+    name=$(basename $file)
+    mv $file $dir/$dest/
+    ln -s $dir/$dest/$name $name
+    set +o errexit
+    indent "$name added to $dir, but not committed to git"
+  fi
+done

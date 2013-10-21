@@ -1,8 +1,5 @@
 #!/bin/bash -e
-############################
-# .make.sh
 # This script creates symlinks from the home directory to any desired configs in ~/configs
-############################
 
 ########## Variables
 
