@@ -102,8 +102,8 @@ if [ -n "$SSH_CLIENT" ]; then
 fi
 
 # Indicate what vi mode is active
-vim_ins_mode="%{$fg[cyan]%}[INS]%{$reset_color%}"
-vim_nml_mode="%{$fg[blue]%}[NML]%{$reset_color%}"
+vim_ins_mode="%{$fg[cyan]%}»%{$reset_color%}"
+vim_nml_mode="%{$fg[blue]%}∷"
 vim_mode=$vim_ins_mode
 
 function zle-keymap-select {
@@ -122,7 +122,7 @@ zle -N zle-line-finish
 #└ $fg[magenta]%~$fg[cyan]${vcs_info_msg_0_}$reset_color$ '
 
 # Single Line prompt with git and vi mode
-PROMPT='${vim_mode} %{$fg[blue]%}$hostname%{$fg[magenta]%}%~%{$fg[cyan]%}${vcs_info_msg_0_} %{$reset_color%}%# '
+PROMPT='%{$fg[blue]%}$hostname%{$fg[magenta]%}%~%{$fg[cyan]%}${vcs_info_msg_0_} %{$reset_color%}${vim_mode} '
 
 #------------------------------------------------------------------
 # Man Colors
