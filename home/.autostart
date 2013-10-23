@@ -10,7 +10,7 @@ pidgin   &    # chat TODO: don't spawn buddy list
 dropboxd &    # file sync
 alsactl restore & # restore audio settings
 
-redshift & # change the color temp at night
+gtk-redshift & # change the color temp at night
 
 #:: Bind keys
 xmodmap .Xmodmap
