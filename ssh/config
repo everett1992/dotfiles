@@ -10,11 +10,6 @@ host git.apiary
   IdentityFile ~/.ssh/apiary-web.pem
 
 host amazon 
-  HostName ec2-54-205-79-203.compute-1.amazonaws.com
-  User ubuntu
-  IdentityFile ~/.ssh/amazon_ec2_project_2.pem
-  
-host amazon2
-  HostName 54.225.104.65
-  User ceverett
+  HostName ec2-23-22-169-239.compute-1.amazonaws.com
+  User ec2-user
   IdentityFile ~/.ssh/amazon_ec2_project_2.pem
