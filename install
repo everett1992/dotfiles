@@ -26,7 +26,6 @@ cat $locations | while read line; do
     mkdir -p $backup
   fi
 done
-echo "...done"
 
 echo $dir
 cd $dir
@@ -37,7 +36,7 @@ cat $locations | while read line; do
   source=$1
   dest=$(eval echo $2)
 
-  echo "Linking files in '$source' to '$dest'"
+  indent "Linking files in '$source' to '$dest'"
    for file in `ls -A $source`; do
      link="$dest/$file"
      real="$dir/$source/$file"
@@ -51,12 +50,17 @@ cat $locations | while read line; do
 
      if [[ "`readlink "$link"`" != "$real" ]]; then
        if [[ ! -e "$link" ]]; then
-         echo "Creating $file"
+         echo "Creating $file	$link -> $real"
        elif [[ -h "$link" ]]; then
-         echo "Updating $file"
+         echo "Updating $file	$link -> $real"
        fi
-       indent "$link -> $real"
        ln -sf $real $link
      fi
    done
+done
+
+echo ''
+indent "Running post install hooks"
+for hook in $(find $dir/hooks/post_install -type f -executable); do
+  $hook
 done

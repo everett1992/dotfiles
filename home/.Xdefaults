@@ -14,8 +14,8 @@ urxvt.scrollBar:        false
 urxvt.internalBorder:   5
 
 ! Clickable urls
-urxvt.perl-ext-common: default,matcher,vtwheel
-urxvt.urlLauncher:     /usr/bin/chrome
+urxvt.perl-ext: default,matcher,vtwheel
+urxvt.url-launcher:     /usr/bin/chrome
 urxvt.matcher.button:  1
 
 ! do not scroll with output
