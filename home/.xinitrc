@@ -3,6 +3,8 @@ xset -b
 xset +fp /usr/share/fonts/local
 xset fp rehash
 
+eval $(/usr/bin/ssh-agent)
+
 # Run local xinitrc
 [[ -f $HOME/.xinitrc.system ]] && $HOME/.xinitrc.system
 
