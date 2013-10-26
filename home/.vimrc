@@ -104,6 +104,9 @@ set nowrap      " Turn off line wrapping
 " -----------------------------
 set backspace=indent,eol,start " Backspace over these characters
 
+set formatoptions+=j
+set nojoinspaces
+set nostartofline
 
 " -----------------------------
 " Terminal Options
