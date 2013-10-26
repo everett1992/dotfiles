@@ -2,6 +2,8 @@
 
 QUAL=`iwconfig $1 | grep 'Link Quality=' | awk '{gsub(/[=/]/," "); print $3}'`
 MAX=`iwconfig $1 | grep 'Link Quality=' | awk '{gsub(/[=/]/," "); print $4}'`
+QUAL=${QUAL:-0}
+MAX=${MAX:-100}
 PERC=`echo $(($QUAL*100/$MAX))`
 
 if [[ $PERC -lt 20 ]]; then
