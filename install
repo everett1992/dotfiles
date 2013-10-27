@@ -48,7 +48,7 @@ cat $locations | while read line; do
      fi
 
 
-     if [[ "`readlink "$link"`" != "$real" ]]; then
+     if [[ "`readlink -f "$link"`" != "$real" ]]; then
        if [[ ! -e "$link" ]]; then
          echo "Creating $file	$link -> $real"
        elif [[ -h "$link" ]]; then
