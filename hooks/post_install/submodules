@@ -5,4 +5,4 @@ git submodule init
 git submodule update
 
 # Maybe it's time to switch to pathogen
-vim -c :BundleUpdate -c :qa
+#vim -c :BundleUpdate -c :qa
