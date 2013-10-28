@@ -98,6 +98,9 @@ zstyle ':vcs_info:git*' formats "(±%b)"
 
 precmd() { vcs_info }
 
+# clear any terminal colors // remove '-n' to include a new line after each prompt, may be cool
+preexec() { echo -n "$reset_color" }
+
 # Display hostname if logged in remotely
 if [ -n "$SSH_CLIENT" ]; then
 	hostname="%M "
