@@ -67,6 +67,8 @@ alias suspend="systemctl suspend"
 
 alias rake='noglob rake'
 
+alias ssh='ssh-add -l || ssh-add && ssh'
+
 #------------------------------------------------------------------
 # Autocomplete configuration
 #------------------------------------------------------------------
