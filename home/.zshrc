@@ -93,7 +93,9 @@ colors
 # Needed to display git branch
 autoload -Uz vcs_info
 zstyle ':vcs_info:*' enable git
+zstyle ':vcs_info:git*' actionformats "(±%b|%a)"
 zstyle ':vcs_info:git*' formats "(±%b)"
+
 precmd() { vcs_info }
 
 # Display hostname if logged in remotely
