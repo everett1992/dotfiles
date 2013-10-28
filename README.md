@@ -20,9 +20,11 @@ config ~/.config  # link files in config to ~/.config
 the configs to be tracked in git, but not synced to other computers.
 
  - Automatic git commits on `dot add`.
- 
+
  - Option to add new directories to the locations file on `dot add`.
- 
+
+ - ec2, .ssh/config permissions get mis set
+
 ```
     ~/.wallpapers/.wallpapers
        ^-----------+

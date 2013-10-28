@@ -104,7 +104,10 @@ set nowrap      " Turn off line wrapping
 " -----------------------------
 set backspace=indent,eol,start " Backspace over these characters
 
-set formatoptions+=j
+if v:version > 703 || v:version == 703 && has("patch541")
+  set formatoptions+=j
+endif
+
 set nojoinspaces
 set nostartofline
 
