@@ -9,7 +9,12 @@ host git.apiary
   User ceverett
   IdentityFile ~/.ssh/apiary-web.pem
 
-host amazon 
-  HostName ec2-23-22-169-239.compute-1.amazonaws.com
+host amazon
+  HostName 23.23.243.227
   User ec2-user
+  IdentityFile ~/.ssh/amazon_ec2_project_2.pem
+
+host kmp-spot
+  HostName 23.23.243.227
+  User ubuntu
   IdentityFile ~/.ssh/amazon_ec2_project_2.pem
