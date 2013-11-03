@@ -23,22 +23,13 @@ export EDITOR='vim'
 #------------------------------------------------------------------
 bindkey -v
 typeset -g -A key
-bindkey '\e[1~' beginning-of-line
-bindkey '\e[4~' end-of-line
-bindkey '^?' backward-delete-char
-bindkey '^[[1~' beginning-of-line
-bindkey '^[[5~' up-line-or-history
-bindkey '^[[3~' delete-char
-bindkey '^[[4~' end-of-line
-bindkey '^[[6~' down-line-or-history
-bindkey '^[[A' up-line-or-search
-bindkey '^[[D' backward-char
-bindkey '^[[B' down-line-or-search
-bindkey '^[[C' forward-char 
+
+bindkey '\e[7~' beginning-of-line # Home
+bindkey ''    beginning-of-line # ctrl-a
+bindkey '\e[8~' end-of-line       # End
+bindkey ''    end-of-line       # ctrl-e
+
 bindkey '^R' history-incremental-search-backward
-# for rxvt
-bindkey "\e[8~" end-of-line
-bindkey "\e[7~" beginning-of-line
 
 bindkey "" backward-kill-line
 bindkey "" yank
@@ -48,26 +39,11 @@ bindkey "" yank
 # Aliass
 #------------------------------------------------------------------
 
-# colors
-alias ls='ls -h --color=auto'
-alias dir='dir --color=auto'
-alias vdir='vdir --color=auto'
-alias grep='grep --color=auto'
-alias fgrep='fgrep --color=auto'
-alias egrep='egrep --color=auto'
+# Load general aliass
+[[ -f ~/.aliasrc ]] && source ~/.aliasrc
 
-alias df='df -h'
-
-# convenience
-alias nc='ncmpcpp'
-
-alias reboot="systemctl reboot"
-alias shutdown="systemctl poweroff"
-alias suspend="systemctl suspend"
-
+# Zsh specific alias
 alias rake='noglob rake'
-
-alias ssh='ssh-add -l || ssh-add && ssh'
 
 #------------------------------------------------------------------
 # Autocomplete configuration
@@ -135,12 +111,12 @@ PROMPT='%{$fg[blue]%}$hostname%{$fg[magenta]%}%~%{$fg[cyan]%}${vcs_info_msg_0_} 
 # Man Colors
 #------------------------------------------------------------------
 
-export LESS_TERMCAP_mb=$'\E[01;31m' # begin blinking
-export LESS_TERMCAP_md=$'\E[01;38;5;74m' # begin bold
-export LESS_TERMCAP_me=$'\E[0m' # end mode
-export LESS_TERMCAP_se=$'\E[0m' # end standout-mode
-export LESS_TERMCAP_so=$'\E[38;5;246m' # begin standout-mode - info box
-export LESS_TERMCAP_ue=$'\E[0m' # end underline
+export LESS_TERMCAP_mb=$'\E[01;31m'       # begin blinking
+export LESS_TERMCAP_md=$'\E[01;38;5;74m'  # begin bold
+export LESS_TERMCAP_me=$'\E[0m'           # end mode
+export LESS_TERMCAP_se=$'\E[0m'           # end standout-mode
+export LESS_TERMCAP_so=$'\E[38;5;246m'    # begin standout-mode - info box
+export LESS_TERMCAP_ue=$'\E[0m'           # end underline
 export LESS_TERMCAP_us=$'\E[04;38;5;146m' # begin underline
 #------------------------------------------------------------------
 # Cat Colors
