@@ -5,14 +5,53 @@ function indent {
 }
 
 export dir=$(readlink -f $(dirname $0))
-export wallpaper_dir=${wallpaper_dir:-~/.wallpapers/}
+
+function short_usage {
+  printf "%b" \
+"  usage: $0 [directive] [options]
+
+DIRECTIVES
+  -h:               Print short help message.
+  --help:           Print longer help message.
+  add [files...]:   Move the files to the dotfiles repository.
+                    and create a link from the origional location.
+  install:          Create links to each tracked file.
+  status | st:      Show the status of the git repository.
+"
+}
+function usage {
+  short_usage
+  printf "%b" "
+INFORMATION
+  dot is a file syncing tool build around git, designed for
+  configuration files.
+
+  Tracked files are placed in the dotfiles repository, and
+  links to the files are created in the origional locations.
+
+  The dotfiles repository is where this script, and the tracked
+  dotfiles are found. Probabaly ~/dotfiles, or ~/.dotfiles.
+
+  TODO: seperate scripts from dotfiles repository, define .dotfilesrc
+
+  In the dotfiles repository is a file called 'locations', which
+  defines folders in the repository, and where there contents should
+  be linked.
+"
+}
 
 prog=$1
 shift
 
 case $prog in
+  "-h")
+    short_usage
+    ;;
+  "--help")
+    usage
+    ;;
   "add")
-    $dir/add $*
+    $dir/add $@
     ;;
   "install")
     $dir/install
@@ -22,5 +61,6 @@ case $prog in
     ;;
   *)
     indent "$prog a not recognised directive"
+    short_usage
     ;;
 esac
