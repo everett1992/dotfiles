@@ -17,6 +17,9 @@ case $prog in
   "install")
     $dir/install
     ;;
+  "status" | "st")
+    (cd $dir && git status -sb)
+    ;;
   *)
     indent "$prog a not recognised directive"
     ;;
