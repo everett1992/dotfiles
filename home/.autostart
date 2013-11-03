@@ -6,8 +6,6 @@ echo "Starting programs"
 #:: start programs
 xrandr --auto # screen setup
 compton  &    # composition
-pidgin   &    # chat TODO: don't spawn buddy list
-dropboxd &    # file sync
 alsactl restore & # restore audio settings
 
 gtk-redshift & # change the color temp at night
