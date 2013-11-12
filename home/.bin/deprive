@@ -1,6 +1,22 @@
 #!/bin/bash
 
-xset s off
-xset -dpms
+enable=1
 
-echo "Screen blanking disabled"
+case $1 in
+  "on")
+    enable=1
+    ;;
+  "off")
+    enable=0
+    ;;
+esac
+
+if [[ enable -eq 1 ]]; then
+  xset s on
+  xset +dpms
+  echo "Screen blanking enabled"
+else
+  xset s off
+  xset -dpms
+  echo "Screen blanking disabled"
+fi
