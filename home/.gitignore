@@ -1,3 +1,4 @@
 # Ignore vim temp files
+# ~/.gitignore
 *.swp
 *.swo

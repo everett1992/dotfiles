@@ -1,5 +1,5 @@
 #------------------------------------------------------------------#
-# File: .zshrc                           zsh runtime configuration #
+# File: ~/.zshrc                         zsh runtime configuration #
 # Author: Caleb Everett                                            #
 #------------------------------------------------------------------#
 
@@ -79,9 +79,9 @@ precmd() { vcs_info }
 # clear any terminal colors // remove '-n' to include a new line after each prompt, may be cool
 preexec() { echo -n "$reset_color" }
 
-# Display hostname if logged in remotely
+# Display hostname in prompt if logged in through ssh
 if [ -n "$SSH_CLIENT" ]; then
-	hostname="%M "
+  hostname="%M "
 fi
 
 # Indicate what vi mode is active
@@ -118,6 +118,7 @@ export LESS_TERMCAP_se=$'\E[0m'           # end standout-mode
 export LESS_TERMCAP_so=$'\E[38;5;246m'    # begin standout-mode - info box
 export LESS_TERMCAP_ue=$'\E[0m'           # end underline
 export LESS_TERMCAP_us=$'\E[04;38;5;146m' # begin underline
+
 #------------------------------------------------------------------
 # Cat Colors
 #------------------------------------------------------------------

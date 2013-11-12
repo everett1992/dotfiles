@@ -1,24 +1,28 @@
-# User Info
+# Git global settings
+# ~/.gitconfig
+
+#:: User Info
 [github]
-	user = everett1992
+  user = everett1992
 [user]
-	name =  Caleb Everett
-	email = everett.caleb@gmail.com
+  name =  Caleb Everett
+  email = everett.caleb@gmail.com
 
-# Settings
+#:: Settings
 [core]
-	autocrlf = input
-	safecrlf = true
-	excludesfile = /home/caleb/.gitignore
+  autocrlf = input
+  safecrlf = true
+  excludesfile = /home/caleb/.gitignore
 [push]
-	default = matching
+  default = matching
 [merge]
-	tool = vimdiff
+  tool = vimdiff
+[rerere]
+  enabled=true
+[push]
+  default = simple
 
-
-# Configs and Alias
-[merge]
-	tool = vimdiff
+#:: Alias
 [alias]
   lg = log --decorate --graph --oneline --all --abbrev-commit
   lgs = log --decorate --graph --oneline --all --abbrev-commit -5
@@ -27,12 +31,12 @@
   st = status -sb
   ru = remote update
 
-# Colors
+#:: Colors
 [color]
   branch = always
   diff =   always
   status = always
-	ui = 1
+  ui = 1
 [color "branch"]
   current = yellow reverse
   local = yellow
@@ -46,7 +50,3 @@
   added = yellow
   changed = green
   untracked = cyan
-[rerere]
-  enabled=true
-[push]
-  default = simple

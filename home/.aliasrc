@@ -1,16 +1,19 @@
 # vim:set ft=sh:
+# Shell agnostic aliases
+# ~/.aliasrc
 
-# colors
-alias ls='ls -h --color=auto'
+#:: colors
 alias dir='dir --color=auto'
 alias vdir='vdir --color=auto'
 alias grep='grep --color=auto'
 alias fgrep='fgrep --color=auto'
 alias egrep='egrep --color=auto'
 
+#:: Use human units
 alias df='df -h'
+alias ls='ls -h --color=auto'
 
-# convenience
+#:: convenience
 alias nc='ncmpcpp'
 
 alias reboot="systemctl reboot"

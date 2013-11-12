@@ -218,10 +218,10 @@ set autoread " If the file is edited outside for vim, reload the file
 
 " Place cursor at last location
 if has("autocmd")
-	filetype plugin indent on
-	au BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g`\"" | endif
+  filetype plugin indent on
+  au BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g`\"" | endif
 else
-	set autoindent
+  set autoindent
 endif
 
 " -------------------------------------

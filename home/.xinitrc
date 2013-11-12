@@ -1,13 +1,21 @@
 #!/bin/bash
+# Startx script
+# ~/.xinitrc
+
+#:: Load fonts
 xset -b
 xset +fp /usr/share/fonts/local
 xset fp rehash
 
+
+#:: Start ssh-agent
 eval $(/usr/bin/ssh-agent)
 
-# Run local xinitrc
+#:: Run local xinitrc
 [[ -f $HOME/.xinitrc.system ]] && $HOME/.xinitrc.system
 
+
+#:: Start window manager
 function herbstluftwm {
   ~/.autostart
   exec herbstluftwm

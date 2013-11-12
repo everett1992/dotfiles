@@ -1,19 +1,25 @@
+! X configs (mostly URxvt and Xterm)
+! ~/.Xdefaults
+
+!:: Major X settings
 Xft.dpi:        95
 Xft.antialias:  true
 !Xft.hinting:    full
 !Xft.hintstyle:  hintslight
 Xft.rgba:       rgb
+
+!:: Configure XTerm and URxvt
 XTerm*termName: xterm-256color
 URxvt*termName: xterm-256color
 
-! font settings
+!:: Font
 urxvt.font:                 xft: Terminus Powerline:size=10
 urxvt.boldFont:             xft: Terminus Powerline:size=10
 
 urxvt.scrollBar:        false
 urxvt.internalBorder:   5
 
-! Clickable urls
+! Clickable Urls
 urxvt.perl-ext: default,matcher,vtwheel
 urxvt.url-launcher:     /usr/bin/chrome
 urxvt.matcher.button:  1

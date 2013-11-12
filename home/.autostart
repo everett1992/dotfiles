@@ -1,4 +1,6 @@
 #!/bin/bash
+# Starts programs I want running and calls the system specific autostart.
+# ~/.autostart
 
 system=~/.system.autostart
 
