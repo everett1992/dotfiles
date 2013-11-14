@@ -6,6 +6,8 @@ home/.vim/bundle/*
 home/.ncmpcpp/error.log
 home/.ncmpcpp/artists/
 
+home/.wallpapers/.current
+
 # Ignore dwb state file
 config/dwb/keys.*
 config/dwb/default/cookies
