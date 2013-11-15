@@ -15,6 +15,7 @@ alias ls='ls -h --color=auto'
 
 #:: convenience
 alias nc='ncmpcpp'
+alias vi='vim'
 
 alias reboot="systemctl reboot"
 alias shutdown="systemctl poweroff"
