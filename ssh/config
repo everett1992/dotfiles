@@ -1,6 +1,10 @@
 Host beast
   User everetc1
 
+Host seedbox
+  User twiddleeedee
+  HostName gyro.whatbox.ca
+
 Host *.tcnj.edu
   User everetc1
 
