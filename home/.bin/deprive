@@ -12,11 +12,11 @@ case $1 in
 esac
 
 if [[ enable -eq 1 ]]; then
-  xset s on
-  xset +dpms
-  echo "Screen blanking enabled"
-else
   xset s off
   xset -dpms
+  echo "Screen blanking enabled"
+else
+  xset s on
+  xset +dpms
   echo "Screen blanking disabled"
 fi
