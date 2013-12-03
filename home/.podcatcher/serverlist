@@ -1,48 +1,41 @@
-# Url                                                            Category   Name
-http://feeds.wnyc.org/radiolab                                   radio      Radio Lab
-http://www.npr.org/rss/podcast.php?id=35                         radio      Wait Wait Dont Tell Me
-http://www.npr.org/rss/podcast.php?id=510299                     radio      Ask Me Another
-http://feeds.themoth.org/themothpodcast                          radio      The Moth
-http://feeds.thisamericanlife.org/talpodcast                     radio      This American Life
-http://www.npr.org/rss/podcast.php?id=510298                     radio      Ted Radio Hour
-http://www.marketplace.org/node/all/podcast.xml                  radio      Marketplace
-http://americanpublicmedia.publicradio.org/podcasts/xml/dinner-party/podcast.xml radio Dinner Party Download
-http://feeds.feedburner.com/tciafpodcast                         radio      Re:sound
-http://www.abc.net.au/radionational/feed/2883726/podcast.xml     radio      Future Tense
-http://www.npr.org/rss/podcast.php?id=510282                     radio      Pop Culture Happy Hour
-http://americanpublicmedia.publicradio.org/podcasts/xml/splendid_table/kitchen_questions.xml radio The Splended Table
-http://feeds.wnyc.org/onthemedia                                 radio      On The Media
-http://www.npr.org/rss/podcast.php?id=510294                     radio      Snap Judgement
+# Url                                                                  Category Name
 
+http://rubyrogues.com/feed/                                            software  Ruby Rouges
 
-http://nerdist.libsyn.com/rss                                    net        The Nerdis
-http://www.thesoundsinmyhead.com/rss.xml                         net      The Sound in My Head
-http://feeds.99percentinvisible.org/99percentinvisible           net        99 Percent Invisible
-http://feeds.feedburner.com/WelcomeToNightVale                   net        Welcome to Night Vale
-http://feeds.prx.org/toe                                         net        Theory of Everything
-http://podcast.rickygervais.com/podcast.xml                      net        The Ricky Gervais Podcast
+http://www.startalkradio.net/feed/shows/                               astronomy  Star Talk Radio
 
+http://www.npr.org/rss/podcast.php?id=35                               panel  Wait Wait Dont Tell Me
+http://www.npr.org/rss/podcast.php?id=510299                           panel  Ask Me Another
 
-http://rubyrogues.com/feed/                                      dev        Ruby Rouges
-http://feeds.gitminutes.com/gitminutes-podcast                   dev        Gitminutes
+http://www.kcrw.com/news/programs/lr/RSS                               news  Left Right and Center
+http://feeds.wnyc.org/onthemedia                                       news  On The Media
+http://www.marketplace.org/node/all/podcast.xml                        news  Marketplace
 
-http://www.startalkradio.net/feed/shows/                         astronomy  Star Talk Radio
-http://www.planetary.org/system/rss/channel.jsp?feedID=328434498 astronomy  Planetary
+http://www.tatw.co.uk/podcast.xml                                      music  Above and Beyond
+http://www.kcrw.com/music/programs/mb/RSS                              music  Morning Becomes Eclectic
+http://www.thesoundsinmyhead.com/rss.xml                               music  The Sound in My Head
 
-http://www.kcrw.com/news/programs/lr/RSS                         news Left Right and Center
-http://feeds.feedburner.com/WhoChartedwithHowardKremer           music Who Charted
-http://www.tatw.co.uk/podcast.xml                                music Above and Beyond
-http://www.kcrw.com/music/programs/mb/RSS                        music Morning Becomes Eclectic
+http://www.howstuffworks.com/podcasts/stuff-you-should-know.rss        sci  Stuff You Should Know
+http://feeds.feedburner.com/dancarlin/history?format=xml               sci  Hardcore History
+http://www.kcrw.com/news/programs/in/RSS                               sci  This Is Interesting
+http://bornyesterdaypodcast.com//rss                                   sci  Born Yesterday
+http://feeds.99percentinvisible.org/99percentinvisible                 sci  99 Percent Invisible
+http://feeds.prx.org/toe                                               sci  Theory of Everything
+http://www.npr.org/rss/podcast.php?id=510298                           sci  Ted Radio Hour
+http://feeds.wnyc.org/radiolab                                         sci  Radio Lab
 
-http://www.howstuffworks.com/podcasts/stuff-you-should-know.rss  sci   Stuff You Should Know
-http://feeds.feedburner.com/dancarlin/history?format=xml         sci   Hardcore History
-http://www.kcrw.com/news/programs/in/RSS                         sci   This Is Interesting
-http://bornyesterdaypodcast.com//rss                             sci   Born Yesterday
+http://feeds.feedburner.com/risk-show/yWzy?format=xml                  stories  RISK
+http://feeds.soundcloud.com/users/soundcloud:users:13270730/sounds.rss stories  HereBeMonsters
+http://feeds.feedburner.com/WelcomeToNightVale                         stories  Welcome to Night Vale
+http://feeds.feedburner.com/tciafpodcast                               stories  Re:sound
+http://feeds.themoth.org/themothpodcast                                stories  The Moth
+http://feeds.thisamericanlife.org/talpodcast                           stories  This American Life
+http://thrillingadventurehour.libsyn.com/rss                           stories   Thrilling Adventure Hour
+http://feeds.feedburner.com/thetruthapm                                stories  The Truth
 
-http://feeds.feedburner.com/risk-show/yWzy?format=xml                  stories RISK
-http://feeds.soundcloud.com/users/soundcloud:users:13270730/sounds.rss stories HereBeMonsters
-http://feeds.feedburner.com/thetruthapm                                stories The Truth
-
-http://feeds.feedburner.com/SlateCultureGabfest?format=xml culture   Slate Culture Gabfest
-http://riyl.podbean.com/feed/                              culture   RiYL
-http://smodcast.com/channels/get-up-on-this/feed/          culture   Get Up On This
+http://feeds.feedburner.com/SlateCultureGabfest?format=xml             culture  Slate Culture Gabfest
+http://riyl.podbean.com/feed/                                          culture  RiYL
+http://www.npr.org/rss/podcast.php?id=510282                           culture  Pop Culture Happy Hour
+http://americanpublicmedia.publicradio.org/podcasts/xml/dinner-party/podcast.xml culture  Dinner Party Download
+http://nerdist.libsyn.com/rss                                          culture  The Nerdist
+http://jonahraydio.libsyn.com/rss                                      culture  Jonah Raydio
