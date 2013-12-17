@@ -17,6 +17,9 @@ alias ls='ls -h --color=auto'
 alias nc='ncmpcpp'
 alias vi='vim'
 
+#:: Github markdown server
+alias ghmd="gfms -p 617617 -n"
+
 alias reboot="systemctl reboot"
 alias shutdown="systemctl poweroff"
 alias suspend="systemctl suspend"
