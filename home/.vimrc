@@ -56,6 +56,8 @@ filetype off
   Bundle 'vim-coffee-script'
   Bundle 'vim-markdown'
   Bundle 'vim-less'
+  Bundle 'nono/vim-handlebars'
+  Bundle 'heartsentwined/vim-emblem'
 
   " Color schemes
   Bundle 'molokai'
