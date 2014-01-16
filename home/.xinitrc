@@ -27,28 +27,30 @@ function bspwm {
   exec bspwm
 }
 
-case ${2:-$1} in
-gnome)
-  exec gnome-session
-  ;;
-steam)
-  steam
-  exec startxfce4
-  ;;
-herbstluftwm)
-  herbstluftwm
-  ;;
-bspwm)
-  bspwm
-  ;;
-xfce)
-  #sh .autostart
-  nm-applet &
-  volumeicon &
-  exec startxfce4
-  ;;
-*)
-  herbstluftwm
-  #bspwm
-  ;;
-esac
+herbstluftwm
+
+#case ${2:-$1} in
+#gnome)
+#  exec gnome-session
+#  ;;
+#steam)
+#  steam
+#  exec startxfce4
+#  ;;
+#herbstluftwm)
+#  herbstluftwm
+#  ;;
+#bspwm)
+#  bspwm
+#  ;;
+#xfce)
+#  #sh .autostart
+#  nm-applet &
+#  volumeicon &
+#  exec startxfce4
+#  ;;
+#*)
+#  herbstluftwm
+#  #bspwm
+#  ;;
+#esac
