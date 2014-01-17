@@ -8,12 +8,10 @@ xrandr --auto # screen setup
 compton  &    # composition
 alsactl restore & # restore audio settings
 
-redshift-gtk & # change the color temp at night
-
-#:: Bind keys
-xmodmap .Xmodmap
-xbindkeys & # Media keys
+#:: Background apps
 volumeicon & # Volume bindings
+redshift-gtk & # change the color temp at night
+thunar --daemon & # Start thunar in the background
 
 #:: System specific
 [[ -f $HOME/.autostart.system ]] && $HOME/.autostart.system
