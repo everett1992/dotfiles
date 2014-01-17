@@ -1,0 +1,19 @@
+#!/bin/bash
+# Startx script
+# ~/.xprofile
+
+#:: Load fonts
+xset -b
+xset +fp /usr/share/fonts/local
+xset fp rehash
+
+
+#:: Start ssh-agent
+eval $(/usr/bin/ssh-agent)
+
+#:: Run local xinitrc
+[[ -f $HOME/.xinitrc.system ]] && $HOME/.xinitrc.system
+
+
+#:: Run auto start script
+~/.autostart
