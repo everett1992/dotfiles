@@ -8,7 +8,7 @@ xrandr --auto # screen setup
 compton  &    # composition
 alsactl restore & # restore audio settings
 
-gtk-redshift & # change the color temp at night
+redshift-gtk & # change the color temp at night
 
 #:: Bind keys
 xmodmap .Xmodmap
