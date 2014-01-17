@@ -2,8 +2,6 @@
 # Starts programs I want running and calls the system specific autostart.
 # ~/.autostart
 
-system=~/.system.autostart
-
 echo "Starting programs"
 #:: start programs
 xrandr --auto # screen setup
@@ -18,6 +16,4 @@ xbindkeys & # Media keys
 volumeicon & # Volume bindings
 
 #:: System specific
-if [ -x $system ]; then
-  $system
-fi
+[[ -f $HOME/.autostart.system ]] && $HOME/.autostart.system
