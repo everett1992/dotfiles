@@ -24,8 +24,8 @@ fi
 PS1="$root$hostname\[\033[00;32m\]\w\[\033[00m\]\[\e[01;33;49m\]\$(parse_git_branch)\[\e[0;0m\]$ "
 
 
-# load amazon credentials 
-[[ -f "$HOME/.amazon_keys" ]] && source "$HOME/.amazon_keys";
+# loadcredentials
+[[ -f "$HOME/.keys" ]] && source "$HOME/.keys";
 
 # Load general aliass
 [[ -f ~/.aliasrc ]] && source ~/.aliasrc
