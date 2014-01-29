@@ -2,16 +2,17 @@
 # Starts programs I want running and calls the system specific autostart.
 # ~/.autostart
 
+#:: Start programs
 echo "Starting programs"
-#:: start programs
-xrandr --auto # screen setup
-compton  &    # composition
-alsactl restore & # restore audio settings
+xrandr --auto     # Auto adjust monitors
+compton  &        # Graphics composition
+alsactl restore & # Restore audio settings
 
 #:: Background apps
-volumeicon & # Volume bindings
-redshift-gtk & # change the color temp at night
+volumeicon &      # Volume bindings
+redshift-gtk &    # Change the color temp at night
 thunar --daemon & # Start thunar in the background
+dropboxd &        # Sync files to dropbox
 
 #:: System specific
 [[ -f $HOME/.autostart.system ]] && $HOME/.autostart.system
