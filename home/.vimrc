@@ -53,8 +53,8 @@ filetype off
   Bundle 'powerline'
 
   " Syntax plugins
+  Bundle 'tpope/vim-markdown'
   Bundle 'vim-coffee-script'
-  Bundle 'vim-markdown'
   Bundle 'vim-less'
   Bundle 'nono/vim-handlebars'
   Bundle 'heartsentwined/vim-emblem'
