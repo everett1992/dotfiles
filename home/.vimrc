@@ -17,51 +17,51 @@ filetype off
   set rtp+=~/.vim/bundle/vundle
   call vundle#rc()
   " vundle vundle's vundle
-  Bundle 'vundle'
+  Bundle 'gmarik/vundle'
 
   " My bundles
 
   " Fuzzy file navigation
-  Bundle 'ctrlp.vim'
+  Bundle 'vim-scripts/ctrlp.vim'
 
   " Advanced undo feature navigation
-  Bundle 'gundo.vim'
+  Bundle 'sjl/gundo.vim'
 
   " Matches closing parens,quotes,def/ends
-  Bundle 'vim-matchit'
+  Bundle 'jwitley/vim-matchit'
 
   " Automatically align text
-  Bundle 'vim-easy-align'
+  Bundle 'vim-scripts/vim-easy-align'
 
-  " Rails project navigation
-  Bundle 'vim-rails'
 
   " Tpope wizardry
-  Bundle 'vim-dispatch'
-  Bundle 'vim-unimpaired'
+  Bundle 'tpope/vim-dispatch'
+  Bundle 'tpope/vim-unimpaired'
+  Bundle 'tpope/vim-fugitive'
+  Bundle 'tpope/vim-rails'
 
   " Syntax checker
-  Bundle 'syntastic'
+  Bundle 'scrooloose/syntastic'
   " disable `no docs` error checking
   let syntastic_gjslint_conf= '--nojsdoc'
   let g:syntastic_java_javac_config_file_enabled= 1
 
   " Ctags improvement
-  Bundle 'tagbar'
+  Bundle 'majutsushi/tagbar'
 
   " Status line improvement
-  Bundle 'powerline'
+  Bundle 'Lokaltog/powerline'
 
   " Syntax plugins
   Bundle 'tpope/vim-markdown'
-  Bundle 'vim-coffee-script'
-  Bundle 'vim-less'
+  Bundle 'kchmck/vim-coffee-script'
+  Bundle 'groenewege/vim-less'
   Bundle 'nono/vim-handlebars'
   Bundle 'heartsentwined/vim-emblem'
 
   " Color schemes
-  Bundle 'molokai'
-  Bundle 'flatui.vim'
+  Bundle 'tomasr/molokai'
+  Bundle 'john2x/flatui.vim'
 
 
   set rtp+=~/.vim/bundle/powerline/powerline/bindings/vim
