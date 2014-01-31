@@ -23,3 +23,5 @@ alias markdown-server="gfms -p 1234 -n"
 alias reboot="systemctl reboot"
 alias shutdown="systemctl poweroff"
 alias suspend="systemctl suspend"
+
+alias clone="urxvt > /dev/null 2>&1 & disown"
