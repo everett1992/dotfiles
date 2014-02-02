@@ -25,3 +25,6 @@ alias shutdown="systemctl poweroff"
 alias suspend="systemctl suspend"
 
 alias clone="urxvt > /dev/null 2>&1 & disown"
+function pdf {
+  zathura $*> /dev/null 2>&1 & disown
+}
