@@ -25,7 +25,7 @@
 #:: Alias
 [alias]
   lg = log --decorate --graph --oneline --all --abbrev-commit
-  lgs = log --decorate --graph --oneline --all --abbrev-commit -5
+  lgs = !git --no-pager log --decorate --graph --oneline --all --abbrev-commit -5
   sh = show --name-status
   unstage = reset HEAD --
   st = status -sb
