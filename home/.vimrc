@@ -63,6 +63,8 @@ filetype off
   Bundle 'tomasr/molokai'
   Bundle 'john2x/flatui.vim'
 
+  Bundle 'wellle/targets.vim'
+
 
   set rtp+=~/.vim/bundle/powerline/powerline/bindings/vim
 filetype plugin indent on
