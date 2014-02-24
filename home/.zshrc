@@ -21,8 +21,8 @@ export EDITOR='vim'
 #------------------------------------------------------------------
 # Keybindings
 #------------------------------------------------------------------
-bindkey -v
-typeset -g -A key
+bindkey -v         # Use vi like key bindings
+typeset -g -A key  # I forget. :(
 
 bindkey '\e[7~' beginning-of-line # Home
 bindkey ''    beginning-of-line # ctrl-a
@@ -43,22 +43,25 @@ bindkey "" yank
 [[ -f ~/.aliasrc ]] && source ~/.aliasrc
 
 # Zsh specific alias
+
+# zsh _always_ trie to expand regexes to files
+# so git ^HEAD, rake test[ok], nmap 192.168.*.* will cause issues.
 alias rake='noglob rake'
 
 #------------------------------------------------------------------
 # Autocomplete configuration
 #------------------------------------------------------------------
-zstyle ':completion:*' completer _complete _ignored
 zstyle :compinstall filename "${HOME}/.zshrc"
 
 autoload -Uz compinit
 compinit -C
 
-## case-insensitive (all),partial-word and then substring completion
+zstyle ':completion:*' completer _complete _ignored
+
+# case-insensitive (all),partial-word and then substring completion
 zstyle ':completion:*' matcher-list 'm:{a-zA-Z}={A-Za-z}' \
   'r:|[._-]=* r:|=*' 'l:|=* r:|=*'
 
-setopt BASH_AUTO_LIST
 
 #------------------------------------------------------------------
 # Prompt
