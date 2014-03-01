@@ -58,6 +58,7 @@ filetype off
   Bundle 'groenewege/vim-less'
   Bundle 'nono/vim-handlebars'
   Bundle 'heartsentwined/vim-emblem'
+  Bundle 'jergason/scala.vim'
 
   " Color schemes
   Bundle 'tomasr/molokai'
