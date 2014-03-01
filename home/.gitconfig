@@ -12,7 +12,7 @@
 [core]
   autocrlf = input
   safecrlf = true
-  excludesfile = /home/caleb/.gitignore
+  excludesfile = ~/.gitignore
 [push]
   default = matching
 [merge]
