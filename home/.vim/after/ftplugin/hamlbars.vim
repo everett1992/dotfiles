@@ -1,1 +1,1 @@
-set filetype=haml
+set ft=haml
