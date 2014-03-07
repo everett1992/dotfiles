@@ -54,6 +54,7 @@ filetype off
 
   " Syntax plugins
   Bundle 'tpope/vim-markdown'
+  let g:vim_markdown_folding_disabled=1
   Bundle 'tpope/vim-haml'
   Bundle 'kchmck/vim-coffee-script'
   Bundle 'groenewege/vim-less'
