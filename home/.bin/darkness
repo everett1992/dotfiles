@@ -1,2 +1,10 @@
 #!/bin/bash
+brightness=$(xbacklight -get)
+min=2 # numbers below 2 can get rounded to zero.
+[[ $(echo "$brightness < $min" | bc) == 1 ]] && brightness=$min
+
+xbacklight -set 0 -time 400
 xset dpms force standby
+
+# FIXME: don't run this till the monitor wakes up.
+xbacklight -set $brightness -time 900

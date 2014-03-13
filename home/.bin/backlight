@@ -1,23 +1,54 @@
 #!/bin/bash
 
-step=20
+#:: Define functions
+
 
 function notify {
   echo $1
   #notify-send 'Brightness' -i dialog-information -h int:value:$1 -h string:title:backlight
 }
 
-if [[ "$1" = "-h" ]]; then
-  echo " inc: increase backlight"
-  echo " dec: decrease backlight"
+# FIXME: redirect to stderr
+function err {
+  echo $*
+}
+
+#:: Parse inputs
+
+# First char of string
+func=${1:0:1}
+
+if [[ "$func" != "+" ]] && [[ "$func" != '-' ]]; then
+  err "Usage: $0 [\+\-][0-9+]" \
+      "Argument must start with a + or a -"
+  exit
 fi
 
-if [[ "$1" = "inc" ]]; then
-  xbacklight -inc $step
-  notify $(xbacklight)
+# Tail of the string
+step=${1:1}
+
+if [[ $step == "" ]]; then
+  err "usage: $0 [\+\-][0-9+]"
+      "+/- Needs numerical value ie +10, or -20"
+  exit
 fi
 
-if [[ "$1" = "dec" ]]; then
-  xbacklight -dec $step
-  notify $(xbacklight)
-fi
+
+#:: Caclulate target brightness
+
+setting=$(xbacklight -get)
+# FIXME: Remove dependancy on `bc`
+brightness=$(echo "$setting $func $step" | bc)
+
+#:: Constrain target brightness within range
+
+min=5; max=100;
+# FIXME: Remove bc dependancy
+[[ $(echo "$brightness < $min" | bc) == 1 ]] && brightness=$min
+[[ $(echo "$brightness > $max" | bc) == 1 ]] && brightness=$max
+
+
+#:: Set brightness
+
+logger "$0 backlight set to $brightness"
+xbacklight -set $brightness
