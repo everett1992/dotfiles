@@ -1,6 +1,9 @@
 #!/bin/bash
+
 brightness=$(xbacklight -get)
-min=2 # numbers below 2 can get rounded to zero.
+
+# numbers below 2 can get rounded to zero.
+min=2
 [[ $(echo "$brightness < $min" | bc) == 1 ]] && brightness=$min
 
 xbacklight -set 0 -time 400
