@@ -24,6 +24,8 @@
 
 #:: Alias
 [alias]
+  a = add -v
+  ad = add -v
   lg = log --decorate --graph --oneline --all --abbrev-commit
   lgs = !git --no-pager log --decorate --graph --oneline --all --abbrev-commit -5
   sh = show --name-status
