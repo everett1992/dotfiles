@@ -33,6 +33,9 @@ filetype off
   " Automatically align text
   Bundle 'vim-scripts/vim-easy-align'
 
+  " Create gists from vim
+  Bundle 'mattn/webapi-vim'
+  Bundle 'mattn/gist-vim'
 
   " Tpope wizardry
   Bundle 'tpope/vim-dispatch'
