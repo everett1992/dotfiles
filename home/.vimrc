@@ -97,7 +97,7 @@ let g:rehash256 = 1 " Use Molokai's new version
 syntax on       " Turn on syntax highlighting
 
 set cursorline
-
+set cc=76
 " Simplify tag style by removing underlines
 hi TabLine term=none cterm=none ctermfg=15 ctermbg=242 gui=underline guibg=DarkGrey
 
