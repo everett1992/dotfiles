@@ -231,6 +231,8 @@ nnoremap K <nop>
 " -------------------------------------
 set autoread " If the file is edited outside for vim, reload the file
 
+autocmd BufNewFile,BufRead *.jbuilder set filetype=ruby
+
 
 " Place cursor at last location
 if has("autocmd")
