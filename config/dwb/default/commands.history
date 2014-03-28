@@ -1,5 +1,5 @@
-set adblocker-filterlist /home/caleb/.config/dwb/adblock_lists
 focus_next
+set adblocker-filterlist /home/caleb/.config/dwb/adblock_lists
 caret
 focus_prev
 help
