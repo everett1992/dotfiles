@@ -38,14 +38,13 @@ filetype off
   Bundle 'mattn/gist-vim'
 
   " Tpope wizardry
-  Bundle 'tpope/vim-dispatch'
+  Bundle 'tpope/vim-abolish'
   Bundle 'tpope/vim-unimpaired'
   Bundle 'tpope/vim-fugitive'
   Bundle 'tpope/vim-rails'
   Bundle 'tpope/vim-eunuch'
   " Bundle 'tpope/vim-rsi'
   " Bundle 'tpope/vim-projectile' " Seems cool, not used
-  " Bundle 'tpope/vim-abolish' " Seems cool, not used
 
   " Syntax checker
   Bundle 'scrooloose/syntastic'
