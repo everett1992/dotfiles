@@ -18,7 +18,7 @@ alias nc='ncmpcpp'
 alias vi='vim'
 
 #:: Github markdown server
-alias markdown-server="gfms -p 1234 -n"
+alias markdown-server="gfms -p 1234"
 
 alias reboot="systemctl reboot"
 alias shutdown="systemctl poweroff"
