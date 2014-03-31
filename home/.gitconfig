@@ -28,7 +28,7 @@
   ad = add -v
   lg = log --decorate --graph --oneline --all --abbrev-commit
   lgs = !git --no-pager log --decorate --graph --oneline --all --abbrev-commit -5
-  lga = log --all --graph --pretty=format:'%Cred%h - %C(bold blue)<%an>%Creset %Cgreen[%cr]%Creset %s %C(yellow)%d%Creset' --abbrev-commit
+  lga = log --all --pretty=format:'%Cred%h - %C(bold blue)<%an>%Creset %Cgreen[%cr]%Creset %s %C(yellow)%d%Creset' --abbrev-commit
   sh = show --name-status
   unstage = reset HEAD --
   st = status -sb
