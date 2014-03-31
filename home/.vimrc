@@ -20,6 +20,8 @@ filetype off
   Bundle 'gmarik/vundle'
 
   " My bundles
+  
+  Bundle 'rking/ag.vim'
 
   " Fuzzy file navigation
   Bundle 'vim-scripts/ctrlp.vim'
