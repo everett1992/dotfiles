@@ -47,6 +47,7 @@ bindkey "" yank
 # zsh _always_ trie to expand regexes to files
 # so git ^HEAD, rake test[ok], nmap 192.168.*.* will cause issues.
 alias rake='noglob rake'
+alias curl='noglob curl'
 
 #------------------------------------------------------------------
 # Autocomplete configuration
