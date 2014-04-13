@@ -5,7 +5,7 @@
 #:: Start programs
 echo "Starting programs"
 xrandr --auto     # Auto adjust monitors
-compton  &        # Graphics composition
+compton         & # Graphics composition
 alsactl restore & # Restore audio settings
 
 #:: Background apps
