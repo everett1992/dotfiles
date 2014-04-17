@@ -28,3 +28,4 @@ alias clone="urxvt > /dev/null 2>&1 & disown"
 function pdf {
   zathura $*> /dev/null 2>&1 & disown
 }
+alias now="date +%l:%M | figlet |cowsay -n"
