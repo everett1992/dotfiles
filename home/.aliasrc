@@ -29,3 +29,4 @@ function pdf {
   zathura $*> /dev/null 2>&1 & disown
 }
 alias now="date +%l:%M | figlet |cowsay -n"
+alias many="xargs -n 1 -I {}"
