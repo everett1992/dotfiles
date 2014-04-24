@@ -20,11 +20,8 @@ filetype off
   Bundle 'gmarik/vundle'
 
   " My bundles
-  
-  Bundle 'rking/ag.vim'
 
-  " Fuzzy file navigation
-  Bundle 'vim-scripts/ctrlp.vim'
+  Bundle 'rking/ag.vim'
 
   " Advanced undo feature navigation
   Bundle 'sjl/gundo.vim'
@@ -54,9 +51,6 @@ filetype off
   let syntastic_gjslint_conf= '--nojsdoc'
   let g:syntastic_java_javac_config_file_enabled= 1
 
-  " Ctags improvement
-  Bundle 'majutsushi/tagbar'
-
   " Status line improvement
   Bundle 'Lokaltog/powerline'
 
@@ -73,8 +67,6 @@ filetype off
   " Color schemes
   Bundle 'tomasr/molokai'
   Bundle 'john2x/flatui.vim'
-
-  Bundle 'wellle/targets.vim'
 
 
   set rtp+=~/.vim/bundle/powerline/powerline/bindings/vim
