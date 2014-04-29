@@ -1,6 +1,10 @@
-#!/bin/bash
+#!/bin/bash -e
 
-echo "Reconnecting to wireless"
+message="Restarting wireless"
+logger $message
+echo $message
+notify-send "$message"
+
 sudo systemctl restart netctl-auto@wlp3s0.service
 
 status=$?
