@@ -3,7 +3,7 @@
 " Author: Caleb Everett                                            "
 "                                                                  "
 " Dependancies:                                                    "
-"   Vundle: git clone https://github.com/gmarik/vundle.git         "
+"   Vundle: git clone https://github.com/gmarik/Vundle.vim         "
 "             ~/.vim/bundle/vundle                                 "
 "------------------------------------------------------------------"
 
