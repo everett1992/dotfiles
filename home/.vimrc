@@ -14,10 +14,10 @@ set nocompatible " disable vi compatibility
 " ------------------------------
 
 filetype off
-  set rtp+=~/.vim/bundle/vundle
-  call vundle#begin()
+set rtp+=~/.vim/bundle/Vundle.vim
+call vundle#begin()
   " vundle vundle's vundle
-  Plugin 'gmarik/vundle'
+  Plugin 'gmarik/Vundle.vim'
 
   " My bundles
 
@@ -27,7 +27,7 @@ filetype off
   Plugin 'sjl/gundo.vim'
 
   " Matches closing parens,quotes,def/ends
-  Plugin 'jwitley/vim-matchit'
+  Plugin 'jwhitley/vim-matchit'
 
   " Automatically align text
   Plugin 'vim-scripts/vim-easy-align'
@@ -70,7 +70,7 @@ filetype off
 
 
   set rtp+=~/.vim/bundle/powerline/powerline/bindings/vim
-  call vundle#end()
+call vundle#end()
 filetype plugin indent on
 
 " Enable directory vim configs
