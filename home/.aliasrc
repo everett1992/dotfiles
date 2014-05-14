@@ -30,3 +30,4 @@ function pdf {
 }
 alias now="date +%l:%M | figlet |cowsay -n"
 alias many="xargs -n 1 -I {}"
+alias define="sdcv -u \"Webster's Revised Unabridged Dictionary (1913)\""
