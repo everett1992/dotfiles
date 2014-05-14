@@ -1,7 +1,11 @@
 let g:netrw_dirhistmax  =10
-let g:netrw_dirhist_cnt =5
+let g:netrw_dirhist_cnt =9
 let g:netrw_dirhist_1='/home/caleb/workspace/music-streamer/app'
 let g:netrw_dirhist_2='/home/caleb/workspace/rms_rails/app/assets/javascripts/mobile'
 let g:netrw_dirhist_3='/home/caleb'
 let g:netrw_dirhist_4='/home/caleb/workspace'
 let g:netrw_dirhist_5='/home/caleb/Dropbox/TCNJ/netsec/sploits/id'
+let g:netrw_dirhist_6='/home/caleb/workspace/buzz/app/views/ember'
+let g:netrw_dirhist_7='/home/caleb/workspace/buzz/app/assets/javascripts/controllers/episodes'
+let g:netrw_dirhist_8='/home/caleb/workspace/buzz/app/assets/javascripts/controllers/podcasts'
+let g:netrw_dirhist_9='/home/caleb/workspace/assignment5/src/assignment5'
