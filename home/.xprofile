@@ -14,4 +14,4 @@ eval $(/usr/bin/ssh-agent)
 [[ -f $HOME/.xinitrc.system ]] && $HOME/.xinitrc.system
 
 #:: Run auto start script
-~/.autostart &
+[[ -f $HOME/.autostart ]] && $HOME/.autostart
