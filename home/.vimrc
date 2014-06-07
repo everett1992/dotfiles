@@ -24,7 +24,7 @@ call vundle#begin()
   Plugin 'rking/ag.vim'
 
   " Advanced undo feature navigation
-  Plugin 'sjl/gundo.vim'
+  " Plugin 'sjl/gundo.vim'
 
   " Matches closing parens,quotes,def/ends
   Plugin 'jwhitley/vim-matchit'
@@ -37,9 +37,9 @@ call vundle#begin()
   Plugin 'mattn/gist-vim'
 
   " Tpope wizardry
-  Plugin 'tpope/vim-abolish'
+  " Plugin 'tpope/vim-abolish'
   Plugin 'tpope/vim-unimpaired'
-  Plugin 'tpope/vim-fugitive'
+  " Plugin 'tpope/vim-fugitive'
   Plugin 'tpope/vim-rails'
   Plugin 'tpope/vim-eunuch'
   " Plugin 'tpope/vim-rsi'
