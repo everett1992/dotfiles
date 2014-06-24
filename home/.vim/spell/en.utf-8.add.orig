@@ -12,6 +12,7 @@ dropdown
 everett1992
 hypocenter
 linkedin
+<<<<<<< HEAD
 Voir
 vim
 voir
@@ -29,9 +30,11 @@ Todo
 kml
 kmz
 caltopo
+=======
 mouseenter
 mouseleave
 repo
 repos
 Javascript
 plugins
+>>>>>>> bf207d366908f64973586b1ee92f548ea1c8e2f5

@@ -14,3 +14,4 @@ config/dwb/default/cookies
 config/dwb/default/history
 config/dwb/default/navigate.history
 config/dwb/default/session
+home/.vim/.netrwhist
