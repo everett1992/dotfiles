@@ -30,4 +30,5 @@ function pdf {
 }
 alias now="date +%l:%M | figlet |cowsay -n"
 alias many="xargs -n 1 -I {}"
+alias myip="dig +short myip.opendns.com @resolver1.opendns.com"
 alias define="sdcv -u \"Webster's Revised Unabridged Dictionary (1913)\""
