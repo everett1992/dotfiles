@@ -1,0 +1,950 @@
+Archive member included because of file (symbol)
+
+/opt/local/lib/gcc/avr/4.7.0/avr5/libgcc.a(_exit.o)
+                              /opt/local/lib/gcc/avr/4.7.0/../../../../avr/lib/avr5/crtm32u4.o (exit)
+/opt/local/lib/gcc/avr/4.7.0/avr5/libgcc.a(_copy_data.o)
+                              main.o (__do_copy_data)
+/opt/local/lib/gcc/avr/4.7.0/avr5/libgcc.a(_clear_bss.o)
+                              main.o (__do_clear_bss)
+
+Allocating common symbols
+Common symbol       size              file
+
+main_loop_row       0x1               main.o
+main_layers_pressed
+                    0x54              main.o
+main_arg_row        0x1               main.o
+main_arg_layer      0x1               main.o
+layers              0x28              main.o
+main_arg_was_pressed
+                    0x1               main.o
+main_arg_is_pressed
+                    0x1               main.o
+main_loop_col       0x1               main.o
+main_arg_layer_offset
+                    0x1               main.o
+main_arg_col        0x1               main.o
+
+Discarded input sections
+
+ .bss           0x0000000000000000        0x0 /opt/local/lib/gcc/avr/4.7.0/../../../../avr/lib/avr5/crtm32u4.o
+ .text          0x0000000000000000        0x0 main.o
+ .bss           0x0000000000000000        0x0 main.o
+ .text.main_layers_get_offset_id
+                0x0000000000000000       0x2a main.o
+ .text          0x0000000000000000        0x0 keyboard/ergodox/controller.o
+ .bss           0x0000000000000000        0x0 keyboard/ergodox/controller.o
+ .text          0x0000000000000000        0x0 keyboard/ergodox/controller/mcp23018.o
+ .bss           0x0000000000000000        0x0 keyboard/ergodox/controller/mcp23018.o
+ .text          0x0000000000000000        0x0 keyboard/ergodox/controller/teensy-2-0.o
+ .bss           0x0000000000000000        0x0 keyboard/ergodox/controller/teensy-2-0.o
+ .text          0x0000000000000000        0x0 keyboard/ergodox/layout/qwerty-kinesis-mod.o
+ .bss           0x0000000000000000        0x0 keyboard/ergodox/layout/qwerty-kinesis-mod.o
+ .text          0x0000000000000000        0x0 lib/key-functions/private.o
+ .bss           0x0000000000000000        0x0 lib/key-functions/private.o
+ .text          0x0000000000000000        0x0 lib/twi/teensy-2-0.o
+ .bss           0x0000000000000000        0x0 lib/twi/teensy-2-0.o
+ .text          0x0000000000000000        0x0 lib/usb/TODO.o
+ .bss           0x0000000000000000        0x0 lib/usb/TODO.o
+ .text          0x0000000000000000        0x0 lib/key-functions/public/basic.o
+ .bss           0x0000000000000000        0x0 lib/key-functions/public/basic.o
+ .text          0x0000000000000000        0x0 lib/key-functions/public/device.o
+ .bss           0x0000000000000000        0x0 lib/key-functions/public/device.o
+ .text          0x0000000000000000        0x0 lib/key-functions/public/special.o
+ .bss           0x0000000000000000        0x0 lib/key-functions/public/special.o
+ .text          0x0000000000000000        0x0 lib-other/pjrc/usb_keyboard/usb_keyboard.o
+ .bss           0x0000000000000000        0x0 lib-other/pjrc/usb_keyboard/usb_keyboard.o
+ .text.usb_keyboard_press
+                0x0000000000000000       0x1e lib-other/pjrc/usb_keyboard/usb_keyboard.o
+ .text          0x0000000000000000        0x0 /opt/local/lib/gcc/avr/4.7.0/avr5/libgcc.a(_exit.o)
+ .bss           0x0000000000000000        0x0 /opt/local/lib/gcc/avr/4.7.0/avr5/libgcc.a(_exit.o)
+ .text.libgcc.mul
+                0x0000000000000000        0x0 /opt/local/lib/gcc/avr/4.7.0/avr5/libgcc.a(_exit.o)
+ .text.libgcc.div
+                0x0000000000000000        0x0 /opt/local/lib/gcc/avr/4.7.0/avr5/libgcc.a(_exit.o)
+ .text.libgcc   0x0000000000000000        0x0 /opt/local/lib/gcc/avr/4.7.0/avr5/libgcc.a(_exit.o)
+ .text.libgcc.prologue
+                0x0000000000000000        0x0 /opt/local/lib/gcc/avr/4.7.0/avr5/libgcc.a(_exit.o)
+ .text.libgcc.builtins
+                0x0000000000000000        0x0 /opt/local/lib/gcc/avr/4.7.0/avr5/libgcc.a(_exit.o)
+ .text.libgcc.fmul
+                0x0000000000000000        0x0 /opt/local/lib/gcc/avr/4.7.0/avr5/libgcc.a(_exit.o)
+ .text          0x0000000000000000        0x0 /opt/local/lib/gcc/avr/4.7.0/avr5/libgcc.a(_copy_data.o)
+ .bss           0x0000000000000000        0x0 /opt/local/lib/gcc/avr/4.7.0/avr5/libgcc.a(_copy_data.o)
+ .text.libgcc.mul
+                0x0000000000000000        0x0 /opt/local/lib/gcc/avr/4.7.0/avr5/libgcc.a(_copy_data.o)
+ .text.libgcc.div
+                0x0000000000000000        0x0 /opt/local/lib/gcc/avr/4.7.0/avr5/libgcc.a(_copy_data.o)
+ .text.libgcc   0x0000000000000000        0x0 /opt/local/lib/gcc/avr/4.7.0/avr5/libgcc.a(_copy_data.o)
+ .text.libgcc.prologue
+                0x0000000000000000        0x0 /opt/local/lib/gcc/avr/4.7.0/avr5/libgcc.a(_copy_data.o)
+ .text.libgcc.builtins
+                0x0000000000000000        0x0 /opt/local/lib/gcc/avr/4.7.0/avr5/libgcc.a(_copy_data.o)
+ .text.libgcc.fmul
+                0x0000000000000000        0x0 /opt/local/lib/gcc/avr/4.7.0/avr5/libgcc.a(_copy_data.o)
+ .text          0x0000000000000000        0x0 /opt/local/lib/gcc/avr/4.7.0/avr5/libgcc.a(_clear_bss.o)
+ .bss           0x0000000000000000        0x0 /opt/local/lib/gcc/avr/4.7.0/avr5/libgcc.a(_clear_bss.o)
+ .text.libgcc.mul
+                0x0000000000000000        0x0 /opt/local/lib/gcc/avr/4.7.0/avr5/libgcc.a(_clear_bss.o)
+ .text.libgcc.div
+                0x0000000000000000        0x0 /opt/local/lib/gcc/avr/4.7.0/avr5/libgcc.a(_clear_bss.o)
+ .text.libgcc   0x0000000000000000        0x0 /opt/local/lib/gcc/avr/4.7.0/avr5/libgcc.a(_clear_bss.o)
+ .text.libgcc.prologue
+                0x0000000000000000        0x0 /opt/local/lib/gcc/avr/4.7.0/avr5/libgcc.a(_clear_bss.o)
+ .text.libgcc.builtins
+                0x0000000000000000        0x0 /opt/local/lib/gcc/avr/4.7.0/avr5/libgcc.a(_clear_bss.o)
+ .text.libgcc.fmul
+                0x0000000000000000        0x0 /opt/local/lib/gcc/avr/4.7.0/avr5/libgcc.a(_clear_bss.o)
+
+Memory Configuration
+
+Name             Origin             Length             Attributes
+text             0x0000000000000000 0x0000000000020000 xr
+data             0x0000000000800060 0x000000000000ffa0 rw !x
+eeprom           0x0000000000810000 0x0000000000010000 rw !x
+fuse             0x0000000000820000 0x0000000000000400 rw !x
+lock             0x0000000000830000 0x0000000000000400 rw !x
+signature        0x0000000000840000 0x0000000000000400 rw !x
+*default*        0x0000000000000000 0xffffffffffffffff
+
+Linker script and memory map
+
+Address of section .data set to 0x800100
+LOAD /opt/local/lib/gcc/avr/4.7.0/../../../../avr/lib/avr5/crtm32u4.o
+LOAD main.o
+LOAD keyboard/ergodox/controller.o
+LOAD keyboard/ergodox/controller/mcp23018.o
+LOAD keyboard/ergodox/controller/teensy-2-0.o
+LOAD keyboard/ergodox/layout/qwerty-kinesis-mod.o
+LOAD lib/key-functions/private.o
+LOAD lib/twi/teensy-2-0.o
+LOAD lib/usb/TODO.o
+LOAD lib/key-functions/public/basic.o
+LOAD lib/key-functions/public/device.o
+LOAD lib/key-functions/public/special.o
+LOAD lib-other/pjrc/usb_keyboard/usb_keyboard.o
+LOAD /opt/local/lib/gcc/avr/4.7.0/avr5/libgcc.a
+LOAD /opt/local/lib/gcc/avr/4.7.0/../../../../avr/lib/avr5/libc.a
+LOAD /opt/local/lib/gcc/avr/4.7.0/avr5/libgcc.a
+
+.hash
+ *(.hash)
+
+.dynsym
+ *(.dynsym)
+
+.dynstr
+ *(.dynstr)
+
+.gnu.version
+ *(.gnu.version)
+
+.gnu.version_d
+ *(.gnu.version_d)
+
+.gnu.version_r
+ *(.gnu.version_r)
+
+.rel.init
+ *(.rel.init)
+
+.rela.init
+ *(.rela.init)
+
+.rel.text
+ *(.rel.text)
+ *(.rel.text.*)
+ *(.rel.gnu.linkonce.t*)
+
+.rela.text
+ *(.rela.text)
+ *(.rela.text.*)
+ *(.rela.gnu.linkonce.t*)
+
+.rel.fini
+ *(.rel.fini)
+
+.rela.fini
+ *(.rela.fini)
+
+.rel.rodata
+ *(.rel.rodata)
+ *(.rel.rodata.*)
+ *(.rel.gnu.linkonce.r*)
+
+.rela.rodata
+ *(.rela.rodata)
+ *(.rela.rodata.*)
+ *(.rela.gnu.linkonce.r*)
+
+.rel.data
+ *(.rel.data)
+ *(.rel.data.*)
+ *(.rel.gnu.linkonce.d*)
+
+.rela.data
+ *(.rela.data)
+ *(.rela.data.*)
+ *(.rela.gnu.linkonce.d*)
+
+.rel.ctors
+ *(.rel.ctors)
+
+.rela.ctors
+ *(.rela.ctors)
+
+.rel.dtors
+ *(.rel.dtors)
+
+.rela.dtors
+ *(.rela.dtors)
+
+.rel.got
+ *(.rel.got)
+
+.rela.got
+ *(.rela.got)
+
+.rel.bss
+ *(.rel.bss)
+
+.rela.bss
+ *(.rela.bss)
+
+.rel.plt
+ *(.rel.plt)
+
+.rela.plt
+ *(.rela.plt)
+
+.text           0x0000000000000000     0x23ee
+ *(.vectors)
+ .vectors       0x0000000000000000       0xac /opt/local/lib/gcc/avr/4.7.0/../../../../avr/lib/avr5/crtm32u4.o
+                0x0000000000000000                __vectors
+                0x0000000000000000                __vector_default
+ *(.vectors)
+ *(.progmem.gcc*)
+ *(.progmem*)
+ .progmem.data._kb_layout_release
+                0x00000000000000ac      0x690 keyboard/ergodox/layout/qwerty-kinesis-mod.o
+                0x00000000000000ac                _kb_layout_release
+ .progmem.data._kb_layout_press
+                0x000000000000073c      0x690 keyboard/ergodox/layout/qwerty-kinesis-mod.o
+                0x000000000000073c                _kb_layout_press
+ .progmem.data._kb_layout
+                0x0000000000000dcc      0x348 keyboard/ergodox/layout/qwerty-kinesis-mod.o
+                0x0000000000000dcc                _kb_layout
+ .progmem.data.descriptor_list
+                0x0000000000001114       0x31 lib-other/pjrc/usb_keyboard/usb_keyboard.o
+ .progmem.data.endpoint_config_table
+                0x0000000000001145        0x6 lib-other/pjrc/usb_keyboard/usb_keyboard.o
+ .progmem.data.device_descriptor
+                0x000000000000114b       0x12 lib-other/pjrc/usb_keyboard/usb_keyboard.o
+ .progmem.data.config1_descriptor
+                0x000000000000115d       0x22 lib-other/pjrc/usb_keyboard/usb_keyboard.o
+ .progmem.data.keyboard_hid_report_desc
+                0x000000000000117f       0x3f lib-other/pjrc/usb_keyboard/usb_keyboard.o
+ .progmem.data.string0
+                0x00000000000011be        0x4 lib-other/pjrc/usb_keyboard/usb_keyboard.o
+ .progmem.data.string1
+                0x00000000000011c2       0x1a lib-other/pjrc/usb_keyboard/usb_keyboard.o
+ .progmem.data.string2
+                0x00000000000011dc       0x38 lib-other/pjrc/usb_keyboard/usb_keyboard.o
+                0x0000000000001214                . = ALIGN (0x2)
+                0x0000000000001214                __trampolines_start = .
+ *(.trampolines)
+ .trampolines   0x0000000000001214        0x0 linker stubs
+ *(.trampolines*)
+                0x0000000000001214                __trampolines_end = .
+ *(.jumptables)
+ *(.jumptables*)
+ *(.lowtext)
+ *(.lowtext*)
+                0x0000000000001214                __ctors_start = .
+ *(.ctors)
+                0x0000000000001214                __ctors_end = .
+                0x0000000000001214                __dtors_start = .
+ *(.dtors)
+                0x0000000000001214                __dtors_end = .
+ SORT(*)(.ctors)
+ SORT(*)(.dtors)
+ *(.init0)
+ .init0         0x0000000000001214        0x0 /opt/local/lib/gcc/avr/4.7.0/../../../../avr/lib/avr5/crtm32u4.o
+                0x0000000000001214                __init
+ *(.init0)
+ *(.init1)
+ *(.init1)
+ *(.init2)
+ .init2         0x0000000000001214        0xc /opt/local/lib/gcc/avr/4.7.0/../../../../avr/lib/avr5/crtm32u4.o
+ *(.init2)
+ *(.init3)
+ *(.init3)
+ *(.init4)
+ .init4         0x0000000000001220       0x16 /opt/local/lib/gcc/avr/4.7.0/avr5/libgcc.a(_copy_data.o)
+                0x0000000000001220                __do_copy_data
+ .init4         0x0000000000001236       0x10 /opt/local/lib/gcc/avr/4.7.0/avr5/libgcc.a(_clear_bss.o)
+                0x0000000000001236                __do_clear_bss
+ *(.init4)
+ *(.init5)
+ *(.init5)
+ *(.init6)
+ *(.init6)
+ *(.init7)
+ *(.init7)
+ *(.init8)
+ *(.init8)
+ *(.init9)
+ .init9         0x0000000000001246        0x6 /opt/local/lib/gcc/avr/4.7.0/../../../../avr/lib/avr5/crtm32u4.o
+ *(.init9)
+ *(.text)
+ .text          0x000000000000124c        0x4 /opt/local/lib/gcc/avr/4.7.0/../../../../avr/lib/avr5/crtm32u4.o
+                0x000000000000124c                __vector_42
+                0x000000000000124c                __vector_22
+                0x000000000000124c                __vector_28
+                0x000000000000124c                __vector_1
+                0x000000000000124c                __vector_32
+                0x000000000000124c                __vector_34
+                0x000000000000124c                __vector_24
+                0x000000000000124c                __vector_12
+                0x000000000000124c                __bad_interrupt
+                0x000000000000124c                __vector_6
+                0x000000000000124c                __vector_31
+                0x000000000000124c                __vector_35
+                0x000000000000124c                __vector_39
+                0x000000000000124c                __vector_3
+                0x000000000000124c                __vector_23
+                0x000000000000124c                __vector_30
+                0x000000000000124c                __vector_25
+                0x000000000000124c                __vector_13
+                0x000000000000124c                __vector_17
+                0x000000000000124c                __vector_19
+                0x000000000000124c                __vector_7
+                0x000000000000124c                __vector_41
+                0x000000000000124c                __vector_27
+                0x000000000000124c                __vector_5
+                0x000000000000124c                __vector_33
+                0x000000000000124c                __vector_37
+                0x000000000000124c                __vector_4
+                0x000000000000124c                __vector_9
+                0x000000000000124c                __vector_2
+                0x000000000000124c                __vector_21
+                0x000000000000124c                __vector_15
+                0x000000000000124c                __vector_36
+                0x000000000000124c                __vector_29
+                0x000000000000124c                __vector_40
+                0x000000000000124c                __vector_8
+                0x000000000000124c                __vector_26
+                0x000000000000124c                __vector_14
+                0x000000000000124c                __vector_16
+                0x000000000000124c                __vector_18
+                0x000000000000124c                __vector_20
+                0x000000000000124c                __vector_38
+                0x0000000000001250                . = ALIGN (0x2)
+ *(.text.*)
+ .text.main_exec_key
+                0x0000000000001250       0x60 main.o
+                0x0000000000001250                main_exec_key
+ .text.main_layers_peek
+                0x00000000000012b0       0x1e main.o
+                0x00000000000012b0                main_layers_peek
+ .text.startup.main
+                0x00000000000012ce      0x192 main.o
+                0x00000000000012ce                main
+ .text.main_layers_push
+                0x0000000000001460       0x44 main.o
+                0x0000000000001460                main_layers_push
+ .text.main_layers_pop_id
+                0x00000000000014a4       0x70 main.o
+                0x00000000000014a4                main_layers_pop_id
+ .text.kb_init  0x0000000000001514       0x18 keyboard/ergodox/controller.o
+                0x0000000000001514                kb_init
+ .text.kb_update_matrix
+                0x000000000000152c       0x24 keyboard/ergodox/controller.o
+                0x000000000000152c                kb_update_matrix
+ .text.mcp23018_init
+                0x0000000000001550       0x56 keyboard/ergodox/controller/mcp23018.o
+                0x0000000000001550                mcp23018_init
+ .text.mcp23018_update_matrix
+                0x00000000000015a6       0xfc keyboard/ergodox/controller/mcp23018.o
+                0x00000000000015a6                mcp23018_update_matrix
+ .text.teensy_init
+                0x00000000000016a2      0x192 keyboard/ergodox/controller/teensy-2-0.o
+                0x00000000000016a2                teensy_init
+ .text.teensy_update_matrix
+                0x0000000000001834      0x29e keyboard/ergodox/controller/teensy-2-0.o
+                0x0000000000001834                teensy_update_matrix
+ .text._kbfun_press_release
+                0x0000000000001ad2       0xe8 lib/key-functions/private.o
+                0x0000000000001ad2                _kbfun_press_release
+ .text._kbfun_is_pressed
+                0x0000000000001bba       0x7c lib/key-functions/private.o
+                0x0000000000001bba                _kbfun_is_pressed
+ .text.twi_init
+                0x0000000000001c36       0x12 lib/twi/teensy-2-0.o
+                0x0000000000001c36                twi_init
+ .text.twi_start
+                0x0000000000001c48       0x2e lib/twi/teensy-2-0.o
+                0x0000000000001c48                twi_start
+ .text.twi_stop
+                0x0000000000001c76       0x10 lib/twi/teensy-2-0.o
+                0x0000000000001c76                twi_stop
+ .text.twi_send
+                0x0000000000001c86       0x3c lib/twi/teensy-2-0.o
+                0x0000000000001c86                twi_send
+ .text.twi_read
+                0x0000000000001cc2       0x2c lib/twi/teensy-2-0.o
+                0x0000000000001cc2                twi_read
+ .text.layer_pop
+                0x0000000000001cee       0x1e lib/key-functions/public/basic.o
+ .text.layer_push
+                0x0000000000001d0c       0x4e lib/key-functions/public/basic.o
+ .text.kbfun_press_release
+                0x0000000000001d5a       0x2e lib/key-functions/public/basic.o
+                0x0000000000001d5a                kbfun_press_release
+ .text.kbfun_toggle
+                0x0000000000001d88       0x4c lib/key-functions/public/basic.o
+                0x0000000000001d88                kbfun_toggle
+ .text.kbfun_transparent
+                0x0000000000001dd4       0x2c lib/key-functions/public/basic.o
+                0x0000000000001dd4                kbfun_transparent
+ .text.kbfun_layer_push_1
+                0x0000000000001e00        0x4 lib/key-functions/public/basic.o
+                0x0000000000001e00                kbfun_layer_push_1
+ .text.kbfun_layer_pop_1
+                0x0000000000001e04        0x4 lib/key-functions/public/basic.o
+                0x0000000000001e04                kbfun_layer_pop_1
+ .text.kbfun_layer_push_2
+                0x0000000000001e08        0x4 lib/key-functions/public/basic.o
+                0x0000000000001e08                kbfun_layer_push_2
+ .text.kbfun_layer_pop_2
+                0x0000000000001e0c        0x4 lib/key-functions/public/basic.o
+                0x0000000000001e0c                kbfun_layer_pop_2
+ .text.kbfun_layer_push_3
+                0x0000000000001e10        0x4 lib/key-functions/public/basic.o
+                0x0000000000001e10                kbfun_layer_push_3
+ .text.kbfun_layer_pop_3
+                0x0000000000001e14        0x4 lib/key-functions/public/basic.o
+                0x0000000000001e14                kbfun_layer_pop_3
+ .text.kbfun_layer_push_4
+                0x0000000000001e18        0x4 lib/key-functions/public/basic.o
+                0x0000000000001e18                kbfun_layer_push_4
+ .text.kbfun_layer_pop_4
+                0x0000000000001e1c        0x4 lib/key-functions/public/basic.o
+                0x0000000000001e1c                kbfun_layer_pop_4
+ .text.kbfun_layer_push_5
+                0x0000000000001e20        0x4 lib/key-functions/public/basic.o
+                0x0000000000001e20                kbfun_layer_push_5
+ .text.kbfun_layer_pop_5
+                0x0000000000001e24        0x4 lib/key-functions/public/basic.o
+                0x0000000000001e24                kbfun_layer_pop_5
+ .text.kbfun_layer_push_6
+                0x0000000000001e28        0x4 lib/key-functions/public/basic.o
+                0x0000000000001e28                kbfun_layer_push_6
+ .text.kbfun_layer_pop_6
+                0x0000000000001e2c        0x4 lib/key-functions/public/basic.o
+                0x0000000000001e2c                kbfun_layer_pop_6
+ .text.kbfun_layer_push_7
+                0x0000000000001e30        0x4 lib/key-functions/public/basic.o
+                0x0000000000001e30                kbfun_layer_push_7
+ .text.kbfun_layer_pop_7
+                0x0000000000001e34        0x4 lib/key-functions/public/basic.o
+                0x0000000000001e34                kbfun_layer_pop_7
+ .text.kbfun_layer_push_8
+                0x0000000000001e38        0x4 lib/key-functions/public/basic.o
+                0x0000000000001e38                kbfun_layer_push_8
+ .text.kbfun_layer_pop_8
+                0x0000000000001e3c        0x4 lib/key-functions/public/basic.o
+                0x0000000000001e3c                kbfun_layer_pop_8
+ .text.kbfun_layer_push_9
+                0x0000000000001e40        0x4 lib/key-functions/public/basic.o
+                0x0000000000001e40                kbfun_layer_push_9
+ .text.kbfun_layer_pop_9
+                0x0000000000001e44        0x4 lib/key-functions/public/basic.o
+                0x0000000000001e44                kbfun_layer_pop_9
+ .text.kbfun_layer_push_10
+                0x0000000000001e48        0x4 lib/key-functions/public/basic.o
+                0x0000000000001e48                kbfun_layer_push_10
+ .text.kbfun_layer_pop_10
+                0x0000000000001e4c        0x4 lib/key-functions/public/basic.o
+                0x0000000000001e4c                kbfun_layer_pop_10
+ .text.kbfun_jump_to_bootloader
+                0x0000000000001e50       0x64 lib/key-functions/public/device.o
+                0x0000000000001e50                kbfun_jump_to_bootloader
+ .text.numpad_toggle_numlock
+                0x0000000000001eb4       0x10 lib/key-functions/public/special.o
+ .text.kbfun_shift_press_release
+                0x0000000000001ec4        0xa lib/key-functions/public/special.o
+                0x0000000000001ec4                kbfun_shift_press_release
+ .text.kbfun_2_keys_capslock_press_release
+                0x0000000000001ece       0xa8 lib/key-functions/public/special.o
+                0x0000000000001ece                kbfun_2_keys_capslock_press_release
+ .text.kbfun_layer_push_numpad
+                0x0000000000001f76       0x3c lib/key-functions/public/special.o
+                0x0000000000001f76                kbfun_layer_push_numpad
+ .text.kbfun_layer_pop_numpad
+                0x0000000000001fb2        0xc lib/key-functions/public/special.o
+                0x0000000000001fb2                kbfun_layer_pop_numpad
+ .text.usb_wait_in_ready
+                0x0000000000001fbe        0xa lib-other/pjrc/usb_keyboard/usb_keyboard.o
+ .text.usb_init
+                0x0000000000001fc8       0x2e lib-other/pjrc/usb_keyboard/usb_keyboard.o
+                0x0000000000001fc8                usb_init
+ .text.usb_configured
+                0x0000000000001ff6        0x6 lib-other/pjrc/usb_keyboard/usb_keyboard.o
+                0x0000000000001ff6                usb_configured
+ .text.usb_keyboard_send
+                0x0000000000001ffc       0x70 lib-other/pjrc/usb_keyboard/usb_keyboard.o
+                0x0000000000001ffc                usb_keyboard_send
+ .text.__vector_10
+                0x000000000000206c       0xb4 lib-other/pjrc/usb_keyboard/usb_keyboard.o
+                0x000000000000206c                __vector_10
+ .text.__vector_11
+                0x0000000000002120      0x2ca lib-other/pjrc/usb_keyboard/usb_keyboard.o
+                0x0000000000002120                __vector_11
+                0x00000000000023ea                . = ALIGN (0x2)
+ *(.fini9)
+ .fini9         0x00000000000023ea        0x0 /opt/local/lib/gcc/avr/4.7.0/avr5/libgcc.a(_exit.o)
+                0x00000000000023ea                exit
+                0x00000000000023ea                _exit
+ *(.fini9)
+ *(.fini8)
+ *(.fini8)
+ *(.fini7)
+ *(.fini7)
+ *(.fini6)
+ *(.fini6)
+ *(.fini5)
+ *(.fini5)
+ *(.fini4)
+ *(.fini4)
+ *(.fini3)
+ *(.fini3)
+ *(.fini2)
+ *(.fini2)
+ *(.fini1)
+ *(.fini1)
+ *(.fini0)
+ .fini0         0x00000000000023ea        0x4 /opt/local/lib/gcc/avr/4.7.0/avr5/libgcc.a(_exit.o)
+ *(.fini0)
+                0x00000000000023ee                _etext = .
+
+.data           0x0000000000800100       0x1a load address 0x00000000000023ee
+                0x0000000000800100                PROVIDE (__data_start, .)
+ *(.data)
+ .data          0x0000000000800100        0x0 /opt/local/lib/gcc/avr/4.7.0/../../../../avr/lib/avr5/crtm32u4.o
+ .data          0x0000000000800100        0x0 main.o
+ .data          0x0000000000800100        0x0 keyboard/ergodox/controller.o
+ .data          0x0000000000800100        0x0 keyboard/ergodox/controller/mcp23018.o
+ .data          0x0000000000800100        0x0 keyboard/ergodox/controller/teensy-2-0.o
+ .data          0x0000000000800100        0x0 keyboard/ergodox/layout/qwerty-kinesis-mod.o
+ .data          0x0000000000800100        0x0 lib/key-functions/private.o
+ .data          0x0000000000800100        0x0 lib/twi/teensy-2-0.o
+ .data          0x0000000000800100        0x0 lib/usb/TODO.o
+ .data          0x0000000000800100        0x0 lib/key-functions/public/basic.o
+ .data          0x0000000000800100        0x0 lib/key-functions/public/device.o
+ .data          0x0000000000800100        0x0 lib/key-functions/public/special.o
+ .data          0x0000000000800100        0x0 lib-other/pjrc/usb_keyboard/usb_keyboard.o
+ .data          0x0000000000800100        0x0 /opt/local/lib/gcc/avr/4.7.0/avr5/libgcc.a(_exit.o)
+ .data          0x0000000000800100        0x0 /opt/local/lib/gcc/avr/4.7.0/avr5/libgcc.a(_copy_data.o)
+ .data          0x0000000000800100        0x0 /opt/local/lib/gcc/avr/4.7.0/avr5/libgcc.a(_clear_bss.o)
+ *(.data*)
+ .data.layers_ids_in_use
+                0x0000000000800100       0x14 main.o
+                0x0000000000800100                layers_ids_in_use
+ .data.main_kb_was_pressed
+                0x0000000000800114        0x2 main.o
+                0x0000000000800114                main_kb_was_pressed
+ .data.main_kb_is_pressed
+                0x0000000000800116        0x2 main.o
+                0x0000000000800116                main_kb_is_pressed
+ .data.keyboard_idle_config
+                0x0000000000800118        0x1 lib-other/pjrc/usb_keyboard/usb_keyboard.o
+ .data.keyboard_protocol
+                0x0000000000800119        0x1 lib-other/pjrc/usb_keyboard/usb_keyboard.o
+ *(.rodata)
+ *(.rodata*)
+ *(.gnu.linkonce.d*)
+                0x000000000080011a                . = ALIGN (0x2)
+                0x000000000080011a                _edata = .
+                0x000000000080011a                PROVIDE (__data_end, .)
+
+.bss            0x000000000080011a      0x150
+                0x000000000080011a                PROVIDE (__bss_start, .)
+ *(.bss)
+ *(.bss*)
+ .bss.layers_head
+                0x000000000080011a        0x1 main.o
+                0x000000000080011a                layers_head
+ .bss._main_kb_was_pressed
+                0x000000000080011b       0x54 main.o
+ .bss._main_kb_is_pressed
+                0x000000000080016f       0x54 main.o
+ .bss.layer_ids
+                0x00000000008001c3       0x14 lib/key-functions/public/basic.o
+ .bss.keys_pressed.1652
+                0x00000000008001d7        0x1 lib/key-functions/public/special.o
+ .bss.lshift_pressed.1653
+                0x00000000008001d8        0x1 lib/key-functions/public/special.o
+ .bss.rshift_pressed.1654
+                0x00000000008001d9        0x1 lib/key-functions/public/special.o
+ .bss.numpad_layer_id
+                0x00000000008001da        0x1 lib/key-functions/public/special.o
+ .bss.keyboard_leds
+                0x00000000008001db        0x1 lib-other/pjrc/usb_keyboard/usb_keyboard.o
+                0x00000000008001db                keyboard_leds
+ .bss.keyboard_keys
+                0x00000000008001dc        0x6 lib-other/pjrc/usb_keyboard/usb_keyboard.o
+                0x00000000008001dc                keyboard_keys
+ .bss.keyboard_modifier_keys
+                0x00000000008001e2        0x1 lib-other/pjrc/usb_keyboard/usb_keyboard.o
+                0x00000000008001e2                keyboard_modifier_keys
+ .bss.usb_configuration
+                0x00000000008001e3        0x1 lib-other/pjrc/usb_keyboard/usb_keyboard.o
+ .bss.keyboard_idle_count
+                0x00000000008001e4        0x1 lib-other/pjrc/usb_keyboard/usb_keyboard.o
+ .bss.div4.1611
+                0x00000000008001e5        0x1 lib-other/pjrc/usb_keyboard/usb_keyboard.o
+ *(COMMON)
+ COMMON         0x00000000008001e6       0x84 main.o
+                0x00000000008001e6                main_loop_row
+                0x00000000008001e7                main_layers_pressed
+                0x000000000080023b                main_arg_row
+                0x000000000080023c                main_arg_layer
+                0x000000000080023d                layers
+                0x0000000000800265                main_arg_was_pressed
+                0x0000000000800266                main_arg_is_pressed
+                0x0000000000800267                main_loop_col
+                0x0000000000800268                main_arg_layer_offset
+                0x0000000000800269                main_arg_col
+                0x000000000080026a                PROVIDE (__bss_end, .)
+                0x00000000000023ee                __data_load_start = LOADADDR (.data)
+                0x0000000000002408                __data_load_end = (__data_load_start + SIZEOF (.data))
+
+.noinit         0x000000000080026a        0x0
+                0x000000000080026a                PROVIDE (__noinit_start, .)
+ *(.noinit*)
+                0x000000000080026a                PROVIDE (__noinit_end, .)
+                0x000000000080026a                _end = .
+                0x000000000080026a                PROVIDE (__heap_start, .)
+
+.eeprom         0x0000000000810000        0x0
+ *(.eeprom*)
+                0x0000000000810000                __eeprom_end = .
+
+.fuse
+ *(.fuse)
+ *(.lfuse)
+ *(.hfuse)
+ *(.efuse)
+
+.lock
+ *(.lock*)
+
+.signature
+ *(.signature*)
+
+.stab           0x0000000000000000      0x8c4
+ *(.stab)
+ .stab          0x0000000000000000      0x6cc /opt/local/lib/gcc/avr/4.7.0/../../../../avr/lib/avr5/crtm32u4.o
+ .stab          0x00000000000006cc       0x6c /opt/local/lib/gcc/avr/4.7.0/avr5/libgcc.a(_exit.o)
+                                         0x78 (size before relaxing)
+ .stab          0x0000000000000738       0xd8 /opt/local/lib/gcc/avr/4.7.0/avr5/libgcc.a(_copy_data.o)
+                                         0xe4 (size before relaxing)
+ .stab          0x0000000000000810       0xb4 /opt/local/lib/gcc/avr/4.7.0/avr5/libgcc.a(_clear_bss.o)
+                                         0xc0 (size before relaxing)
+
+.stabstr        0x0000000000000000      0x142
+ *(.stabstr)
+ .stabstr       0x0000000000000000      0x142 /opt/local/lib/gcc/avr/4.7.0/../../../../avr/lib/avr5/crtm32u4.o
+
+.stab.excl
+ *(.stab.excl)
+
+.stab.exclstr
+ *(.stab.exclstr)
+
+.stab.index
+ *(.stab.index)
+
+.stab.indexstr
+ *(.stab.indexstr)
+
+.comment        0x0000000000000000       0x11
+ *(.comment)
+ .comment       0x0000000000000000       0x11 main.o
+                                         0x12 (size before relaxing)
+ .comment       0x0000000000000000       0x12 keyboard/ergodox/controller.o
+ .comment       0x0000000000000000       0x12 keyboard/ergodox/controller/mcp23018.o
+ .comment       0x0000000000000000       0x12 keyboard/ergodox/controller/teensy-2-0.o
+ .comment       0x0000000000000000       0x12 keyboard/ergodox/layout/qwerty-kinesis-mod.o
+ .comment       0x0000000000000000       0x12 lib/key-functions/private.o
+ .comment       0x0000000000000000       0x12 lib/twi/teensy-2-0.o
+ .comment       0x0000000000000000       0x12 lib/usb/TODO.o
+ .comment       0x0000000000000000       0x12 lib/key-functions/public/basic.o
+ .comment       0x0000000000000000       0x12 lib/key-functions/public/device.o
+ .comment       0x0000000000000000       0x12 lib/key-functions/public/special.o
+ .comment       0x0000000000000000       0x12 lib-other/pjrc/usb_keyboard/usb_keyboard.o
+
+.debug
+ *(.debug)
+
+.line
+ *(.line)
+
+.debug_srcinfo
+ *(.debug_srcinfo)
+
+.debug_sfnames
+ *(.debug_sfnames)
+
+.debug_aranges
+ *(.debug_aranges)
+
+.debug_pubnames
+ *(.debug_pubnames)
+
+.debug_info
+ *(.debug_info)
+ *(.gnu.linkonce.wi.*)
+
+.debug_abbrev
+ *(.debug_abbrev)
+
+.debug_line
+ *(.debug_line)
+
+.debug_frame
+ *(.debug_frame)
+
+.debug_str
+ *(.debug_str)
+
+.debug_loc
+ *(.debug_loc)
+
+.debug_macinfo
+ *(.debug_macinfo)
+
+.debug_pubtypes
+ *(.debug_pubtypes)
+
+.debug_ranges
+ *(.debug_ranges)
+
+.debug_macro
+ *(.debug_macro)
+OUTPUT(firmware.elf elf32-avr)
+LOAD linker stubs
+
+Cross Reference Table
+
+Symbol                                            File
+__bad_interrupt                                   /opt/local/lib/gcc/avr/4.7.0/../../../../avr/lib/avr5/crtm32u4.o
+__bss_end                                         /opt/local/lib/gcc/avr/4.7.0/avr5/libgcc.a(_clear_bss.o)
+__bss_start                                       /opt/local/lib/gcc/avr/4.7.0/avr5/libgcc.a(_clear_bss.o)
+__data_end                                        /opt/local/lib/gcc/avr/4.7.0/avr5/libgcc.a(_copy_data.o)
+__data_load_start                                 /opt/local/lib/gcc/avr/4.7.0/avr5/libgcc.a(_copy_data.o)
+__data_start                                      /opt/local/lib/gcc/avr/4.7.0/avr5/libgcc.a(_copy_data.o)
+__do_clear_bss                                    /opt/local/lib/gcc/avr/4.7.0/avr5/libgcc.a(_clear_bss.o)
+                                                  lib-other/pjrc/usb_keyboard/usb_keyboard.o
+                                                  lib/key-functions/public/special.o
+                                                  lib/key-functions/public/basic.o
+                                                  main.o
+__do_copy_data                                    /opt/local/lib/gcc/avr/4.7.0/avr5/libgcc.a(_copy_data.o)
+                                                  lib-other/pjrc/usb_keyboard/usb_keyboard.o
+                                                  main.o
+__heap_end                                        /opt/local/lib/gcc/avr/4.7.0/../../../../avr/lib/avr5/crtm32u4.o
+__init                                            /opt/local/lib/gcc/avr/4.7.0/../../../../avr/lib/avr5/crtm32u4.o
+__stack                                           /opt/local/lib/gcc/avr/4.7.0/../../../../avr/lib/avr5/crtm32u4.o
+__vector_1                                        /opt/local/lib/gcc/avr/4.7.0/../../../../avr/lib/avr5/crtm32u4.o
+__vector_10                                       lib-other/pjrc/usb_keyboard/usb_keyboard.o
+                                                  /opt/local/lib/gcc/avr/4.7.0/../../../../avr/lib/avr5/crtm32u4.o
+__vector_11                                       lib-other/pjrc/usb_keyboard/usb_keyboard.o
+                                                  /opt/local/lib/gcc/avr/4.7.0/../../../../avr/lib/avr5/crtm32u4.o
+__vector_12                                       /opt/local/lib/gcc/avr/4.7.0/../../../../avr/lib/avr5/crtm32u4.o
+__vector_13                                       /opt/local/lib/gcc/avr/4.7.0/../../../../avr/lib/avr5/crtm32u4.o
+__vector_14                                       /opt/local/lib/gcc/avr/4.7.0/../../../../avr/lib/avr5/crtm32u4.o
+__vector_15                                       /opt/local/lib/gcc/avr/4.7.0/../../../../avr/lib/avr5/crtm32u4.o
+__vector_16                                       /opt/local/lib/gcc/avr/4.7.0/../../../../avr/lib/avr5/crtm32u4.o
+__vector_17                                       /opt/local/lib/gcc/avr/4.7.0/../../../../avr/lib/avr5/crtm32u4.o
+__vector_18                                       /opt/local/lib/gcc/avr/4.7.0/../../../../avr/lib/avr5/crtm32u4.o
+__vector_19                                       /opt/local/lib/gcc/avr/4.7.0/../../../../avr/lib/avr5/crtm32u4.o
+__vector_2                                        /opt/local/lib/gcc/avr/4.7.0/../../../../avr/lib/avr5/crtm32u4.o
+__vector_20                                       /opt/local/lib/gcc/avr/4.7.0/../../../../avr/lib/avr5/crtm32u4.o
+__vector_21                                       /opt/local/lib/gcc/avr/4.7.0/../../../../avr/lib/avr5/crtm32u4.o
+__vector_22                                       /opt/local/lib/gcc/avr/4.7.0/../../../../avr/lib/avr5/crtm32u4.o
+__vector_23                                       /opt/local/lib/gcc/avr/4.7.0/../../../../avr/lib/avr5/crtm32u4.o
+__vector_24                                       /opt/local/lib/gcc/avr/4.7.0/../../../../avr/lib/avr5/crtm32u4.o
+__vector_25                                       /opt/local/lib/gcc/avr/4.7.0/../../../../avr/lib/avr5/crtm32u4.o
+__vector_26                                       /opt/local/lib/gcc/avr/4.7.0/../../../../avr/lib/avr5/crtm32u4.o
+__vector_27                                       /opt/local/lib/gcc/avr/4.7.0/../../../../avr/lib/avr5/crtm32u4.o
+__vector_28                                       /opt/local/lib/gcc/avr/4.7.0/../../../../avr/lib/avr5/crtm32u4.o
+__vector_29                                       /opt/local/lib/gcc/avr/4.7.0/../../../../avr/lib/avr5/crtm32u4.o
+__vector_3                                        /opt/local/lib/gcc/avr/4.7.0/../../../../avr/lib/avr5/crtm32u4.o
+__vector_30                                       /opt/local/lib/gcc/avr/4.7.0/../../../../avr/lib/avr5/crtm32u4.o
+__vector_31                                       /opt/local/lib/gcc/avr/4.7.0/../../../../avr/lib/avr5/crtm32u4.o
+__vector_32                                       /opt/local/lib/gcc/avr/4.7.0/../../../../avr/lib/avr5/crtm32u4.o
+__vector_33                                       /opt/local/lib/gcc/avr/4.7.0/../../../../avr/lib/avr5/crtm32u4.o
+__vector_34                                       /opt/local/lib/gcc/avr/4.7.0/../../../../avr/lib/avr5/crtm32u4.o
+__vector_35                                       /opt/local/lib/gcc/avr/4.7.0/../../../../avr/lib/avr5/crtm32u4.o
+__vector_36                                       /opt/local/lib/gcc/avr/4.7.0/../../../../avr/lib/avr5/crtm32u4.o
+__vector_37                                       /opt/local/lib/gcc/avr/4.7.0/../../../../avr/lib/avr5/crtm32u4.o
+__vector_38                                       /opt/local/lib/gcc/avr/4.7.0/../../../../avr/lib/avr5/crtm32u4.o
+__vector_39                                       /opt/local/lib/gcc/avr/4.7.0/../../../../avr/lib/avr5/crtm32u4.o
+__vector_4                                        /opt/local/lib/gcc/avr/4.7.0/../../../../avr/lib/avr5/crtm32u4.o
+__vector_40                                       /opt/local/lib/gcc/avr/4.7.0/../../../../avr/lib/avr5/crtm32u4.o
+__vector_41                                       /opt/local/lib/gcc/avr/4.7.0/../../../../avr/lib/avr5/crtm32u4.o
+__vector_42                                       /opt/local/lib/gcc/avr/4.7.0/../../../../avr/lib/avr5/crtm32u4.o
+__vector_5                                        /opt/local/lib/gcc/avr/4.7.0/../../../../avr/lib/avr5/crtm32u4.o
+__vector_6                                        /opt/local/lib/gcc/avr/4.7.0/../../../../avr/lib/avr5/crtm32u4.o
+__vector_7                                        /opt/local/lib/gcc/avr/4.7.0/../../../../avr/lib/avr5/crtm32u4.o
+__vector_8                                        /opt/local/lib/gcc/avr/4.7.0/../../../../avr/lib/avr5/crtm32u4.o
+__vector_9                                        /opt/local/lib/gcc/avr/4.7.0/../../../../avr/lib/avr5/crtm32u4.o
+__vector_default                                  /opt/local/lib/gcc/avr/4.7.0/../../../../avr/lib/avr5/crtm32u4.o
+__vectors                                         /opt/local/lib/gcc/avr/4.7.0/../../../../avr/lib/avr5/crtm32u4.o
+_exit                                             /opt/local/lib/gcc/avr/4.7.0/avr5/libgcc.a(_exit.o)
+_kb_layout                                        keyboard/ergodox/layout/qwerty-kinesis-mod.o
+                                                  lib/key-functions/public/special.o
+                                                  lib/key-functions/public/basic.o
+_kb_layout_press                                  keyboard/ergodox/layout/qwerty-kinesis-mod.o
+                                                  main.o
+_kb_layout_release                                keyboard/ergodox/layout/qwerty-kinesis-mod.o
+                                                  main.o
+_kbfun_is_pressed                                 lib/key-functions/private.o
+                                                  lib/key-functions/public/special.o
+                                                  lib/key-functions/public/basic.o
+_kbfun_press_release                              lib/key-functions/private.o
+                                                  lib/key-functions/public/special.o
+                                                  lib/key-functions/public/basic.o
+exit                                              /opt/local/lib/gcc/avr/4.7.0/avr5/libgcc.a(_exit.o)
+                                                  /opt/local/lib/gcc/avr/4.7.0/../../../../avr/lib/avr5/crtm32u4.o
+kb_init                                           keyboard/ergodox/controller.o
+                                                  main.o
+kb_update_matrix                                  keyboard/ergodox/controller.o
+                                                  main.o
+kbfun_2_keys_capslock_press_release               lib/key-functions/public/special.o
+                                                  keyboard/ergodox/layout/qwerty-kinesis-mod.o
+kbfun_jump_to_bootloader                          lib/key-functions/public/device.o
+                                                  keyboard/ergodox/layout/qwerty-kinesis-mod.o
+kbfun_layer_pop_1                                 lib/key-functions/public/basic.o
+                                                  keyboard/ergodox/layout/qwerty-kinesis-mod.o
+kbfun_layer_pop_10                                lib/key-functions/public/basic.o
+                                                  keyboard/ergodox/layout/qwerty-kinesis-mod.o
+kbfun_layer_pop_2                                 lib/key-functions/public/basic.o
+                                                  keyboard/ergodox/layout/qwerty-kinesis-mod.o
+kbfun_layer_pop_3                                 lib/key-functions/public/basic.o
+                                                  keyboard/ergodox/layout/qwerty-kinesis-mod.o
+kbfun_layer_pop_4                                 lib/key-functions/public/basic.o
+                                                  keyboard/ergodox/layout/qwerty-kinesis-mod.o
+kbfun_layer_pop_5                                 lib/key-functions/public/basic.o
+                                                  keyboard/ergodox/layout/qwerty-kinesis-mod.o
+kbfun_layer_pop_6                                 lib/key-functions/public/basic.o
+                                                  keyboard/ergodox/layout/qwerty-kinesis-mod.o
+kbfun_layer_pop_7                                 lib/key-functions/public/basic.o
+                                                  keyboard/ergodox/layout/qwerty-kinesis-mod.o
+kbfun_layer_pop_8                                 lib/key-functions/public/basic.o
+                                                  keyboard/ergodox/layout/qwerty-kinesis-mod.o
+kbfun_layer_pop_9                                 lib/key-functions/public/basic.o
+                                                  keyboard/ergodox/layout/qwerty-kinesis-mod.o
+kbfun_layer_pop_numpad                            lib/key-functions/public/special.o
+                                                  keyboard/ergodox/layout/qwerty-kinesis-mod.o
+kbfun_layer_push_1                                lib/key-functions/public/basic.o
+                                                  keyboard/ergodox/layout/qwerty-kinesis-mod.o
+kbfun_layer_push_10                               lib/key-functions/public/basic.o
+                                                  keyboard/ergodox/layout/qwerty-kinesis-mod.o
+kbfun_layer_push_2                                lib/key-functions/public/basic.o
+                                                  keyboard/ergodox/layout/qwerty-kinesis-mod.o
+kbfun_layer_push_3                                lib/key-functions/public/basic.o
+                                                  keyboard/ergodox/layout/qwerty-kinesis-mod.o
+kbfun_layer_push_4                                lib/key-functions/public/basic.o
+                                                  keyboard/ergodox/layout/qwerty-kinesis-mod.o
+kbfun_layer_push_5                                lib/key-functions/public/basic.o
+                                                  keyboard/ergodox/layout/qwerty-kinesis-mod.o
+kbfun_layer_push_6                                lib/key-functions/public/basic.o
+                                                  keyboard/ergodox/layout/qwerty-kinesis-mod.o
+kbfun_layer_push_7                                lib/key-functions/public/basic.o
+                                                  keyboard/ergodox/layout/qwerty-kinesis-mod.o
+kbfun_layer_push_8                                lib/key-functions/public/basic.o
+                                                  keyboard/ergodox/layout/qwerty-kinesis-mod.o
+kbfun_layer_push_9                                lib/key-functions/public/basic.o
+                                                  keyboard/ergodox/layout/qwerty-kinesis-mod.o
+kbfun_layer_push_numpad                           lib/key-functions/public/special.o
+                                                  keyboard/ergodox/layout/qwerty-kinesis-mod.o
+kbfun_press_release                               lib/key-functions/public/basic.o
+                                                  lib/key-functions/public/special.o
+                                                  keyboard/ergodox/layout/qwerty-kinesis-mod.o
+kbfun_shift_press_release                         lib/key-functions/public/special.o
+                                                  keyboard/ergodox/layout/qwerty-kinesis-mod.o
+kbfun_toggle                                      lib/key-functions/public/basic.o
+                                                  keyboard/ergodox/layout/qwerty-kinesis-mod.o
+kbfun_transparent                                 lib/key-functions/public/basic.o
+                                                  keyboard/ergodox/layout/qwerty-kinesis-mod.o
+keyboard_keys                                     lib-other/pjrc/usb_keyboard/usb_keyboard.o
+                                                  lib/key-functions/private.o
+keyboard_leds                                     lib-other/pjrc/usb_keyboard/usb_keyboard.o
+                                                  main.o
+keyboard_modifier_keys                            lib-other/pjrc/usb_keyboard/usb_keyboard.o
+                                                  lib/key-functions/private.o
+layers                                            main.o
+layers_head                                       main.o
+layers_ids_in_use                                 main.o
+main                                              main.o
+                                                  /opt/local/lib/gcc/avr/4.7.0/../../../../avr/lib/avr5/crtm32u4.o
+main_arg_col                                      lib/key-functions/public/special.o
+                                                  lib/key-functions/public/basic.o
+                                                  main.o
+main_arg_is_pressed                               lib/key-functions/public/special.o
+                                                  lib/key-functions/public/basic.o
+                                                  main.o
+main_arg_layer                                    lib/key-functions/public/special.o
+                                                  lib/key-functions/public/basic.o
+                                                  main.o
+main_arg_layer_offset                             lib/key-functions/public/basic.o
+                                                  main.o
+main_arg_row                                      lib/key-functions/public/special.o
+                                                  lib/key-functions/public/basic.o
+                                                  main.o
+main_arg_was_pressed                              main.o
+main_exec_key                                     main.o
+                                                  lib/key-functions/public/basic.o
+main_kb_is_pressed                                main.o
+main_kb_was_pressed                               main.o
+main_layers_get_offset_id                         main.o
+main_layers_peek                                  main.o
+                                                  lib/key-functions/public/basic.o
+main_layers_pop_id                                main.o
+                                                  lib/key-functions/public/special.o
+                                                  lib/key-functions/public/basic.o
+main_layers_pressed                               lib/key-functions/public/basic.o
+                                                  main.o
+main_layers_push                                  main.o
+                                                  lib/key-functions/public/special.o
+                                                  lib/key-functions/public/basic.o
+main_loop_col                                     main.o
+main_loop_row                                     main.o
+mcp23018_init                                     keyboard/ergodox/controller/mcp23018.o
+                                                  keyboard/ergodox/controller.o
+mcp23018_update_matrix                            keyboard/ergodox/controller/mcp23018.o
+                                                  keyboard/ergodox/controller.o
+teensy_init                                       keyboard/ergodox/controller/teensy-2-0.o
+                                                  keyboard/ergodox/controller.o
+teensy_update_matrix                              keyboard/ergodox/controller/teensy-2-0.o
+                                                  keyboard/ergodox/controller.o
+twi_init                                          lib/twi/teensy-2-0.o
+                                                  keyboard/ergodox/controller/teensy-2-0.o
+twi_read                                          lib/twi/teensy-2-0.o
+                                                  keyboard/ergodox/controller/mcp23018.o
+twi_send                                          lib/twi/teensy-2-0.o
+                                                  keyboard/ergodox/controller/mcp23018.o
+twi_start                                         lib/twi/teensy-2-0.o
+                                                  keyboard/ergodox/controller/mcp23018.o
+twi_stop                                          lib/twi/teensy-2-0.o
+                                                  keyboard/ergodox/controller/mcp23018.o
+usb_configured                                    lib-other/pjrc/usb_keyboard/usb_keyboard.o
+                                                  main.o
+usb_init                                          lib-other/pjrc/usb_keyboard/usb_keyboard.o
+                                                  main.o
+usb_keyboard_press                                lib-other/pjrc/usb_keyboard/usb_keyboard.o
+usb_keyboard_send                                 lib-other/pjrc/usb_keyboard/usb_keyboard.o
+                                                  lib/key-functions/public/special.o
+                                                  main.o
