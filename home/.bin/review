@@ -1,0 +1,27 @@
+#!/bin/bash
+
+#:: Confirm user input
+function confirm {
+  echo -n $1
+  read -sn 1 ans
+  case "$ans" in
+    ""|y|Y|yes|YES|Yes) return 0 ;;
+    *)  return 1 ;;
+  esac
+}
+
+camera_dir=/mnt/camera/DCIM/100NIKON
+photo_dir=~/luggage/Photos
+
+album="$1"
+
+if [ -z "$album" ]; then
+  echo "No album provided"
+  exit
+fi
+
+if confirm "Copying photos from $camera_dir to $photo_dir/$album"; then
+  feh -. $camera_dir
+  mv $camera_dir/ $photo_dir/$album
+fi
+
