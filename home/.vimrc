@@ -139,6 +139,7 @@ set guicursor=a:blinkon0 " Disable cursor blink
 " -------------------------------------
 "  File Options
 " -------------------------------------
+set nobackup
 set backupdir=~/.backup,/tmp " Backup to ~/.backup and /tmp
 
 " -------------------------------------

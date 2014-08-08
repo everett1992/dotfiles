@@ -1,4 +1,3 @@
-let g:netrw_dirhistmax  =10
 let g:netrw_dirhist_cnt =4
 let g:netrw_dirhist_1='/usr/share/wemux'
 let g:netrw_dirhist_2='/home/caleb/workspace/maps/resource'
