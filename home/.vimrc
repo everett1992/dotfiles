@@ -13,65 +13,60 @@ set nocompatible " disable vi compatibility
 " Vundle
 " ------------------------------
 
-filetype off
-set rtp+=~/.vim/bundle/Vundle.vim
-call vundle#begin()
-  " vundle vundle's vundle
-  Plugin 'gmarik/Vundle.vim'
-
+call plug#begin('~/.vim/plugged')
   " My bundles
 
-  Plugin 'rking/ag.vim'
+  Plug 'rking/ag.vim'
 
   " Advanced undo feature navigation
-  " Plugin 'sjl/gundo.vim'
+  Plug 'sjl/gundo.vim', { 'on': 'GundoToggle' }
 
   " Matches closing parens,quotes,def/ends
-  Plugin 'jwhitley/vim-matchit'
+  Plug 'jwhitley/vim-matchit'
 
   " Automatically align text
-  Plugin 'vim-scripts/vim-easy-align'
+  Plug 'vim-scripts/vim-easy-align', { 'on': 'EasyAlign' }
 
   " Create gists from vim
-  Plugin 'mattn/webapi-vim'
-  Plugin 'mattn/gist-vim'
+  Plug 'mattn/webapi-vim'
+  Plug 'mattn/gist-vim'
 
   " Tpope wizardry
-  " Plugin 'tpope/vim-abolish'
-  Plugin 'tpope/vim-unimpaired'
-  Plugin 'tpope/vim-fugitive'
-  Plugin 'tpope/vim-rails'
-  Plugin 'tpope/vim-eunuch'
-  " Plugin 'tpope/vim-rsi'
-  " Plugin 'tpope/vim-projectile' " Seems cool, not used
+  " Plug 'tpope/vim-abolish'
+  Plug 'tpope/vim-unimpaired'
+  Plug 'tpope/vim-fugitive'
+  Plug 'tpope/vim-rails'
+  Plug 'tpope/vim-eunuch'
+  Plug 'tpope/vim-projectionist'
+  " Plug 'tpope/vim-rsi'
+  " Plug 'tpope/vim-projectile' " Seems cool, not used
 
   " Syntax checker
-  Plugin 'scrooloose/syntastic'
+  Plug 'scrooloose/syntastic'
   " disable `no docs` error checking
   let syntastic_gjslint_conf= '--nojsdoc'
   let g:syntastic_java_javac_config_file_enabled= 1
 
   " Status line improvement
-  Plugin 'Lokaltog/powerline'
+  Plug 'Lokaltog/powerline'
 
   " Syntax plugins
-  Plugin 'tpope/vim-markdown'
+  Plug 'tpope/vim-markdown'
   let g:vim_markdown_folding_disabled=1
-  Plugin 'tpope/vim-haml'
-  Plugin 'kchmck/vim-coffee-script'
-  Plugin 'groenewege/vim-less'
-  Plugin 'nono/vim-handlebars'
-  Plugin 'heartsentwined/vim-emblem'
-  Plugin 'jergason/scala.vim'
+  Plug 'tpope/vim-haml'
+  Plug 'kchmck/vim-coffee-script'
+  Plug 'groenewege/vim-less'
+  Plug 'nono/vim-handlebars'
+  Plug 'heartsentwined/vim-emblem'
+  Plug 'jergason/scala.vim'
 
   " Color schemes
-  Plugin 'tomasr/molokai'
-  Plugin 'john2x/flatui.vim'
+  Plug 'tomasr/molokai'
+  Plug 'john2x/flatui.vim'
 
 
-  set rtp+=~/.vim/bundle/powerline/powerline/bindings/vim
-call vundle#end()
-filetype plugin indent on
+  set rtp+=~/.vim/plugged/powerline/powerline/bindings/vim
+call plug#end()
 
 " Enable directory vim configs
  let g:localrc_filename='.local.vimrc'
