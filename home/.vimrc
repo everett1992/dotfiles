@@ -48,7 +48,26 @@ call plug#begin('~/.vim/plugged')
   let g:syntastic_java_javac_config_file_enabled= 1
 
   " Status line improvement
-  Plug 'Lokaltog/powerline'
+  Plug 'bling/vim-airline'
+  let g:airline_theme='kalisi'
+  let g:airline_powerline_fonts=1
+  let g:airline_mode_map = {
+      \ '__' : '-',
+      \ 'n'  : 'N',
+      \ 'i'  : 'I',
+      \ 'R'  : 'R',
+      \ 'c'  : 'C',
+      \ 'v'  : 'V',
+      \ 'V'  : 'V',
+      \ '' : 'V',
+      \ 's'  : 'S',
+      \ 'S'  : 'S',
+      \ '' : 'S',
+      \ }
+
+  let g:airline_section_c = "%f%M %W"
+  let g:airline_section_y = ""
+  let g:airline_section_z = " %l:%c"
 
   " Syntax plugins
   Plug 'tpope/vim-markdown'
@@ -64,8 +83,6 @@ call plug#begin('~/.vim/plugged')
   Plug 'tomasr/molokai'
   Plug 'john2x/flatui.vim'
 
-
-  set rtp+=~/.vim/plugged/powerline/powerline/bindings/vim
 call plug#end()
 
 " Enable directory vim configs
@@ -186,7 +203,7 @@ set shiftwidth=2
 set mouse=n " Turn on mouse support in normal mode
 
 " -------------------------------------
-"  Plug-in Key binds 
+"  Plug-in Key binds
 " -------------------------------------
 
 " toggle tagbar with \t or <F5>

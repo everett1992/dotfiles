@@ -1,8 +1,7 @@
 # Files to ignore
 *.swp
 *.swo
-home/.vim/plugged/*
-!home/.vim/bundle/vundle
+home/.vim/plugged
 home/.ncmpcpp/error.log
 home/.ncmpcpp/artists/
 
