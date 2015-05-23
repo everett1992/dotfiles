@@ -40,6 +40,8 @@ call plug#begin('~/.vim/plugged')
   Plug 'tpope/vim-projectionist'
   " Plug 'tpope/vim-rsi'
   " Plug 'tpope/vim-projectile' " Seems cool, not used
+  "
+  Plug 'lambdatoast/elm.vim'
 
   " Syntax checker
   Plug 'scrooloose/syntastic'

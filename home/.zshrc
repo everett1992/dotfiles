@@ -80,13 +80,14 @@ zstyle ':vcs_info:git*' formats "(±%b)"
 
 precmd() { vcs_info }
 
-# clear any terminal colors // remove '-n' to include a new line after each prompt, may be cool
-preexec() { echo -n "$reset_color" }
 
 # Display hostname in prompt if logged in through ssh
 if [ -n "$SSH_CLIENT" ]; then
   hostname="%M "
 fi
+
+# clear any terminal colors // remove '-n' to include a new line after each prompt, may be cool
+preexec() { echo -n "$reset_color" }
 
 # Indicate what vi mode is active
 vim_ins_mode="%{$fg[cyan]%}»%{$reset_color%}"
