@@ -16,6 +16,8 @@ set nocompatible " disable vi compatibility
 call plug#begin('~/.vim/plugged')
   " My bundles
 
+  Plug 'rust-lang/rust.vim'
+  Plug 'racer-rust/vim-racer'
   Plug 'rking/ag.vim'
 
   " Advanced undo feature navigation
@@ -49,8 +51,16 @@ call plug#begin('~/.vim/plugged')
   let syntastic_gjslint_conf= '--nojsdoc'
   let g:syntastic_java_javac_config_file_enabled= 1
 
+  Plug 'Shougo/vimproc.vim', { 'do': 'make' }
+  Plug 'Quramy/tsuquyomi'
+  Plug 'leafgarland/typescript-vim'
+  let g:tsuquyomi_disable_quickfix = 1
+  let g:syntastic_typescript_checkers = ['tsuquyomi']
+  Plug 'sirtaj/vim-openscad'
+
   " Status line improvement
-  Plug 'bling/vim-airline'
+  Plug 'vim-airline/vim-airline'
+  Plug 'vim-airline/vim-airline-themes'
   let g:airline_theme='kalisi'
   let g:airline_powerline_fonts=1
   let g:airline_mode_map = {
@@ -84,6 +94,8 @@ call plug#begin('~/.vim/plugged')
   " Color schemes
   Plug 'tomasr/molokai'
   Plug 'john2x/flatui.vim'
+  Plug 'isobit/vim-caddyfile'
+  Plug 'fatih/vim-go'
 
 call plug#end()
 
@@ -142,7 +154,7 @@ set nostartofline
 " Terminal Options
 " -----------------------------
 set ttyfast " Reduce escape wait times
-set timeout timeoutlen=500 ttimeoutlen=500
+set timeout timeoutlen=500 ttimeoutlen=10
 
 " -------------------------------------
 "  Gvim Options
@@ -235,6 +247,9 @@ nnoremap <F1> <nop>
 nnoremap Q <nop>
 nnoremap K <nop>
 
+inoremap <C-@> <C-Space>
+inoremap <C-Space> <C-x><C-o>
+
 " -------------------------------------
 "  Misc Options
 " -------------------------------------
@@ -250,43 +265,3 @@ if has("autocmd")
 else
   set autoindent
 endif
-
-" -------------------------------------
-"  Fold Options
-" -------------------------------------
-
-" Set a nicer foldtext function
-set foldtext=MyFoldText()
-function! MyFoldText()
-  let line = getline(v:foldstart)
-  if match( line, '^[ \t]*\(\/\*\|\/\/\)[*/\\]*[ \t]*$' ) == 0
-    let initial = substitute( line, '^\([ \t]\)*\(\/\*\|\/\/\)\(.*\)', '\1\2', '' )
-    let linenum = v:foldstart + 1
-    while linenum < v:foldend
-      let line = getline( linenum )
-      let comment_content = substitute( line, '^\([ \t\/\*]*\)\(.*\)$', '\2', 'g' )
-      if comment_content != ''
-        break
-      endif
-      let linenum = linenum + 1
-    endwhile
-    let sub = initial . ' ' . comment_content
-  else
-    let sub = line
-    let startbrace = substitute( line, '^.*{[ \t]*$', '{', 'g')
-    if startbrace == '{'
-      let line = getline(v:foldend)
-      let endbrace = substitute( line, '^[ \t]*}\(.*\)$', '}', 'g')
-      if endbrace == '}'
-        let sub = sub.substitute( line, '^[ \t]*}\(.*\)$', '...}\1', 'g')
-      endif
-    endif
-  endif
-  let n = v:foldend - v:foldstart + 1
-  let info = " " . n . " lines"
-  let sub = sub . "                                                                                                                  "
-  let num_w = getwinvar( 0, '&number' ) * getwinvar( 0, '&numberwidth' )
-  let fold_w = getwinvar( 0, '&foldcolumn' )
-  let sub = strpart( sub, 0, winwidth(0) - strlen( info ) - num_w - fold_w - 1 )
-  return sub . info
-endfunction
