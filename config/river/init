@@ -1,0 +1,11 @@
+#!/bin/sh
+# river 0.4 runs this once at startup. Window management is done by hrwm,
+# which in turn runs ~/.config/hrwm/autostart (and again on `hrwm reload`).
+
+export PATH="$HOME/.cargo/bin:$HOME/.local/bin:$PATH"
+export XDG_CURRENT_DESKTOP=river
+
+# let portals, notification daemons etc. find this session
+dbus-update-activation-environment --systemd WAYLAND_DISPLAY XDG_CURRENT_DESKTOP 2>/dev/null
+
+exec hrwm

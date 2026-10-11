@@ -1,0 +1,5 @@
+#!/bin/sh
+# Pick a window gap from a menu. Arguments: the menu command (fuzzel ...).
+# Port of ~/.config/herbstluftwm/padding, which used dmenu.
+gap=$(printf '0\n6\n10\n16\n' | "$@" --dmenu --lines 4 --width 10 --prompt 'gap: ') || exit
+[ -n "$gap" ] && hrwm set window_gap "$gap"

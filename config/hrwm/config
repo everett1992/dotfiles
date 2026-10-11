@@ -1,0 +1,38 @@
+#!/bin/bash
+# copied from ~/.config/herbstluftwm/config; sourced by ~/.config/hrwm/autostart
+
+export Mod=Mod4
+
+# a size with a native Terminus strike; others get scaled and look fuzzy
+export font="Terminus:pixelsize=14"
+# 15pt = 20px, a native Terminus strike, close to the ~21px X gave alacritty
+# at this panel's 168 DPI (Wayland uses scale 1 and ignores DPI)
+export terminal="alacritty -o font.size=15"
+export browser="firefox"
+
+
+# auto: windows side by side in wide frames, stacked in tall ones (hrwm extension)
+export default_frame_layout=auto
+
+export focus_follows_mouse=1
+export raise_on_click=1
+export raise_on_focus=0
+export raise_on_focus_temporarily=0
+
+export frame_border_width=0
+export window_border_width=3
+export window_border_inner_width=0
+
+export window_gap=6
+export frame_gap=0
+export frame_padding=0
+
+export frame_bg_transparent=0
+export frame_active_opacity=1
+export frame_normal_opacity=1
+
+export vertical_split=0.82
+export horizontal_split=0.62
+
+export vertical_split_i=0.18
+export horizontal_split_i=0.38
