@@ -7,22 +7,27 @@
 # History
 #------------------------------------------------------------------
 HISTFILE=~/.histfile
-HISTSIZE=1000
-SAVEHIST=1000
-
+HISTSIZE=10000
+SAVEHIST=10000
+setopt INC_APPEND_HISTORY
+setopt HIST_IGNORE_DUPS
 
 #------------------------------------------------------------------
 # Variables
 #------------------------------------------------------------------
 
 export BROWSER='chrome'
-export EDITOR='vim'
+export EDITOR='nvim'
 
 #------------------------------------------------------------------
 # Keybindings
 #------------------------------------------------------------------
 bindkey -v         # Use vi like key bindings
 typeset -g -A key  # I forget. :(
+
+# 10ms delay before sending escape.
+KEYTIMEOUT=1
+
 
 bindkey '\e[7~' beginning-of-line # Home
 bindkey ''    beginning-of-line # ctrl-a
@@ -43,11 +48,6 @@ bindkey "" yank
 [[ -f ~/.aliasrc ]] && source ~/.aliasrc
 
 # Zsh specific alias
-
-# zsh _always_ trie to expand regexes to files
-# so git ^HEAD, rake test[ok], nmap 192.168.*.* will cause issues.
-alias rake='noglob rake'
-alias curl='noglob curl'
 
 #------------------------------------------------------------------
 # Autocomplete configuration
@@ -124,17 +124,10 @@ export LESS_TERMCAP_so=$'\E[38;5;246m'    # begin standout-mode - info box
 export LESS_TERMCAP_ue=$'\E[0m'           # end underline
 export LESS_TERMCAP_us=$'\E[04;38;5;146m' # begin underline
 
-#------------------------------------------------------------------
-# Cat Colors
-#------------------------------------------------------------------
-
-function ccat {
-  for arg in "$@"; do
-    pygmentize -g "${arg}" 2> /dev/null || /bin/cat "${arg}"
-  done
-}
-
-
 # path loading
-PATH="$PATH:$HOME/.bin"
-PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
+PATH=$HOME/.cargo/bin:"$HOME/.local/bin:$PATH:$HOME/.bin"
+
+eval $(ssh-agent) > /dev/null
+eval "$(/home/caleb/.local/bin/mise activate zsh)"
+
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh

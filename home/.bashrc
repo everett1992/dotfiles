@@ -8,7 +8,6 @@
 
 shopt -s checkwinsize
 
-
 parse_git_branch() { 
   git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/(\1)/'
  }
@@ -30,16 +29,4 @@ PS1="$root$hostname\[\033[00;32m\]\w\[\033[00m\]\[\e[01;33;49m\]\$(parse_git_bra
 # Load general aliass
 [[ -f ~/.aliasrc ]] && source ~/.aliasrc
 
-
-export EDITOR="vim"
-export BROWSER="chromium"
-
-
-# your fortune is printed
-# [[ "$PS1" ]] && echo -e "\e[00;33m$(/usr/bin/fortune -s)\e[00m"
-
-# a cow says your fortune
-# [[ "$PS1" ]] && echo -e "\e[00;33m$(/usr/bin/fortune -s | /usr/bin/cowsay)\e[00m"
-
-
-PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
+[ -f ~/.fzf.bash ] && source ~/.fzf.bash
