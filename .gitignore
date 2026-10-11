@@ -14,3 +14,8 @@ config/dwb/default/history
 config/dwb/default/navigate.history
 config/dwb/default/session
 home/.vim/.netrwhist
+
+# Fonts that must not be published: DS Bradley is licensed for private use
+# only, and iosevka-custom is ~100MB of generated builds.
+home/.fonts/DS_Bradley.ttf
+home/.fonts/iosevka-custom/
