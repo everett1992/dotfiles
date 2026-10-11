@@ -127,7 +127,6 @@ export LESS_TERMCAP_us=$'\E[04;38;5;146m' # begin underline
 # path loading
 PATH=$HOME/.cargo/bin:"$HOME/.local/bin:$PATH:$HOME/.bin"
 
-eval $(ssh-agent) > /dev/null
 eval "$(/home/caleb/.local/bin/mise activate zsh)"
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
