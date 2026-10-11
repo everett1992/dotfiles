@@ -13,50 +13,36 @@ set nocompatible " disable vi compatibility
 " Vundle
 " ------------------------------
 
-call plug#begin('~/.vim/plugged')
+call plug#begin(stdpath('data') . '/plugged')
   " My bundles
 
+  " Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
+  " let g:deoplete#enable_at_startup = 1
+
+  Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
+  Plug 'junegunn/fzf.vim'
+
+  Plug 'neoclide/coc.nvim', {'branch': 'release'}
+
+  inoremap <silent><expr> <C-space> coc#refresh()
+  map <C-space> <Plug>(coc-codeaction-line)
+  map <silent> gd <Plug>(coc-definition)
+
   Plug 'rust-lang/rust.vim'
-  Plug 'racer-rust/vim-racer'
   Plug 'rking/ag.vim'
-
-  " Advanced undo feature navigation
-  Plug 'sjl/gundo.vim', { 'on': 'GundoToggle' }
-
-  " Matches closing parens,quotes,def/ends
-  Plug 'jwhitley/vim-matchit'
 
   " Automatically align text
   Plug 'vim-scripts/vim-easy-align', { 'on': 'EasyAlign' }
-
-  " Create gists from vim
-  Plug 'mattn/webapi-vim'
-  Plug 'mattn/gist-vim'
 
   " Tpope wizardry
   " Plug 'tpope/vim-abolish'
   Plug 'tpope/vim-unimpaired'
   Plug 'tpope/vim-fugitive'
-  Plug 'tpope/vim-rails'
   Plug 'tpope/vim-eunuch'
   Plug 'tpope/vim-projectionist'
-  " Plug 'tpope/vim-rsi'
-  " Plug 'tpope/vim-projectile' " Seems cool, not used
-  "
-  Plug 'lambdatoast/elm.vim'
-
-  " Syntax checker
-  Plug 'scrooloose/syntastic'
-  " disable `no docs` error checking
-  let syntastic_gjslint_conf= '--nojsdoc'
-  let g:syntastic_java_javac_config_file_enabled= 1
 
   Plug 'Shougo/vimproc.vim', { 'do': 'make' }
-  Plug 'Quramy/tsuquyomi'
   Plug 'leafgarland/typescript-vim'
-  let g:tsuquyomi_disable_quickfix = 1
-  let g:syntastic_typescript_checkers = ['tsuquyomi']
-  Plug 'sirtaj/vim-openscad'
 
   " Status line improvement
   Plug 'vim-airline/vim-airline'
@@ -84,19 +70,8 @@ call plug#begin('~/.vim/plugged')
   " Syntax plugins
   Plug 'tpope/vim-markdown'
   let g:vim_markdown_folding_disabled=1
-  Plug 'tpope/vim-haml'
-  Plug 'kchmck/vim-coffee-script'
-  Plug 'groenewege/vim-less'
-  Plug 'nono/vim-handlebars'
-  Plug 'heartsentwined/vim-emblem'
-  Plug 'jergason/scala.vim'
-
   " Color schemes
   Plug 'tomasr/molokai'
-  Plug 'john2x/flatui.vim'
-  Plug 'isobit/vim-caddyfile'
-  Plug 'fatih/vim-go'
-
 call plug#end()
 
 " Enable directory vim configs
@@ -159,8 +134,8 @@ set timeout timeoutlen=500 ttimeoutlen=10
 " -------------------------------------
 "  Gvim Options
 " -------------------------------------
-set guioptions=c " Disable menu, and other gui elements
-set guicursor=a:blinkon0 " Disable cursor blink
+" set guioptions=c " Disable menu, and other gui elements
+" set guicursor=a:blinkon0 " Disable cursor blink
 
 " -------------------------------------
 "  File Options
@@ -246,9 +221,6 @@ cnoreabbrev tn tabnew
 nnoremap <F1> <nop>
 nnoremap Q <nop>
 nnoremap K <nop>
-
-inoremap <C-@> <C-Space>
-inoremap <C-Space> <C-x><C-o>
 
 " -------------------------------------
 "  Misc Options
