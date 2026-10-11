@@ -1,3 +1,5 @@
+AddKeysToAgent yes
+
 Host beast
   User everetc1
 
@@ -21,4 +23,14 @@ host amazon
 host *.compute-1.amazonaws.com
   User ec2-user
   IdentityFile ~/.ssh/amazon_ec2_project_2.pem
+
+Host 192.168.1.186 sun suntracker
+  HostName 192.168.1.186
+  User caleb
+  IdentityFile ~/.ssh/id_ed25519_pi
+
+Host github.com
+  User git
+  IdentityFile ~/.ssh/id_ed25519_github
+  IdentitiesOnly yes
 
