@@ -1,0 +1,95 @@
+/* waybar style for hrwm, after the old dzen panel */
+@import "colors.css";
+
+* {
+    font-family: "Terminus", monospace;
+    font-size: 14px;
+    border: none;
+    border-radius: 0;
+    min-height: 0;
+}
+
+window#waybar {
+    background: @bg;
+    color: @fg;
+}
+
+/* tags: one module each, classes set by `hrwm --waybar-tag` relative to
+   the monitor this bar is on */
+#tags label {
+    padding: 0 6px;
+    color: @fg;
+    border-bottom: 2px solid transparent;
+}
+/* no windows */
+#tags .empty {
+    color: @dim;
+}
+/* has windows */
+#tags .occupied {
+    color: #ffffff;
+}
+/* shown on this bar's monitor, which has focus */
+#tags .this-monitor.focused {
+    background: @active;
+    color: #000000;
+    border-bottom-color: @active;
+}
+/* shown on this bar's monitor, focus is elsewhere */
+#tags .this-monitor {
+    background: alpha(@active, 0.35);
+    border-bottom-color: @active;
+    color: #ffffff;
+}
+/* shown on another monitor (.focused: that monitor has focus) */
+#tags .other-monitor {
+    background: @other;
+    color: #000000;
+}
+#tags .other-monitor.focused {
+    border-bottom-color: @active;
+}
+/* never set yet: river 0.4.8 doesn't pass urgency on to window managers */
+#tags .urgent {
+    background: #df8787;
+    color: #000000;
+}
+
+#custom-title {
+    color: @fg;
+    padding: 0 8px;
+}
+
+#network,
+#battery,
+#pulseaudio,
+#clock,
+#tray {
+    padding: 0 8px;
+}
+
+#battery.warning {
+    color: @accent;
+}
+#battery.critical {
+    background: #df8787;
+    color: #000000;
+}
+
+/* volume/brightness meter from ~/.config/waybar/osd, shown for 2s on change */
+#custom-osd {
+    padding: 0 8px;
+    color: #ffffff;
+    background: alpha(@active, 0.25);
+}
+#custom-osd.muted,
+#custom-osd.mic-muted {
+    background: #df8787;
+    color: #000000;
+}
+
+/* lights up while the mic or screen is being captured */
+#privacy { padding: 0 6px; background: #df8787; }
+/* "awake" while idle lock is off; click to toggle */
+#idle_inhibitor { padding: 0 6px; color: #000000; background: @active; }
+#idle_inhibitor.deactivated { padding: 0; background: transparent; }

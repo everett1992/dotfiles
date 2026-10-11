@@ -19,3 +19,6 @@ home/.vim/.netrwhist
 # only, and iosevka-custom is ~100MB of generated builds.
 home/.fonts/DS_Bradley.ttf
 home/.fonts/iosevka-custom/
+
+# generated from ~/.colors by ~/.config/hrwm/autostart
+config/waybar/colors.css

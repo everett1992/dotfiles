@@ -1,0 +1,110 @@
+#!/bin/bash
+# Waybar custom module: when volume, mute, mic mute or brightness changes,
+# show a meter like "󰕾 ██████░░░░ 60%" for a moment, then hide again.
+# Icons are from Siji (siji-ng).
+# It watches the values themselves, so changes from anywhere show up.
+#
+# For testing, OSD_SINK, OSD_SOURCE and OSD_BACKLIGHT override what is watched.
+
+source ~/.colors
+sink=${OSD_SINK:-@DEFAULT_SINK@}
+source=${OSD_SOURCE:-@DEFAULT_SOURCE@}
+backlight=${OSD_BACKLIGHT:-$(ls -d /sys/class/backlight/* 2>/dev/null | head -1)}
+show_for_us=2000000
+
+# Siji icons at their native 10px (bitmap fonts get blurry when scaled)
+icon() { printf "<span font_desc='Siji 10px'>%b</span>" "$1"; }
+icon_vol=$(icon '\ue05d') icon_muted=$(icon '\ue04f') icon_light=$(icon '\ue234')
+icon_mic=$(icon '\ue04c') icon_mic_muted=$(icon '\ue04c')
+
+# events from both watchers arrive on fd 3
+fifo=$(mktemp -u)
+mkfifo "$fifo"
+exec 3<>"$fifo"
+rm "$fifo"
+# waybar stops modules with SIGTERM on reload; take the watchers along
+trap 'pkill -P $$' EXIT
+trap 'exit' TERM INT HUP
+
+pactl subscribe 2>/dev/null \
+    | grep --line-buffered -E "'change' on (sink|source|server)" \
+    | sed -u 's/.*/audio/' >&3 &
+
+# sysfs brightness can't be watched for changes, so poll it
+if [[ -n $backlight ]]; then
+    (
+        last=$(<"$backlight/brightness")
+        # stop if the main script is gone, even if it was killed hard
+        while sleep 0.2 && kill -0 $$ 2>/dev/null; do
+            b=$(<"$backlight/brightness")
+            [[ $b != "$last" ]] && echo light
+            last=$b
+        done
+    ) >&3 &
+fi
+
+read_audio() {
+    vol=$(pactl get-sink-volume "$sink" 2>/dev/null | grep -oE '[0-9]+%' | head -1 | tr -d %)
+    mute=$(pactl get-sink-mute "$sink" 2>/dev/null | awk '{print $2}')
+    mic=$(pactl get-source-mute "$source" 2>/dev/null | awk '{print $2}')
+}
+
+# on the same curve as `brightnessctl -e` (exponent 4), so 10% key steps
+# move the meter by 10%
+read_light() {
+    local cur max
+    cur=$(<"$backlight/brightness")
+    max=$(<"$backlight/max_brightness")
+    light=$(awk -v c="$cur" -v m="$max" 'BEGIN { printf "%d", 100 * (c / m) ^ 0.25 + 0.5 }')
+}
+
+# show LABEL PERCENT CLASS, or show LABEL "" CLASS for a word-only message
+show() {
+    local label=$1 pct=$2 class=$3 text
+    if [[ -n $pct ]]; then
+        local n=$(( (pct + 5) / 10 )) full empty
+        (( n > 10 )) && n=10
+        full=$(printf '%*s' "$n" '' | sed 's/ /█/g')
+        empty=$(printf '%*s' "$((10 - n))" '' | sed 's/ /░/g')
+        text="$label <span foreground='$COLOR2'>$full</span><span foreground='$COLOR8'>$empty</span> $pct%"
+    else
+        text=$label
+    fi
+    printf '{"text":"%s","class":"%s"}\n' "$text" "$class"
+    hide_at=$(( ${EPOCHREALTIME/./} + show_for_us ))
+}
+
+read_audio
+[[ -n $backlight ]] && read_light
+hide_at=0
+echo '{"text":""}'
+
+while true; do
+    if (( hide_at > 0 )); then
+        left=$(( hide_at - ${EPOCHREALTIME/./} ))
+        (( left < 1000 )) && left=1000
+        timeout=$(printf '%d.%06d' $((left / 1000000)) $((left % 1000000)))
+    else
+        timeout=3600
+    fi
+    if read -t "$timeout" -u 3 event; then
+        case $event in
+            audio)
+                old_vol=$vol old_mute=$mute old_mic=$mic
+                read_audio
+                if [[ $mic != "$old_mic" ]]; then
+                    [[ $mic == yes ]] && show "$icon_mic_muted muted" "" mic-muted || show "$icon_mic on" "" mic
+                elif [[ $mute != "$old_mute" || $vol != "$old_vol" ]]; then
+                    [[ $mute == yes ]] && show "$icon_muted muted" "" muted || show "$icon_vol" "$vol" volume
+                fi
+                ;;
+            light)
+                read_light
+                show "$icon_light" "$light" brightness
+                ;;
+        esac
+    elif (( hide_at > 0 )) && (( ${EPOCHREALTIME/./} >= hide_at )); then
+        echo '{"text":""}'
+        hide_at=0
+    fi
+done

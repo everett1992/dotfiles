@@ -1,0 +1,191 @@
+// waybar config for hrwm (river 0.4), replacing the old dzen/conky/stalonetray panel.
+// Icons are from Siji (siji-ng), wrapped in spans at its native 10px so they stay sharp.
+// Tags come from `hrwm --waybar-tag NAME`; colors.css is written by ~/.config/hrwm/autostart.
+{
+  "layer": "top",
+  "position": "top",
+  "height": 20,
+  "spacing": 0,
+  "modules-left": [
+    "group/tags",
+    "custom/osd"
+  ],
+  "modules-center": [
+    "clock",
+    "network",
+    "battery",
+    "pulseaudio"
+  ],
+  "modules-right": [
+    "privacy",
+    "idle_inhibitor",
+    "custom/title",
+    "tray"
+  ],
+  "group/tags": {
+    "orientation": "horizontal",
+    "modules": [
+      "custom/tag-z",
+      "custom/tag-x",
+      "custom/tag-c",
+      "custom/tag-v",
+      "custom/tag-b",
+      "custom/tag-n",
+      "custom/tag-m"
+    ]
+  },
+  "custom/tag-z": {
+    "exec": "hrwm --waybar-tag z",
+    "return-type": "json",
+    "restart-interval": 2,
+    "on-click": "hrwm use z",
+    "on-scroll-up": "hrwm use_index -1 --skip-visible",
+    "on-scroll-down": "hrwm use_index +1 --skip-visible",
+    "tooltip": false
+  },
+  "custom/tag-x": {
+    "exec": "hrwm --waybar-tag x",
+    "return-type": "json",
+    "restart-interval": 2,
+    "on-click": "hrwm use x",
+    "on-scroll-up": "hrwm use_index -1 --skip-visible",
+    "on-scroll-down": "hrwm use_index +1 --skip-visible",
+    "tooltip": false
+  },
+  "custom/tag-c": {
+    "exec": "hrwm --waybar-tag c",
+    "return-type": "json",
+    "restart-interval": 2,
+    "on-click": "hrwm use c",
+    "on-scroll-up": "hrwm use_index -1 --skip-visible",
+    "on-scroll-down": "hrwm use_index +1 --skip-visible",
+    "tooltip": false
+  },
+  "custom/tag-v": {
+    "exec": "hrwm --waybar-tag v",
+    "return-type": "json",
+    "restart-interval": 2,
+    "on-click": "hrwm use v",
+    "on-scroll-up": "hrwm use_index -1 --skip-visible",
+    "on-scroll-down": "hrwm use_index +1 --skip-visible",
+    "tooltip": false
+  },
+  "custom/tag-b": {
+    "exec": "hrwm --waybar-tag b",
+    "return-type": "json",
+    "restart-interval": 2,
+    "on-click": "hrwm use b",
+    "on-scroll-up": "hrwm use_index -1 --skip-visible",
+    "on-scroll-down": "hrwm use_index +1 --skip-visible",
+    "tooltip": false
+  },
+  "custom/tag-n": {
+    "exec": "hrwm --waybar-tag n",
+    "return-type": "json",
+    "restart-interval": 2,
+    "on-click": "hrwm use n",
+    "on-scroll-up": "hrwm use_index -1 --skip-visible",
+    "on-scroll-down": "hrwm use_index +1 --skip-visible",
+    "tooltip": false
+  },
+  "custom/tag-m": {
+    "exec": "hrwm --waybar-tag m",
+    "return-type": "json",
+    "restart-interval": 2,
+    "on-click": "hrwm use m",
+    "on-scroll-up": "hrwm use_index -1 --skip-visible",
+    "on-scroll-down": "hrwm use_index +1 --skip-visible",
+    "tooltip": false
+  },
+  "custom/title": {
+    "exec": "hrwm --waybar-title",
+    "return-type": "json",
+    "restart-interval": 2,
+    "max-length": 80,
+    "tooltip": false,
+    "escape": true
+  },
+  "custom/osd": {
+    "exec": "~/.config/waybar/osd",
+    "return-type": "json",
+    "restart-interval": 2,
+    "escape": false,
+    "tooltip": false
+  },
+  "network": {
+    "format-wifi": "{icon} {essid}",
+    "format-icons": [
+      "<span font_desc='Siji 10px'></span>",
+      "<span font_desc='Siji 10px'></span>",
+      "<span font_desc='Siji 10px'></span>",
+      "<span font_desc='Siji 10px'></span>",
+      "<span font_desc='Siji 10px'></span>"
+    ],
+    "format-ethernet": "<span font_desc='Siji 10px'></span> wired",
+    "format-disconnected": "<span font_desc='Siji 10px'></span> offline",
+    "tooltip-format": "{ifname} {ipaddr} {signalStrength}%"
+  },
+  "battery": {
+    "format": "{icon} {capacity}%",
+    "format-charging": "<span font_desc='Siji 10px'></span> {capacity}%",
+    "format-icons": [
+      "<span font_desc='Siji 10px'></span>",
+      "<span font_desc='Siji 10px'></span>",
+      "<span font_desc='Siji 10px'></span>",
+      "<span font_desc='Siji 10px'></span>",
+      "<span font_desc='Siji 10px'></span>",
+      "<span font_desc='Siji 10px'></span>",
+      "<span font_desc='Siji 10px'></span>",
+      "<span font_desc='Siji 10px'></span>",
+      "<span font_desc='Siji 10px'></span>",
+      "<span font_desc='Siji 10px'></span>"
+    ],
+    "states": {
+      "warning": 20,
+      "critical": 10
+    },
+    "format-plugged": "<span font_desc='Siji 10px'></span> {capacity}%",
+    "format-full": "<span font_desc='Siji 10px'></span> {capacity}%"
+  },
+  "pulseaudio": {
+    "format": "{icon} {volume}%",
+    "format-muted": "<span font_desc='Siji 10px'></span> muted",
+    "format-icons": {
+      "default": [
+        "<span font_desc='Siji 10px'></span>",
+        "<span font_desc='Siji 10px'></span>",
+        "<span font_desc='Siji 10px'></span>"
+      ]
+    },
+    "on-click": "pavucontrol",
+    "scroll-step": 5
+  },
+  "clock": {
+    "format": "<span font_desc='Siji 10px'></span> {0:%I:%M%p}  <span font_desc='Siji 10px'></span> {0:%a %b %d}",
+    "tooltip-format": "{calendar}"
+  },
+  "tray": {
+    "icon-size": 14,
+    "spacing": 6
+  },
+  "privacy": {
+    "icon-size": 12,
+    "modules": [
+      {
+        "type": "screenshare"
+      },
+      {
+        "type": "audio-in"
+      }
+    ]
+  },
+  "idle_inhibitor": {
+    "format": "{icon}",
+    "format-icons": {
+      "activated": "awake",
+      "deactivated": ""
+    },
+    "tooltip-format-activated": "not locking or blanking",
+    "tooltip-format-deactivated": "idle lock on"
+  }
+}
