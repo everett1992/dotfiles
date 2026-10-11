@@ -1,0 +1,5 @@
+# When an app asks to share the screen, click the monitor to share
+# (with one monitor, just click anywhere).
+[screencast]
+chooser_type=simple
+chooser_cmd=slurp -f %o -or
